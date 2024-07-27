@@ -69,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 374.5
+    "width": 374.5,
+    "collapsed": true
   },
   "right": {
     "id": "e342685a996aaaaa",
@@ -187,7 +188,7 @@
       "workspaces:Manage workspace layouts": false
     }
   },
-  "active": "b4ff4c9b0e471e17",
+  "active": "ad35da2405346f98",
   "lastOpenFiles": [
     "Courses/Deep-Learning/Neural Networks and Deep Learning.md",
     "Courses/GPUs Programming/Introduction to Concurrent Programming with GPUs.md",
