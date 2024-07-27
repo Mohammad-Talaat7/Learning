@@ -103,6 +103,14 @@
             }
           },
           {
+            "id": "ad35da2405346f98",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {}
+            }
+          },
+          {
             "id": "31eaa2439d6bd0d3",
             "type": "leaf",
             "state": {
@@ -141,11 +149,12 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
-    "width": 326.5
+    "width": 403.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -159,6 +168,6 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "13f912e6988e2032",
+  "active": "7723a12e2bb69481",
   "lastOpenFiles": []
 }
