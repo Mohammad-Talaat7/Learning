@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "7c7589f5d10da481",
+        "id": "0f5729d0bc5a4ebe",
         "type": "tabs",
         "children": [
           {
-            "id": "c9d73fbf9cbb085c",
+            "id": "e29adf8ca9da210e",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -82,7 +82,7 @@
         "dimension": 39.40217391304348,
         "children": [
           {
-            "id": "7723a12e2bb69481",
+            "id": "c9d73fbf9cbb085c",
             "type": "leaf",
             "state": {
               "type": "graph",
@@ -194,13 +194,15 @@
       "workspaces:Manage workspace layouts": false
     }
   },
-  "active": "b4ff4c9b0e471e17",
+  "active": "e29adf8ca9da210e",
   "lastOpenFiles": [
+    "IMG_8231.png",
+    "Courses/Deep-Learning/Neural Networks and Deep Learning.md",
+    "kaggle.com.md",
     "assets",
     "assets/IMG_8230.png",
     "assets/IMG_8229.jpg",
     "Courses/Deep-Learning/Deep-Learning Specialization.md",
-    "Courses/Deep-Learning/Neural Networks and Deep Learning.md",
     "Courses/Deep-Learning/Neural Networks and Deep Learning notes.md",
     "Courses/Deep-Learning/andrewng-p-5-sequence-models.md",
     "Courses/Deep-Learning/andrewng-p-1-neural-network-deep-learning.md",

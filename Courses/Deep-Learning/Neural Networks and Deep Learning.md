@@ -41,26 +41,23 @@ Here are the course summary as its given on the course [link](https://www.course
 ### Supervised learning with neural networks
 
 - Different types of neural networks for supervised learning which includes:
-  - CNN or convolutional neural networks (Useful in computer vision)
-  - RNN or Recurrent neural networks (Useful in Speech recognition or NLP)
-  - Standard NN (Useful for Structured data)
-  - Hybrid/custom NN or a Collection of NNs types
+	  - CNN or convolutional neural networks (Useful in computer vision)
+	  - RNN or Recurrent neural networks (Useful in Speech recognition or NLP)
+	  - Standard NN (Useful for Structured data)
+	  - Hybrid/custom NN or a Collection of NNs types
 - Structured data is like the databases and tables.
-- Unstructured data is like https://raw.githubusercontent.com/ashishpatel26/DeepLearning.ai-Summary/master/1-%20Neural%20Networks%20and%20Deep%20Learning/Images/, video, audio, and text.
+- Unstructured data is like Images, video, audio, and text.
 - Structured data gives more money because companies relies on prediction on its big data.
 
 ### Why is deep learning taking off?
 
 - Deep learning is taking off for 3 reasons:
   1. Data:
-     - Using this image we can conclude:
-       - ![](https://raw.githubusercontent.com/ashishpatel26/DeepLearning.ai-Summary/master/1-%20Neural%20Networks%20and%20Deep%20Learning/Images//11.png)
+     - Using this image we can conclude: ![[IMG_8231.png]]
      - For small data NN can perform as Linear regression or SVM (Support vector machine)
      - For big data a small NN is better that SVM
      - For big data a big NN is better that a medium NN is better that small NN.
      - Hopefully we have a lot of data because the world is using the computer a little bit more
-       - Mobiles
-       - IOT (Internet of things)
   2. Computation:
      - GPUs.
      - Powerful CPUs.
