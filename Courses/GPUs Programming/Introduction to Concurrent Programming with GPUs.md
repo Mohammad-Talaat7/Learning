@@ -47,7 +47,10 @@ We discussed [[Introduction to Concurrent Programming with GPUs Outline]]
 - They can do one thing at a time (pick up the fork - eat - but the fork down, etc)
 - We need an Algorithm that allows all philosophers to eat
 ### Producer-Consumer
-- Produc
+- Producer-Consumer (Reader-Writer) pattern is very popular tool these days
+- We often use it in message queues 
+- Race Conditions can easily happen as the producer needs to write data in sequential way and the consumer needs to write data in sequential way or as they become available 
+- Ex. If the shared counter is updated, read, then the memory is updated
 ### Sleeping Barber 
 
 ### Data and Code Synchronization
