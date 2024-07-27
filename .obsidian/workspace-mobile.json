@@ -11,12 +11,8 @@
             "id": "9db92a668b29b306",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Courses/GPUs Programming/Introduction to Concurrent Programming with GPUs.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "graph",
+              "state": {}
             }
           }
         ]
@@ -97,7 +93,6 @@
         "state": {
           "type": "backlink",
           "state": {
-            "file": "Courses/GPUs Programming/Introduction to Concurrent Programming with GPUs.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -114,7 +109,6 @@
         "state": {
           "type": "outgoing-link",
           "state": {
-            "file": "Courses/GPUs Programming/Introduction to Concurrent Programming with GPUs.md",
             "linksCollapsed": false,
             "unlinkedCollapsed": true
           }
@@ -125,9 +119,7 @@
         "type": "leaf",
         "state": {
           "type": "outline",
-          "state": {
-            "file": "Courses/GPUs Programming/Introduction to Concurrent Programming with GPUs.md"
-          }
+          "state": {}
         }
       },
       {
@@ -163,8 +155,8 @@
   },
   "active": "9db92a668b29b306",
   "lastOpenFiles": [
-    "Courses/GPUs Programming/GPU Programming Specialization.md",
     "Courses/GPUs Programming/Introduction to Concurrent Programming with GPUs.md",
+    "Courses/GPUs Programming/GPU Programming Specialization.md",
     "Courses/GPUs Programming",
     "Courses",
     "Courses/GPUs Programming/Introduction to Concurrent Programming with GPUs Outline.md"
