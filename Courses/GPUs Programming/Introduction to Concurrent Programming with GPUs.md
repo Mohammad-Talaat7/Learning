@@ -52,5 +52,10 @@ We discussed [[Introduction to Concurrent Programming with GPUs Outline]]
 - Race Conditions can easily happen as the producer needs to write data in sequential way and the consumer needs to write data in sequential way or as they become available 
 - Ex. If the shared counter is updated, read, then the memory is updated
 ### Sleeping Barber 
-
+- the sleeping Barber Problem visualize the data queue as the waiting room and the threads as the barbers each barber have one seat and therefore can work on one customer (process) at a time
+- There are two possibilities here:
+	- firstly the customers number are getting bigger and bigger and there is no room in the waiting room although the barber take their time with the customer in chair which lead to live-lock or over-utilization problem 
+	- Secondly there are no customers and the barbers just chatting about life and sports which can lead to under-utilization problem
+- Keep in mind that if the waiting room is full and new customer arrives one customer leaves
 ### Data and Code Synchronization
+- most of programming languages have synchronization mechanism these days it means to 
