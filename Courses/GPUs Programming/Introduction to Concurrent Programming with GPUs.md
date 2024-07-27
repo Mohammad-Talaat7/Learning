@@ -47,7 +47,26 @@ We discussed [[Introduction to Concurrent Programming with GPUs Outline]]
 - They can do one thing at a time (pick up the fork - eat - but the fork down, etc)
 - We need an Algorithm that allows all philosophers to eat
 ### Producer-Consumer
-- 
+- Producer-Consumer (Reader-Writer) pattern is very popular tool these days
+- We often use it in message queues 
+- Race Conditions can easily happen as the producer needs to write data in sequential way and the consumer needs to write data in sequential way or as they become available 
+- Ex. If the shared counter is updated, read, then the memory is updated
 ### Sleeping Barber 
-
+- the sleeping Barber Problem visualize the data queue as the waiting room and the threads as the barbers each barber have one seat and therefore can work on one customer (process) at a time
+- There are two possibilities here:
+	- firstly the customers number are getting bigger and bigger and there is no room in the waiting room although the barber take their time with the customer in chair which lead to live-lock or over-utilization problem 
+	- Secondly there are no customers and the barbers just chatting about life and sports which can lead to under-utilization problem
+- Keep in mind that if the waiting room is full and new customer arrives one customer leaves
 ### Data and Code Synchronization
+- most of programming languages have synchronization mechanism these days it means to block access for specific code or dat until it has finished all its operations
+- If we sync all data we end up having a dead-lock as all the processes will wait for the data and on the other hand the data can’t be reached until the former process end using it
+## Concurrent Programming Patterns
+Many of the solutions fit into these five patterns:
+### Divide and Conquer
+- the main idea about Divide and Conquer Pattern is to split the large dataset or large process to smaller ones each of them running through a thread and each thread return a response then taking in account all responses we got we may answer the main question
+- Used in Sorting and Searching Algorithms
+- If recursion is not allowed or really inefficient which is the case in CUDA then this shouldn’t been used frequently
+### Map-Reduce
+### Repository
+### Pipelines / Workflows
+### Recursion
