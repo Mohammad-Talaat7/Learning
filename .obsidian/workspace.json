@@ -93,7 +93,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Courses/GPUs Programming/jn.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +109,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Courses/GPUs Programming/jn.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -184,8 +182,11 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "05b383f7be35fa3d",
+  "active": "ad35da2405346f98",
   "lastOpenFiles": [
+    "Courses/GPUs Programming/Introduction to Concurrent Programming with GPUs Outline.md",
+    "Courses/GPUs Programming/Introduction to Concurrent Programming with GPUs.md",
+    "Courses/GPUs Programming/GPU Programming Specialization.md",
     "Courses/GPUs Programming/jn.md",
     "Courses/GPUs Programming",
     "Courses"
