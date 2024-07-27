@@ -31,14 +31,10 @@ Here are the course summary as its given on the course [link](https://www.course
 ### What is a (Neural Network) NN?
 
 - Single neuron == linear regression
-- Simple NN graph:
-  - ![](https://raw.githubusercontent.com/ashishpatel26/DeepLearning.ai-Summary/master/1-%20Neural%20Networks%20and%20Deep%20Learning/Images//Others/01.jpg)
-  - Image taken from [tutorialspoint.com](tutorialspoint.com)
+- Simple NN graph: ![[IMG_8229.jpg]]
 - RELU stands for rectified linear unit is the most popular activation function right now that makes deep NNs train faster now.
-- Hidden layers predicts connection between inputs automatically, thats what deep learning is good at.
-- Deep NN consists of more hidden layers (Deeper layers)
-  - ![](https://raw.githubusercontent.com/ashishpatel26/DeepLearning.ai-Summary/master/1-%20Neural%20Networks%20and%20Deep%20Learning/Images//Others/02.png)
-  - Image taken from [opennn.net](opennn.net)
+- Hidden layers predicts connection between inputs automatically, that's what deep learning is good at.
+- Deep NN consists of more hidden layers (Deeper layers) ![[IMG_8230.png]]
 - Each Input will be connected to the hidden layer and the NN will decide the connections.
 - Supervised learning means we have the (X,Y) and we need to get the function that maps X to Y.
 

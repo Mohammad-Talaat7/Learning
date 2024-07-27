@@ -69,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 374.5
+    "width": 374.5,
+    "collapsed": true
   },
   "right": {
     "id": "e342685a996aaaaa",
@@ -193,8 +194,11 @@
       "workspaces:Manage workspace layouts": false
     }
   },
-  "active": "c9d73fbf9cbb085c",
+  "active": "b4ff4c9b0e471e17",
   "lastOpenFiles": [
+    "assets",
+    "assets/IMG_8230.png",
+    "assets/IMG_8229.jpg",
     "Courses/Deep-Learning/Deep-Learning Specialization.md",
     "Courses/Deep-Learning/Neural Networks and Deep Learning.md",
     "Courses/Deep-Learning/Neural Networks and Deep Learning notes.md",
