@@ -58,4 +58,8 @@ We discussed [[Introduction to Concurrent Programming with GPUs Outline]]
 	- Secondly there are no customers and the barbers just chatting about life and sports which can lead to under-utilization problem
 - Keep in mind that if the waiting room is full and new customer arrives one customer leaves
 ### Data and Code Synchronization
-- most of programming languages have synchronization mechanism these days it means to 
+- most of programming languages have synchronization mechanism these days it means to block access for specific code or dat until it has finished all its operations
+- If we sync all data we end up having a dead-lock as all the processes will wait for the data and on the other hand the data can’t be reached until the former process end using it
+## Concurrent Programming Patterns
+Many of the solutions fit into these five patterns:
+### Devide a
