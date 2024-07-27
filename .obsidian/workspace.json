@@ -14,8 +14,21 @@
               "type": "graph",
               "state": {}
             }
+          },
+          {
+            "id": "05b383f7be35fa3d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Courses/GPUs Programming/jn.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -81,6 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Courses/GPUs Programming/jn.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Courses/GPUs Programming/jn.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -135,7 +150,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Courses/GPUs Programming/jn.md"
+              }
             }
           },
           {
@@ -154,7 +171,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 403.5
+    "width": 308.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -168,8 +185,10 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "b4ff4c9b0e471e17",
+  "active": "ad35da2405346f98",
   "lastOpenFiles": [
+    "Courses/GPUs Programming/jn.md",
+    "Courses/GPUs Programming",
     "Courses"
   ]
 }
