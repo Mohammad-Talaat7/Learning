@@ -63,6 +63,8 @@ We discussed [[Introduction to Concurrent Programming with GPUs Outline]]
 ## Concurrent Programming Patterns
 Many of the solutions fit into these five patterns:
 ### Divide and Conquer 
+- the main idea about Divide and Conquer Pattern is to split the large dataset to smaller and smaller datasets each of them running through a thread and each thread return a response then taking in account all responses we got we may answer the main question
+- 
 ### Map-Reduce
 ### Repository
 ### Pipelines / Workflows
