@@ -47,7 +47,7 @@ We discussed [[Introduction to Concurrent Programming with GPUs Outline]]
 - They can do one thing at a time (pick up the fork - eat - but the fork down, etc)
 - We need an Algorithm that allows all philosophers to eat
 ### Producer-Consumer
-- 
+- this is new line
 ### Sleeping Barber 
 
 ### Data and Code Synchronization
