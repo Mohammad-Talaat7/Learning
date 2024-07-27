@@ -19,11 +19,10 @@
             "id": "05b383f7be35fa3d",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "diff-view",
               "state": {
-                "file": "Courses/GPUs Programming/jn.md",
-                "mode": "source",
-                "source": false
+                "file": ".obsidian/plugins/obsidian-git/data.json",
+                "staged": false
               }
             }
           }
@@ -185,7 +184,7 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "ad35da2405346f98",
+  "active": "05b383f7be35fa3d",
   "lastOpenFiles": [
     "Courses/GPUs Programming/jn.md",
     "Courses/GPUs Programming",
