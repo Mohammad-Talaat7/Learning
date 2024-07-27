@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Neural Networks and Deep Learning.md",
+                "file": "Courses/Deep-Learning/Neural Networks and Deep Learning.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 374.5,
-    "collapsed": true
+    "width": 374.5
   },
   "right": {
     "id": "e342685a996aaaaa",
@@ -105,9 +104,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Neural Networks and Deep Learning.md"
-              }
+              "state": {}
             }
           },
           {
@@ -141,7 +138,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Neural Networks and Deep Learning.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -158,7 +154,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Neural Networks and Deep Learning.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -192,10 +187,10 @@
       "workspaces:Manage workspace layouts": false
     }
   },
-  "active": "458d294d970888d5",
+  "active": "b4ff4c9b0e471e17",
   "lastOpenFiles": [
+    "Courses/Deep-Learning/Neural Networks and Deep Learning.md",
     "Courses/GPUs Programming/Introduction to Concurrent Programming with GPUs.md",
-    "Neural Networks and Deep Learning.md",
     "Courses/GPUs Programming/GPU Programming Specialization.md",
     "Courses/Deep-Learning/Deep-Learning Specialization.md",
     "Courses/Deep-Learning",
