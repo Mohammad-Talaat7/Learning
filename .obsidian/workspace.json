@@ -11,11 +11,28 @@
             "id": "7723a12e2bb69481",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Courses/GPUs Programming/GPU Programming Specialization.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "c9e99fafd5125a80",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Courses/Deep-Learning/Untitled.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -81,6 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Courses/Deep-Learning/Untitled.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Courses/Deep-Learning/Untitled.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -135,7 +154,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Courses/Deep-Learning/Untitled.md"
+              }
             }
           },
           {
@@ -168,11 +189,13 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "ad35da2405346f98",
+  "active": "b4ff4c9b0e471e17",
   "lastOpenFiles": [
-    "Courses/GPUs Programming/Introduction to Concurrent Programming with GPUs Outline.md",
-    "Courses/GPUs Programming/Introduction to Concurrent Programming with GPUs.md",
     "Courses/GPUs Programming/GPU Programming Specialization.md",
+    "Courses/Deep-Learning/Untitled.md",
+    "Courses/GPUs Programming/Introduction to Concurrent Programming with GPUs.md",
+    "Courses/Deep-Learning",
+    "Courses/GPUs Programming/Introduction to Concurrent Programming with GPUs Outline.md",
     "Courses/GPUs Programming/jn.md",
     "Courses/GPUs Programming",
     "Courses"
