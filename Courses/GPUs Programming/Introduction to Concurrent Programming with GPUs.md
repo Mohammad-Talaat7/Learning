@@ -66,6 +66,7 @@ Many of the solutions fit into these five patterns:
 - the main idea about Divide and Conquer Pattern is to split the large dataset or large process to smaller ones each of them running through a thread and each thread return a response then taking in account all responses we got we may answer the main question
 - Used in Sorting and Searching Algorithms
 - If recursion is not allowed or really inefficient which is the case in CUDA then this shouldn’t been used frequently
+- new line here
 ### Map-Reduce
 ### Repository
 ### Pipelines / Workflows
