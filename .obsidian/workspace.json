@@ -14,20 +14,8 @@
               "type": "graph",
               "state": {}
             }
-          },
-          {
-            "id": "05b383f7be35fa3d",
-            "type": "leaf",
-            "state": {
-              "type": "diff-view",
-              "state": {
-                "file": ".obsidian/plugins/obsidian-git/data.json",
-                "staged": false
-              }
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -147,9 +135,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Courses/GPUs Programming/jn.md"
-              }
+              "state": {}
             }
           },
           {
