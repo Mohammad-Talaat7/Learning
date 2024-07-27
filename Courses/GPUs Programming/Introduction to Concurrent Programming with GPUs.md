@@ -62,7 +62,7 @@ We discussed [[Introduction to Concurrent Programming with GPUs Outline]]
 - If we sync all data we end up having a dead-lock as all the processes will wait for the data and on the other hand the data can’t be reached until the former process end using it
 ## Concurrent Programming Patterns
 Many of the solutions fit into these five patterns:
-### Divide and Conquer 
+### Divide and Conquer
 - the main idea about Divide and Conquer Pattern is to split the large dataset to smaller and smaller datasets each of them running through a thread and each thread return a response then taking in account all responses we got we may answer the main question
 - 
 ### Map-Reduce
