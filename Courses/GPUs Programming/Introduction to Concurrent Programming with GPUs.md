@@ -62,4 +62,8 @@ We discussed [[Introduction to Concurrent Programming with GPUs Outline]]
 - If we sync all data we end up having a dead-lock as all the processes will wait for the data and on the other hand the data can’t be reached until the former process end using it
 ## Concurrent Programming Patterns
 Many of the solutions fit into these five patterns:
-### Devide a
+### Divide and Conquer 
+### Map-Reduce
+### Repository
+### Pipelines / Workflows
+### Recursion
