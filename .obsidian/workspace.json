@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tanh",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -65,12 +65,12 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 374.5
+    "width": 374.5,
+    "collapsed": true
   },
   "right": {
     "id": "e342685a996aaaaa",
@@ -194,13 +194,13 @@
       "workspaces:Manage workspace layouts": false
     }
   },
-  "active": "6bd8608d4cba6c76",
+  "active": "e29adf8ca9da210e",
   "lastOpenFiles": [
+    "IMG_8239.png",
     "assets/IMG_8238.png",
     "Courses/Deep-Learning/Neural Networks and Deep Learning.md",
     "assets/IMG_8237.png",
     "Courses/GPUs Programming/Introduction to Concurrent Programming with GPUs Outline.md",
-    "IMG_8239.png",
     "IMG_8242.png",
     "kaggle.com.md",
     "assets/IMG_8236.png",

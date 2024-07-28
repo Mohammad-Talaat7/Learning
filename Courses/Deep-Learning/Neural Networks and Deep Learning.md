@@ -370,7 +370,7 @@ vectorization
 - If you notice always m is the number of columns.
 - In the last example we can call `X` = `A0`. So the previous step can be rewritten as:
 
-  ```
+  ```python
   Z1 = W1A0 + b1    # shape of Z1 (noOfHiddenNeurons,m)
   A1 = sigmoid(Z1)  # shape of A1 (noOfHiddenNeurons,m)
   Z2 = W2A1 + b2    # shape of Z2 is (1,m)
@@ -414,7 +414,7 @@ vectorization
   - Whatever hidden layers you add, the activation will be always linear like logistic regression (So its useless in a lot of complex problems)
 - You might use linear activation function in one place - in the output layer if the output is real numbers (regression problem). But even in this case if the output value is non-negative you could use RELU instead.
 
-### Derivatives of activation functions
+### Derivatives of activation functions #ImportantMath
 
 - Derivation of Sigmoid activation function:
 
@@ -473,7 +473,7 @@ vectorization
 
 - Forward propagation:
 
-  ```
+  ```python
   Z1 = W1A0 + b1    # A0 is X
   A1 = g1(Z1)
   Z2 = W2A1 + b2
@@ -481,7 +481,7 @@ vectorization
   ```
 
 - Backpropagation (derivations):   
-  ```
+  ```python
   dZ2 = A2 - Y      # derivative of cost function we used * derivative of the sigmoid function
   dW2 = (dZ2 * A1.T) / m
   db2 = Sum(dZ2) / m
@@ -491,7 +491,7 @@ vectorization
   # Hint there are transposes with multiplication because to keep dimensions correct
   ```
 - How we derived the 6 equations of the backpropagation:   
-  ![](https://raw.githubusercontent.com/ashishpatel26/DeepLearning.ai-Summary/master/1-%20Neural%20Networks%20and%20Deep%20Learning/Images//06.png)
+  ![[IMG_8239.png]]
 
 ### Random Initialization
 
@@ -516,7 +516,7 @@ vectorization
 
 > Understand the key computations underlying deep learning, use them to build and train deep neural networks, and apply it to computer vision.
 
-### Deep L-layer neural network
+### Deep L-layer neural network #Notations 
 
 - Shallow NN is a NN with one or two layers.
 - Deep NN is a NN with three or more layers.
