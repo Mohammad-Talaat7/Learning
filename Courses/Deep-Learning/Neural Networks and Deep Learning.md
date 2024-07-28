@@ -93,17 +93,17 @@ vectorization
 
 - Algorithm is used for classification algorithm of 2 classes.
 - Equations:
-  - Simple equation:	`y = wx + b`
-  - If x is a vector: `y = w(transpose)x + b`
-  - If we need y to be in between 0 and 1 (probability): `y = sigmoid(w(transpose)x + b)`
-  - In some notations this might be used: `y = sigmoid(w(transpose)x)` 
-    - While `b` is `w0` of `w` and we add `x0 = 1`. but we won't use this notation in the course (Andrew said that the first notation is better).
-- In binary classification `Y` has to be between `0` and `1`.
-- In the last equation `w` is a vector of `Nx` and `b` is a real number
+  - Simple equation:	$y = wx + b$
+  - If x is a vector:           $y = w^Tx + b$
+  - If we need y to be in between 0 and 1 (probability): $y = sigmoid(w^Tx + b)$
+  - In some notations this might be used: $y = sigmoid(w^Tx)$ 
+    - While $b$ is $w_0$ of $w$ and we add $x_0 = 1$. but we won't use this notation in the course (Andrew said that the first notation is better).
+- In binary classification $Y$ has to be between `0` and `1`.
+- In the last equation $w$ is a vector of $N_x$ and $b$ is a real number
 
 ### Logistic regression cost function
 
-- First loss function would be the square root error:  `L(y',y) = 1/2 (y' - y)^2`
+- First loss function would be the square root error:  $L(y',y) = 1/2 (y' - y)/^2$
   - But we won't use this notation because it leads us to optimization problem which is non convex, means it contains local optimum points.
 - This is the function that we will use: `L(y',y) = - (y*log(y') + (1-y)*log(1-y'))`
 - To explain the last function lets see:
