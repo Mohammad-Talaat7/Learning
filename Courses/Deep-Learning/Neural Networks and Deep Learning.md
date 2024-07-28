@@ -180,7 +180,7 @@ vectorization
   ```
 
 - So we have:
-
+![[IMG_8236.png]]
 
 - Then from right to left we will calculate derivations compared to the result:
 
@@ -194,7 +194,7 @@ vectorization
 
 - From the above we can conclude the logistic regression pseudo code:
 
-  ```
+  ```python
   	J = 0; dw1 = 0; dw2 =0; db = 0;                 # Devs.
   	w1 = 0; w2 = 0; b=0;							# Weights
   	for i = 1 to m
