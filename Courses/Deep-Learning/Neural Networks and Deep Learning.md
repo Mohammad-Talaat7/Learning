@@ -72,14 +72,13 @@ Here are the course summary as its given on the course [link](https://www.course
 ## Neural Networks Basics
 
 > Learn to set up a machine learning problem with a neural network mindset. Learn to use vectorization to speed up your models.
-
+vectorization
 ### Binary classification
 
 - Mainly he is talking about how to do a logistic regression to make a binary classifier.
-  - ![log](https://raw.githubusercontent.com/ashishpatel26/DeepLearning.ai-Summary/master/1-%20Neural%20Networks%20and%20Deep%20Learning/Images//Others/03.png)
-  - Image taken from [3.bp.blogspot.com](http://3.bp.blogspot.com)
+-  ![[IMG_8232.png]]
 - He talked about an example of knowing if the current image contains a cat or not.
-- Here are some notations:
+- Here are some notations: #Notations
   - `M is the number of training vectors`
   - `Nx is the size of the input vector`
   - `Ny is the size of the output vector`
