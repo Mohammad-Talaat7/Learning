@@ -74,4 +74,12 @@ Many of the solutions fit into these five patterns:
 - A pattern that divide the process into number of steps each step get input and its output goes as as input to the next step
 - Workflows works in more circular way (fan in / fan out) means that the same input is an output to different logical steps or data is divided up and sent to the same logical code
 ### Recursion
-- Many conplex problems
+- Many complex problems can be solved via recursive calls which is simply a function that calls it self in the subsequent of its own data 
+- Although it’s not the most efficient solution 
+- Recursion isn’t recommended when you work on large data on local or distributed CPUs also doesn’t work well on GPUs
+- Functional Programming Languages and frameworks like Lisp, Closure are build around some level of recursion and in that case data is divided into head and tail
+- Functions operate on current data and call themselves with the rest
+- Recursion requires a good management to get it to its final state to ensure that the recursive calls will continue in an infinite way
+
+## Flynn’s Taxonomy
+- 
