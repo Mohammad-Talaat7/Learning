@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "0f5729d0bc5a4ebe",
+        "id": "de13b89a6e9aaf10",
         "type": "tabs",
         "children": [
           {
-            "id": "e29adf8ca9da210e",
+            "id": "776f3864b44a8c96",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Courses/Deep-Learning/Neural Networks and Deep Learning.md",
+                "file": "Courses/Deep-Learning/Improving Deep Neural Networks Hyperparameter tuning, Regularization and Optimization.md",
                 "mode": "source",
                 "source": false
               }
@@ -107,7 +107,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Courses/Deep-Learning/Neural Networks and Deep Learning.md"
+                "file": "Courses/Deep-Learning/Improving Deep Neural Networks Hyperparameter tuning, Regularization and Optimization.md"
               }
             }
           },
@@ -143,7 +143,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Courses/Deep-Learning/Neural Networks and Deep Learning.md",
+                "file": "Courses/Deep-Learning/Improving Deep Neural Networks Hyperparameter tuning, Regularization and Optimization.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -160,7 +160,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Courses/Deep-Learning/Neural Networks and Deep Learning.md",
+                "file": "Courses/Deep-Learning/Improving Deep Neural Networks Hyperparameter tuning, Regularization and Optimization.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -194,13 +194,17 @@
       "workspaces:Manage workspace layouts": false
     }
   },
-  "active": "e29adf8ca9da210e",
+  "active": "776f3864b44a8c96",
   "lastOpenFiles": [
-    "IMG_8242.png",
-    "IMG_8240.png",
-    "IMG_8241.png",
-    "IMG_8239.png",
+    "Courses/Deep-Learning/Deep-Learning Specialization.md",
+    "Improving Deep Neural Networks Hyperparameter tuning, Regularization and Optimization.md",
+    "Courses/Deep-Learning/Improving Deep Neural Networks Hyperparameter tuning, Regularization and Optimization.md",
+    "Courses/Deep-Learning/andrewng-p-2-improving-deep-learning-network.md",
+    "assets/IMG_8239.png",
     "Courses/Deep-Learning/Neural Networks and Deep Learning.md",
+    "assets/IMG_8242.png",
+    "assets/IMG_8240.png",
+    "assets/IMG_8241.png",
     "assets/IMG_8238.png",
     "assets/IMG_8237.png",
     "Courses/GPUs Programming/Introduction to Concurrent Programming with GPUs Outline.md",
@@ -210,7 +214,6 @@
     "assets/IMG_8235.png",
     "assets/IMG_8234.png",
     "assets",
-    "Courses/Deep-Learning/Deep-Learning Specialization.md",
     "Courses/Deep-Learning/Neural Networks and Deep Learning notes.md",
     "Courses/Deep-Learning/andrewng-p-5-sequence-models.md",
     "Courses/Deep-Learning/andrewng-p-1-neural-network-deep-learning.md",
