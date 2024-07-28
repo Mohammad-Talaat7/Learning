@@ -82,9 +82,16 @@ Many of the solutions fit into these five patterns:
 - Recursion requires a good management to get it to its final state to ensure that the recursive calls will continue in an infinite way
 
 ## Flynn’s Taxonomy
-- 
-
+- Flynn's Taxonomy classifies all parallel operations into four categories each category start with SI (Singe-Instruction) or MI (Multi-Instruction) and end with SD (Single-Data) or MD (Multi-Data)
 - ![[Pasted image 20240729023825.png]]
+- Single-Instruction and Single-Data
+	- Traditional Von Neumann Single CPU computer
+	- An SISD computing system is a uniprocessor machine which is capable of executing a single instruction, operating on a single data stream
+	- machine instructions are processed in a sequential manner and computers adopting this model are popularly called sequential computers
+	- All the instructions and data to be processed have to be stored in primary memory
+	- /sh
+
+
 
 # Week 3
 ## Python 3 Syntax
