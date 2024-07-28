@@ -571,15 +571,15 @@ vectorization
       - Audio ==> Low level sound features like (sss,bb) ==> Phonemes ==> Words ==> Sentences
 - Neural Researchers think that deep neural networks "think" like brains (simple ==> complex)
 - Circuit theory and deep learning:
-  - /toggle
+  ![[IMG_8240.png]]
 - When starting on an application don't start directly by dozens of hidden layers. Try the simplest solutions (e.g. Logistic Regression), then try the shallow neural network and so on.
 
 ### Building blocks of deep neural networks
 
 - Forward and back propagation for a layer l:
-  - ![Untitled](https://raw.githubusercontent.com/ashishpatel26/DeepLearning.ai-Summary/master/1-%20Neural%20Networks%20and%20Deep%20Learning/Images//10.png)
+  ![[IMG_8241.png]]
 - Deep NN blocks:
-  - ![](https://raw.githubusercontent.com/ashishpatel26/DeepLearning.ai-Summary/master/1-%20Neural%20Networks%20and%20Deep%20Learning/Images//08.png)
+  ![[IMG_8242.png]]
 
 ### Forward and Backward Propagation
 
@@ -609,7 +609,7 @@ vectorization
   dA[L] = (-(y/a) + ((1-y)/(1-a)))
   ```
 
-### Parameters vs Hyperparameters
+### Parameters vs Hyper-parameters
 
 - Main parameters of the NN is `W` and `b`
 - Hyper parameters (parameters that control the algorithm) are like:
