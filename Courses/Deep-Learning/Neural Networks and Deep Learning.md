@@ -332,7 +332,7 @@ vectorization
 ### Computing a Neural Network's Output
 
 - Equations of Hidden layers:
-  - ![](https://raw.githubusercontent.com/ashishpatel26/DeepLearning.ai-Summary/master/1-%20Neural%20Networks%20and%20Deep%20Learning/Images//05.png)
+  ![[IMG_8237.png]]
 - Here are some informations about the last image:
   - `noOfHiddenNeurons = 4`
   - `Nx = 3`
