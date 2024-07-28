@@ -84,6 +84,8 @@ Many of the solutions fit into these five patterns:
 ## Flynn’s Taxonomy
 - 
 
+- ![[Pasted image 20240729023825.png]]
+
 # Week 3
 ## Python 3 Syntax
 ### _ thread / threading libraries 
