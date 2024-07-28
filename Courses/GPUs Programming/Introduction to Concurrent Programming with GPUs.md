@@ -69,6 +69,7 @@ Many of the solutions fit into these five patterns:
 ### Map-Reduce
 - A form of Divide and Conquer Pattern its main idea that for each iteration tha mapper take N data points and split it and then search for the wanted value and the reducer retun a single value (whether we found the desired value or not)
 ### Repository
-- The Reposi
+- The Repository pattern ensures that the Repository is the only role that manages the access to the shared data to allow multiple process to work on the same data atomically
 ### Pipelines / Workflows
+- A pattern 
 ### Recursion
