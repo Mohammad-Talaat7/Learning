@@ -85,4 +85,9 @@ Many of the solutions fit into these five patterns:
 - 
 
 # Week 3
-## Python 
+## Python 3 Syntax
+### _ thread / threading libraries 
+### asyncio library
+### multiprocessing library
+# Week 4
+## Nivida GPU architecture
