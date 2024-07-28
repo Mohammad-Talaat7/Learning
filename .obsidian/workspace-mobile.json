@@ -13,13 +13,22 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Courses/GPUs Programming/Introduction to Concurrent Programming with GPUs.md",
+                "file": "Courses/Deep-Learning/Deep-Learning Specialization.md",
                 "mode": "source",
                 "source": false
               }
             }
+          },
+          {
+            "id": "28be73ba417a55c0",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {}
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -97,7 +106,7 @@
         "state": {
           "type": "backlink",
           "state": {
-            "file": "Courses/GPUs Programming/Introduction to Concurrent Programming with GPUs.md",
+            "file": "Courses/Deep-Learning/Deep-Learning Specialization.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -114,7 +123,7 @@
         "state": {
           "type": "outgoing-link",
           "state": {
-            "file": "Courses/GPUs Programming/Introduction to Concurrent Programming with GPUs.md",
+            "file": "Courses/Deep-Learning/Deep-Learning Specialization.md",
             "linksCollapsed": false,
             "unlinkedCollapsed": true
           }
@@ -126,7 +135,7 @@
         "state": {
           "type": "outline",
           "state": {
-            "file": "Courses/GPUs Programming/Introduction to Concurrent Programming with GPUs.md"
+            "file": "Courses/Deep-Learning/Deep-Learning Specialization.md"
           }
         }
       },
@@ -151,6 +160,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "workspaces:Manage workspace layouts": false,
       "markdown-importer:Open format converter": false,
       "audio-recorder:Start/stop recording": false,
       "switcher:Open quick switcher": false,
@@ -161,10 +171,30 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "753d2197df1df1a3",
+  "active": "28be73ba417a55c0",
   "lastOpenFiles": [
-    "/Courses/GPUs Programming/Introduction to Concurrent Programming with GPUs.md",
+    "Courses/Deep-Learning/Deep-Learning Specialization.md",
     "Courses/GPUs Programming/Introduction to Concurrent Programming with GPUs.md",
+    "Courses/Deep-Learning/Improving Deep Neural Networks Hyperparameter tuning, Regularization and Optimization.md",
+    "Courses/Deep-Learning",
+    "assets/IMG_8229.jpg",
+    "assets/IMG_8238.png",
+    "assets/IMG_8235.png",
+    "assets/IMG_8232.png",
+    "assets/IMG_8240.png",
+    "assets",
+    "assets/IMG_8231.png",
+    "Courses/Deep-Learning/Neural Networks and Deep Learning.md",
+    "assets/IMG_8234.png",
+    "assets/IMG_8237.png",
+    "assets/IMG_8242.png",
+    "assets/IMG_8230.png",
+    "/Courses/GPUs Programming/Introduction to Concurrent Programming with GPUs.md",
+    "/Courses/Deep-Learning/Neural Networks and Deep Learning.md",
+    "/Courses/Deep-Learning/Improving Deep Neural Networks Hyperparameter tuning, Regularization and Optimization.md",
+    "/Courses/Deep-Learning/Deep-Learning Specialization.md",
+    "/assets",
+    "/Courses/Deep-Learning",
     "Courses/GPUs Programming/GPU Programming Specialization.md",
     "Courses/GPUs Programming",
     "Courses",
