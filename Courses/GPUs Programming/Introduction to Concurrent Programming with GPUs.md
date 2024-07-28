@@ -83,3 +83,6 @@ Many of the solutions fit into these five patterns:
 
 ## Flynn’s Taxonomy
 - 
+
+# Week 3
+## Python 
