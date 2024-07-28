@@ -71,5 +71,7 @@ Many of the solutions fit into these five patterns:
 ### Repository
 - The Repository pattern ensures that the Repository is the only role that manages the access to the shared data to allow multiple process to work on the same data atomically
 ### Pipelines / Workflows
-- A pattern 
+- A pattern that divide the process into number of steps each step get input and its output goes as as input to the next step
+- Workflows works in more circular way (fan in / fan out) means that the same input is an output to different logical steps or data is divided up and sent to the same logical code
 ### Recursion
+- Many conplex problems
