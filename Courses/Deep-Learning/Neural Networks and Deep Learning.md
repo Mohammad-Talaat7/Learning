@@ -350,7 +350,7 @@ vectorization
 
 - Pseudo code for forward propagation for the 2 layers NN:
 
-  ```
+  ```python
   for i = 1 to m
     z[1, i] = W1*x[i] + b1      # shape of z[1, i] is (noOfHiddenNeurons,1)
     a[1, i] = sigmoid(z[1, i])  # shape of a[1, i] is (noOfHiddenNeurons,1)
@@ -360,7 +360,7 @@ vectorization
 
 - Lets say we have `X` on shape `(Nx,m)`. So the new pseudo code:
 
-  ```
+  ```python
   Z1 = W1X + b1     # shape of Z1 (noOfHiddenNeurons,m)
   A1 = sigmoid(Z1)  # shape of A1 (noOfHiddenNeurons,m)
   Z2 = W2A1 + b2    # shape of Z2 is (1,m)
@@ -390,7 +390,7 @@ vectorization
     Or
     `A = np.tanh(z)   # Where z is the input matrix`
     
-    ![image](https://user-images.githubusercontent.com/40623310/135577475-0b0fa892-4fb2-41f0-98bd-c382c8d46621.png)
+    ![[IMG_8238.png]]
 
 - It turns out that the tanh activation usually works better than sigmoid activation function for hidden units because the mean of its output is closer to zero, and so it centers the data better for the next layer.
 - Sigmoid or Tanh function disadvantage is that if the input is too small or too high, the slope will be near zero which will cause us the gradient decent problem.
