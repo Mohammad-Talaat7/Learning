@@ -163,9 +163,8 @@ vectorization
 
 ### Logistic Regression Gradient Descent
 
-- In the video he discussed the derivatives of gradient decent example for one sample with two features `x1` and `x2`.
-  - ![](https://raw.githubusercontent.com/ashishpatel26/DeepLearning.ai-Summary/master/1-%20Neural%20Networks%20and%20Deep%20Learning/Images//04.png)
-
+- In the video he discussed the derivatives of gradient decent example for one sample with two features $x_1$ and $x_2$
+- ![[IMG_8235.png]] 
 ### Gradient Descent on m Examples
 
 - Lets say we have these variables:
@@ -181,7 +180,7 @@ vectorization
   ```
 
 - So we have:
-  ![](https://raw.githubusercontent.com/ashishpatel26/DeepLearning.ai-Summary/master/1-%20Neural%20Networks%20and%20Deep%20Learning/Images//09.png)
+
 
 - Then from right to left we will calculate derivations compared to the result:
 
