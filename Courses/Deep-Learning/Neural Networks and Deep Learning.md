@@ -103,13 +103,13 @@ vectorization
 
 ### Logistic regression cost function
 
-- First loss function would be the square root error:  $L(y',y) = 1/2 (y' - y)/^2$
+- First loss function would be the square root error:  $L(y',y) = 1/2 (y' - y)\textasciicircum 2$
   - But we won't use this notation because it leads us to optimization problem which is non convex, means it contains local optimum points.
-- This is the function that we will use: `L(y',y) = - (y*log(y') + (1-y)*log(1-y'))`
+- This is the function that we will use: $L(y',y) = - (y*log(y') + (1-y)*log(1-y'))$
 - To explain the last function lets see:
   - if `y = 1` ==> `L(y',1) = -log(y')`  ==> we want `y'` to be the largest   ==> `y`' biggest value is 1
   - if `y = 0` ==> `L(y',0) = -log(1-y')` ==> we want `1-y'` to be the largest ==> `y'` to be smaller as possible because it can only has 1 value.
-- Then the Cost function will be: `J(w,b) = (1/m) * Sum(L(y'[i],y[i]))`
+- Then the Cost function will be: $J(w,b) = (1/m) * \sum ^m_{i=0}(L(y'[i],y[i]))$
 - The loss function computes the error for a single training example; the cost function is the average of the loss functions of the entire training set.
 
 ### Gradient Descent
@@ -125,7 +125,7 @@ vectorization
 
 
 - The actual equations we will implement:
-  - `w = w - alpha * d(J(w,b) / dw)`        (how much the function slopes in the w direction)
+  - $w = w - alpha * d(J(w,b) / dw)$        (how much the function slopes in the w direction)
   - `b = b - alpha * d(J(w,b) / db)`        (how much the function slopes in the d direction)
 
 ### Derivatives
