@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Courses/Deep-Learning/Improving Deep Neural Networks Hyperparameter tuning, Regularization and Optimization.md",
+                "file": "Courses/GPUs Programming/Introduction to Concurrent Programming with GPUs.md",
                 "mode": "source",
                 "source": false
               }
@@ -107,7 +107,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Courses/Deep-Learning/Improving Deep Neural Networks Hyperparameter tuning, Regularization and Optimization.md"
+                "file": "Courses/GPUs Programming/Introduction to Concurrent Programming with GPUs.md"
               }
             }
           },
@@ -143,7 +143,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Courses/Deep-Learning/Improving Deep Neural Networks Hyperparameter tuning, Regularization and Optimization.md",
+                "file": "Courses/GPUs Programming/Introduction to Concurrent Programming with GPUs.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -160,7 +160,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Courses/Deep-Learning/Improving Deep Neural Networks Hyperparameter tuning, Regularization and Optimization.md",
+                "file": "Courses/GPUs Programming/Introduction to Concurrent Programming with GPUs.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -194,11 +194,11 @@
       "workspaces:Manage workspace layouts": false
     }
   },
-  "active": "776f3864b44a8c96",
+  "active": "b4ff4c9b0e471e17",
   "lastOpenFiles": [
+    "Courses/Deep-Learning/Improving Deep Neural Networks Hyperparameter tuning, Regularization and Optimization.md",
     "Courses/Deep-Learning/Deep-Learning Specialization.md",
     "Improving Deep Neural Networks Hyperparameter tuning, Regularization and Optimization.md",
-    "Courses/Deep-Learning/Improving Deep Neural Networks Hyperparameter tuning, Regularization and Optimization.md",
     "Courses/Deep-Learning/andrewng-p-2-improving-deep-learning-network.md",
     "assets/IMG_8239.png",
     "Courses/Deep-Learning/Neural Networks and Deep Learning.md",
