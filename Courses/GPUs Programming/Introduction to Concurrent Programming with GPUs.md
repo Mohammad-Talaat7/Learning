@@ -91,3 +91,21 @@ Many of the solutions fit into these five patterns:
 ### multiprocessing library
 # Week 4
 ## Nivida GPU architecture
+### Tesla
+- produced 2007-2011
+- CUDA framework
+- Tesla G80 specifics:
+	- 128 CUDA cores
+	- 1280 MB of GDDR5 memory
+	- 152 GB/s memory bandwidth
+	- 150 watts
+### Fermi
+- Produced 2010-2012
+- Introduction of 64bit floating point values
+- Fermi specifics:
+	- 512 CUDA cores
+	- 2 GB of GDDR5 memory 
+	- 192 GB/s memory bandwidth 
+	- 210 watts
+### Kepler
+- Produced 2012-2016
