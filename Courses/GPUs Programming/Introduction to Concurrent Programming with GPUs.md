@@ -109,3 +109,9 @@ Many of the solutions fit into these five patterns:
 	- 210 watts
 ### Kepler
 - Produced 2012-2016
+- Improved programmability
+- GTX 760 Specifics
+	- 1152 CUDA cores
+	- 4 GB of GDDR5 memory 
+	- 80 GB/s memory bandwidth 
+	- 170 watts
