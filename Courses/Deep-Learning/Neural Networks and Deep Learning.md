@@ -125,8 +125,8 @@ vectorization
 
 
 - The actual equations we will implement:
-  - $w = w - alpha * d(J(w,b) / dw)$        (how much the function slopes in the w direction)
-  - `b = b - alpha * d(J(w,b) / db)`        (how much the function slopes in the d direction)
+  - $w = w - alpha * d(J(w,b) / d_w)$    (how much the function slopes in the w direction)
+  - $b = b - alpha * d(J(w,b) / d_b)$       (how much the function slopes in the b direction)
 
 ### Derivatives
 
@@ -144,12 +144,12 @@ vectorization
   - `a = 2.0001` ==> `f(a) = 4.0004` approx.
 - `f(a) = a^3`  ==> `d(f(a))/d(a) = 3a^2`
 - `f(a) = log(a)`  ==> `d(f(a))/d(a) = 1/a`
-- To conclude, Derivative is the slope and slope is different in different points in the function thats why the derivative is a function.
+- To conclude, Derivative is the slope and slope is different in different points in the function that's why the derivative is a function.
 
 ### Computation graph
 
 - Its a graph that organizes the computation from left to right.
-  - ![](https://raw.githubusercontent.com/ashishpatel26/DeepLearning.ai-Summary/master/1-%20Neural%20Networks%20and%20Deep%20Learning/Images//02.png)
+  ![[IMG_8233.png]]
 
 ### Derivatives with a Computation Graph
 
@@ -157,7 +157,7 @@ vectorization
   If `x -> y -> z`          (x effect y and y effects z)
   Then `d(z)/d(x) = d(z)/d(y) * d(y)/d(x)`
 - The video illustrates a big example.
-  - ![](https://raw.githubusercontent.com/ashishpatel26/DeepLearning.ai-Summary/master/1-%20Neural%20Networks%20and%20Deep%20Learning/Images//03.png)
+  ![[IMG_8234.png]]
 - We compute the derivatives on a graph from right to left and it will be a lot more easier.
 - `dvar` means the derivatives of a final output variable with respect to various intermediate quantities.
 
