@@ -54,4 +54,4 @@ print(results[:10])
 - The general way to Parallelize any operation is to take a particular function that should run multiple times and make it run parallelly in different processors
 - To do this we initialize a `Pool` with n number of processors and pass the function you want to parallelize to one of `Pool` parallelization methods
 - the `Pool` class offer `Pool.map()` , `Pool.starmap()`, and `Pool.apply()`methods to execute the function in __Synchronous__ theme and `Pool.map_async()`, `Pool.starmap_async()`, and `Pool.apply_async()` methods to execute the function in __Asynchronous__ theme 
-- 
+- Both `Pool.`
