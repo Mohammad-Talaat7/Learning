@@ -75,4 +75,43 @@ print(results[:10])
 #> [3, 1, 4, 4, 4, 2, 1, 1, 3, 3]
 ```
 ### Parallel Programming using `Pool.map()`
-- as we mentioned `Pool.map()` 
+- as we mentioned `Pool.map()` qccepts only one iterable as an argument so we gonna modify our function by giving it default values
+```python
+# Parallelizing using Pool.map()
+import multiprocessing as mp
+
+# Redefine, with only 1 mandatory argument.
+def howmany_within_range_rowonly(row, minimum=4, maximum=8):
+    count = 0
+    for n in row:
+        if minimum <= n <= maximum:
+            count = count + 1
+    return count
+
+pool = mp.Pool(mp.cpu_count())
+
+results = pool.map(howmany_within_range_rowonly, [row for row in data])
+
+pool.close()
+
+print(results[:10])
+#> [3, 1, 4, 4, 4, 2, 1, 1, 3, 3]
+```
+### Parallel Programming using `Pool.starmap()`
+- In pervious example we had to modify our function by giving it default values due to `Pool.map()`accepting only one iterable as parameter
+- Using `Pool.starmap()`we can avoid this as it also accepts one iterable as parameter but each element in that iterable is also an iterable 
+- We can provide function’s arguments is the same order in this inner iterable element, will in turn be unpacked during execution 
+- In simpler words `Pool.starmap()`is a variation of `Pool.map()`that accepts argument
+```python
+# Parallelizing with Pool.starmap()
+import multiprocessing as mp
+
+pool = mp.Pool(mp.cpu_count())
+
+results = pool.starmap(howmany_within_range, [(row, 4, 8) for row in data])
+
+pool.close()
+
+print(results[:10])
+#> [3, 1, 4, 4, 4, 2, 1, 1, 3, 3]
+```
