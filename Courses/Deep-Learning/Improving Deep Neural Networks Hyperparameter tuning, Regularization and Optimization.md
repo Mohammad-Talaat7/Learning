@@ -72,17 +72,14 @@ Here are the course summary as its given on the course [link](https://www.course
   - Try regularization.
   - Try a different model that is suitable for your data.
 - You should try the previous two points until you have a low bias and low variance.
-- In the older days before deep learning, there was a "Bias/variance tradeoff". But because now you have more options/tools for solving the bias and variance problem its really helpful to use deep learning.
+- In the older days before deep learning, there was a "Bias/variance trade-off". But because now you have more options/tools for solving the bias and variance problem its really helpful to use deep learning.
 - Training a bigger neural network never hurts.
 
 ### Regularization
 
-- Adding regularization to NN will help it reduce variance (overfitting)
-- L1 matrix norm:
-  
-  - `||W|| = Sum(|w[i,j]|)  # sum of absolute values of all w`
-- L2 matrix norm because of arcane technical math reasons is called Frobenius norm:
-  - `||W||^2 = Sum(|w[i,j]|^2)	# sum of all w squared`
+- Adding regularization to NN will help it reduce variance (over-fitting)
+- L1 matrix norm: `||W|| = Sum(|w[i,j]|)  # sum of absolute values of all w`
+- L2 matrix norm because of arcane technical math reasons is called Frobenius norm:`||W||^2 = Sum(|w[i,j]|^2)	# sum of all w squared`
   - Also can be calculated as `||W||^2 = W.T * W`
 - Regularization for logistic regression:
   - The normal cost function that we want to minimize is: `J(w,b) = (1/m) * Sum(L(y(i),y'(i)))`
@@ -107,14 +104,12 @@ Here are the course summary as its given on the course [link](https://www.course
     `dw[l] = (from back propagation) + lambda/m * w[l]`
 
   - So plugging it in weight update step:
-
-    - ```
-      w[l] = w[l] - learning_rate * dw[l]
-           = w[l] - learning_rate * ((from back propagation) + lambda/m * w[l])
-           = w[l] - (learning_rate*lambda/m) * w[l] - learning_rate * (from back propagation) 
-           = (1 - (learning_rate*lambda)/m) * w[l] - learning_rate * (from back propagation)
-      ```
-
+  ```
+  w[l] = w[l] - learning_rate * dw[l]
+  = w[l] - learning_rate * ((from back propagation) + lambda/m * w[l])
+  = w[l] - (learning_rate*lambda/m) * w[l] - learning_rate * (from back propagation) 
+  = (1 - (learning_rate*lambda)/m) * w[l] - learning_rate * (from back propagation)
+  '''
   - In practice this penalizes large weights and effectively limits the freedom in your model.
 
   - The new term `(1 - (learning_rate*lambda)/m) * w[l]`  causes the **weight to decay** in proportion to its size.
