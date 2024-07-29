@@ -160,19 +160,25 @@ results_final = [r for i, r in results]
 print(results_final[:10])
 #> [3, 1, 4, 4, 4, 2, 1, 1, 3, 3]
 ```
-- 
-# Step 3: Use loop to parallelize
-for i, row in enumerate(data):
-    pool.apply_async(howmany_within_range2, args=(i, row, 4, 8), callback=collect_result)
+- It is possible to use `apply_async()`without providing a `callback`function.
+- Only that, if you don’t provide a callback, then you get a list of `pool.ApplyResult` objects which contains the computed output values from each process.
+- From this, you need to use the `pool.ApplyResult.get()` method to retrieve the desired final result.
+```python
+# Parallel processing with Pool.apply_async() without callback function
 
-# Step 4: Close Pool and let all the processes complete    
+import multiprocessing as mp
+pool = mp.Pool(mp.cpu_count())
+
+results = []
+
+# call apply_async() without callback
+result_objects = [pool.apply_async(howmany_within_range2, args=(i, row, 4, 8)) for i, row in enumerate(data)]
+
+# result_objects is a list of pool.ApplyResult objects
+results = [r.get()[1] for r in result_objects]
+
 pool.close()
-pool.join()  # postpones the execution of next line of code until all processes in the queue are done.
-
-# Step 5: Sort results [OPTIONAL]
-results.sort(key=lambda x: x[0])
-results_final = [r for i, r in results]
-
-print(results_final[:10])
+pool.join()
+print(results[:10])
 #> [3, 1, 4, 4, 4, 2, 1, 1, 3, 3]
 ```
