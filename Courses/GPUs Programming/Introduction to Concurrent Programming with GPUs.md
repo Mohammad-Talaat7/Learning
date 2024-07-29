@@ -148,4 +148,5 @@ Many of the solutions fit into these five patterns:
 	- 384 GB/s memory bandwidth 
 	- 115 watts
 ## CUDA Software Layers
-- Our CUDA application can communicate with 
+- Our CUDA application can communicate with either the CUDA runtime API layer (NVCC) or the driver API directly 
+- If you have chosen to use the higher level CUDA runtime API it can imped the GPU code (in .ptx or .cubin extention  )
