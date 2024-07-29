@@ -110,9 +110,9 @@ Many of the solutions fit into these five patterns:
     - Unlike SIMD and MISD machines, PEs in MIMD machines work asynchronously
 # Week 3
 ## Python 3 Syntax
-### _ thread / threading libraries 
-### asyncio library
-### multiprocessing library
+- _ thread / threading libraries 
+- asyncio library
+- multiprocessing library [[Using Multiprocessing library to parallel computing in python]]
 # Week 4
 ## Nivida GPU architecture
 ### Tesla
