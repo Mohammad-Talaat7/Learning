@@ -20,6 +20,18 @@
             }
           },
           {
+            "id": "82d661bf6c9e4fb1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Using Multiprocessing library to parallel computing in python.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
             "id": "28be73ba417a55c0",
             "type": "leaf",
             "state": {
@@ -27,7 +39,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -170,13 +183,14 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "9db92a668b29b306",
+  "active": "82d661bf6c9e4fb1",
   "lastOpenFiles": [
+    "Untitled.md",
+    "Using Multiprocessing library to parallel computing in python.md",
     "Courses/GPUs Programming/Introduction to Concurrent Programming with GPUs.md",
     "assets/IMG_8250.png",
     "assets/IMG_8249.png",
     "assets/Pasted image 20240729023825.png",
-    "Using Multiprocessing library to parallel computing in python.md",
     "/Courses/Deep-Learning/Improving Deep Neural Networks Hyperparameter tuning, Regularization and Optimization.md",
     "/Using Multiprocessing library to parallel computing in python.md",
     "/assets/Pasted image 20240729023825.png",

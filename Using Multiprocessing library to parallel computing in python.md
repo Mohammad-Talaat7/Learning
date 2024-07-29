@@ -182,4 +182,67 @@ pool.join()
 print(results[:10])
 #> [3, 1, 4, 4, 4, 2, 1, 1, 3, 3]
 ```
-- 
+- Implementation using `Pool.starmap_async()`
+```python
+# Parallelizing with Pool.starmap_async()
+
+import multiprocessing as mp
+pool = mp.Pool(mp.cpu_count())
+
+results = []
+
+results = pool.starmap_async(howmany_within_range2, [(i, row, 4, 8) for i, row in enumerate(data)]).get()
+
+# With map, use `howmany_within_range_rowonly` instead
+# results = pool.map_async(howmany_within_range_rowonly, [row for row in data]).get()
+
+pool.close()
+print(results[:10])
+#> [3, 1, 4, 4, 4, 2, 1, 1, 3, 3]
+```
+## Parallize Pandas Implementation
+- First, lets create a sample dataframe and see how to do row-wise and column-wise paralleization.
+- Something like using `pd.apply()`on a user defined function but in parallel.
+```python
+import numpy as np
+import pandas as pd
+import multiprocessing as mp
+
+df = pd.DataFrame(np.random.randint(3, 10, size=[5, 2]))
+print(df.head())
+#>    0  1
+#> 0  8  5
+#> 1  5  3
+#> 2  3  4
+#> 3  4  4
+#> 4  7  9
+```
+- We have a dataframe. Let’s apply the `hypotenuse` function on each row, but running 4 processes at a time
+- To do this, we exploit the `df.itertuples(name=False)`.
+- By setting `name=False`, you are passing each row of the dataframe as a simple tuple to the `hypotenuse` function.
+```python
+# Row wise Operation
+def hypotenuse(row):
+    return round(row[1]**2 + row[2]**2, 2)**0.5
+
+with mp.Pool(4) as pool:
+    result = pool.imap(hypotenuse, df.itertuples(name=False), chunksize=10)
+    output = [round(x, 2) for x in result]
+
+print(output)
+#> [9.43, 5.83, 5.0, 5.66, 11.4]
+```
+- That was an example of row-wise parallelization.
+- Let’s also do a column-wise parallelization.
+```python
+# Column wise Operation
+def sum_of_squares(column):
+    return sum([i**2 for i in column[1]])
+
+with mp.Pool(2) as pool:
+    result = pool.imap(sum_of_squares, df.iteritems(), chunksize=10)
+    output = [x for x in result]
+
+print(output) 
+#> [163, 147]
+```
