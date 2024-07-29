@@ -104,18 +104,18 @@ Here are the course summary as its given on the course [link](https://www.course
     `dw[l] = (from back propagation) + lambda/m * w[l]`
 
   - So plugging it in weight update step:
-  ```
+  ```python
   w[l] = w[l] - learning_rate * dw[l]
   = w[l] - learning_rate * ((from back propagation) + lambda/m * w[l])
   = w[l] - (learning_rate*lambda/m) * w[l] - learning_rate * (from back propagation) 
   = (1 - (learning_rate*lambda)/m) * w[l] - learning_rate * (from back propagation)
-  '''
+  ```
   - In practice this penalizes large weights and effectively limits the freedom in your model.
 
   - The new term `(1 - (learning_rate*lambda)/m) * w[l]`  causes the **weight to decay** in proportion to its size.
 
 
-### Why regularization reduces overfitting?
+### Why regularization reduces over-fitting?
 
 Here are some intuitions:
   - Intuition 1:
