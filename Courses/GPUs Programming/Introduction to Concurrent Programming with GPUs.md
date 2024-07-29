@@ -89,7 +89,17 @@ Many of the solutions fit into these five patterns:
 	- An SISD computing system is a uniprocessor machine which is capable of executing a single instruction, operating on a single data stream
 	- machine instructions are processed in a sequential manner and computers adopting this model are popularly called sequential computers
 	- All the instructions and data to be processed have to be stored in primary memory
-	- /sh
+	- The speed of the processing element in the SISD model is limited(dependent) by the rate at which the computer can transfer information internally
+	- Dominant representative SISD systems are IBM PC, workstations.
+- Single-Instruction and Multi-Data
+	- Vector Processors fine-grained data Parallel Computers
+	- An SIMD system is a multiprocessor machine capable of executing the same instruction on all the CPUs but operating on different data streams
+	- Machines based on an SIMD model are well suited to scientific computing since they involve lots of vector and matrix operations
+	- So that the information can be passed to all the processing elements (PEs) organized data elements of vectors can be divided into multiple sets(N-sets for N PE systems) and each PE can process one data set.
+	- Dominant representative SIMD systems is Cray’s vector processing machine
+- Multi-Instruction and Single-Data
+	- Maybe pipelined Computers
+	-  
 
 
 
