@@ -18,7 +18,7 @@ print("Number of Processors: ", mp.cpu_count())
 ## What is Synchronous and Asynchronous execution?
 - In the field of parallel computing there are two categories of executing program's processes:
 	- first of all the __Synchronous__ execution when we use it we lock critical parts of code from the main program means that the rest of processes can't access the shared variables until the __Synchronous__ process finish
-	- second of all the __Asynchronous__ execution when we use it we set no locks the program runs and finish all the process when he can as a result the order of results can mixed up but usually finish faster
+	- second of all the __Asynchronous__ execution when we use it we set no locks the program runs and finish all the process when it can as a result the order of results can mixed up but usually finish faster
 ## Python Implementation
 ### Problem Statement: Count how many numbers exist between a given range in each row?
 - The first problem is: Given a 2D matrix (or list of lists), count how many numbers are present between a given range in each row. We will work on the list prepared below.
@@ -113,5 +113,66 @@ results = pool.starmap(howmany_within_range, [(row, 4, 8) for row in data])
 pool.close()
 
 print(results[:10])
+#> [3, 1, 4, 4, 4, 2, 1, 1, 3, 3]
+```
+### Asynchronous Parallel Processing
+- The asynchronous equivalents `apply_async()`, `map_async()`and `starmap_async()` lets you do execute the processes in parallel asynchronously, that is the next process can start as soon as previous one gets over without regard for the starting order.
+- As a result, there is no guarantee that the result will be in the same order as the input.
+- `apply_async()` is very similar to `apply()` except that you need to provide a callback function that tells how the computed results should be stored.
+- However, a caveat with `apply_async()` is, the order of numbers in the result gets jumbled up indicating the processes did not complete in the order it was started.
+- A workaround for this is, we redefine a new `howmany_within_range2()` to accept and return the iteration number (`i`) as well and then sort the final results.
+```python
+# Parallel processing with Pool.apply_async()
+
+import multiprocessing as mp
+pool = mp.Pool(mp.cpu_count())
+
+results = []
+
+# Step 1: Redefine, to accept `i`, the iteration number
+def howmany_within_range2(i, row, minimum, maximum):
+    """Returns how many numbers lie within `maximum` and `minimum` in a given `row`"""
+    count = 0
+    for n in row:
+        if minimum <= n <= maximum:
+            count = count + 1
+    return (i, count)
+
+
+# Step 2: Define callback function to collect the output in `results`
+def collect_result(result):
+    global results
+    results.append(result)
+
+
+# Step 3: Use loop to parallelize
+for i, row in enumerate(data):
+    pool.apply_async(howmany_within_range2, args=(i, row, 4, 8), callback=collect_result)
+
+# Step 4: Close Pool and let all the processes complete    
+pool.close()
+pool.join()  # postpones the execution of next line of code until all processes in the queue are done.
+
+# Step 5: Sort results [OPTIONAL]
+results.sort(key=lambda x: x[0])
+results_final = [r for i, r in results]
+
+print(results_final[:10])
+#> [3, 1, 4, 4, 4, 2, 1, 1, 3, 3]
+```
+- 
+# Step 3: Use loop to parallelize
+for i, row in enumerate(data):
+    pool.apply_async(howmany_within_range2, args=(i, row, 4, 8), callback=collect_result)
+
+# Step 4: Close Pool and let all the processes complete    
+pool.close()
+pool.join()  # postpones the execution of next line of code until all processes in the queue are done.
+
+# Step 5: Sort results [OPTIONAL]
+results.sort(key=lambda x: x[0])
+results_final = [r for i, r in results]
+
+print(results_final[:10])
 #> [3, 1, 4, 4, 4, 2, 1, 1, 3, 3]
 ```
