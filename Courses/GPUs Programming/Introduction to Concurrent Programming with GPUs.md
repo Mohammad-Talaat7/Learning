@@ -174,5 +174,7 @@ Many of the solutions fit into these five patterns:
 	- 115 watts
 ## CUDA Software Layers
 - Our CUDA application can communicate with either the CUDA runtime API layer (NVCC) or the driver API directly 
+![[lt46q7vNR2-eOqu7zbdv8Q_eed25abbc36e4a4da116d131d4781b86_Lesson5_CUDA_Software_Layers-readonly.png]]
 - If you have chosen to use the higher level CUDA runtime API it can imped the GPU code (in .ptx or .cubin extension)into the host code to do this we need to compile both types of codes via NVCC command and once done they can interoperate we still need to use a host oriented compiler like GCC or G++ which wore output in the executable thankfully via the NVCC command
 - If you are targeting the driver API you have to compile the GPU code (.ptx-.fatbin) and the CPU code (host code) separately then have the host-executable interact with the GPU via the driver API
+![[lt46q7vNR2-eOqu7zbdv8Q_eed25abbc36e4a4da116d131d4781b86_Lلللesson5_CUDA_Software_Layers-readonly.png]]

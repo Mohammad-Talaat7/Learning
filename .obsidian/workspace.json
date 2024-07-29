@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "de13b89a6e9aaf10",
+        "id": "48e1ec23b1a90c87",
         "type": "tabs",
         "children": [
           {
-            "id": "776f3864b44a8c96",
+            "id": "97bf3a6704c77d90",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -194,19 +194,19 @@
       "workspaces:Manage workspace layouts": false
     }
   },
-  "active": "ad35da2405346f98",
+  "active": "97bf3a6704c77d90",
   "lastOpenFiles": [
-    "conflict-files-obsidian-git.md",
-    "Courses/GPUs Programming/Introduction to Concurrent Programming with GPUs.md",
-    "lt46q7vNR2-eOqu7zbdv8Q_eed25abbc36e4a4da116d131d4781b86_Lلللesson5_CUDA_Software_Layers-readonly.png",
     "lt46q7vNR2-eOqu7zbdv8Q_eed25abbc36e4a4da116d131d4781b86_Lesson5_CUDA_Software_Layers-readonly.png",
+    "assets/IMG_8250.png",
     "assets/Pasted image 20240729023825.png",
+    "lt46q7vNR2-eOqu7zbdv8Q_eed25abbc36e4a4da116d131d4781b86_Lلللesson5_CUDA_Software_Layers-readonly.png",
+    "Courses/GPUs Programming/Introduction to Concurrent Programming with GPUs.md",
+    "conflict-files-obsidian-git.md",
     "Using Multiprocessing library to parallel computing in python.md",
     "Articles/Using Multiprocessing library to parallel computing in python.md",
     "Articles",
     "assets/IMG_8249.png",
     "Courses/Deep-Learning/Improving Deep Neural Networks Hyperparameter tuning, Regularization and Optimization.md",
-    "assets/IMG_8250.png",
     "Courses/Deep-Learning/Deep-Learning Specialization.md",
     "Improving Deep Neural Networks Hyperparameter tuning, Regularization and Optimization.md",
     "Courses/Deep-Learning/andrewng-p-2-improving-deep-learning-network.md",
