@@ -115,3 +115,23 @@ Many of the solutions fit into these five patterns:
 	- 4 GB of GDDR5 memory 
 	- 80 GB/s memory bandwidth 
 	- 170 watts
+### Maxwell
+- Produced 2014-2016
+- Improved Performance/W
+- GTX 980 Specifics
+	- 2048 CUDA cores
+	- 4 GB of GDDR5 memory
+	- 224 GB/s memory bandwidth
+	- 165 watts
+## Pascal
+- Produced 2016-2018
+- Unified Memory and NVLink
+- GTX 1080 Specifics
+	- 2560 CUDA cores
+	- 8 GB of GDDR5 memory
+	- 320 GB/s memory bandwidth
+	- 180 watts
+### Turing
+- Produced 2018-2020
+- Tensor and Ray Tracing Cores
+- Geforce 
