@@ -120,7 +120,7 @@ Here are the course summary as its given on the course [link](https://www.course
 Here are some intuitions:
   - Intuition 1:
      - If `lambda` is too large - a lot of w's will be close to zeros which will make the NN simpler (you can think of it as it would behave closer to logistic regression).
-     - If `lambda` is good enough it will just reduce some weights that makes the neural network overfit.
+     - If `lambda` is good enough it will just reduce some weights that makes the neural network over-fit.
   - Intuition 2 (with _tanh_ activation function):
      - If `lambda` is too large, w's will be small (close to zero) - will use the linear part of the _tanh_ activation function, so we will go from non linear activation to _roughly_ linear which would make the NN a _roughly_ linear classifier.
      - If `lambda` good enough it will just make some of _tanh_ activations _roughly_ linear which will prevent overfitting.
