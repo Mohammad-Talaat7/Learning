@@ -40,13 +40,13 @@ Here are the course summary as its given on the course [link](https://www.course
 
 - Bias / Variance techniques are Easy to learn, but difficult to master.
 - So here the explanation of Bias / Variance:
-  - If your model is underfitting (logistic regression of non linear data) it has a "high bias"
-  - If your model is overfitting then it has a "high variance"
+  - If your model is under-fitting (logistic regression of non linear data) it has a "high bias"
+  - If your model is over-fitting then it has a "high variance"
   - Your model will be alright if you balance the Bias / Variance
   - For more:
-    - ![](https://raw.githubusercontent.com/ashishpatel26/DeepLearning.ai-Summary/master/2-%20Improving%20Deep%20Neural%20Networks/Images//01-_Bias_-_Variance.png)
+    ![[IMG_8249.png]]
 - Another idea to get the bias /  variance if you don't have a 2D plotting mechanism:
-  - High variance (overfitting) for example:
+  - High variance (over-fitting) for example:
     - Training error: 1%
     - Dev error: 11%
   - high Bias (underfitting) for example:
