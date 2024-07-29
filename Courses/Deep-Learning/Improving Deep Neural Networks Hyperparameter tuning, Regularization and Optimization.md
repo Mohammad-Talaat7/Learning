@@ -40,13 +40,13 @@ Here are the course summary as its given on the course [link](https://www.course
 
 - Bias / Variance techniques are Easy to learn, but difficult to master.
 - So here the explanation of Bias / Variance:
-  - If your model is underfitting (logistic regression of non linear data) it has a "high bias"
-  - If your model is overfitting then it has a "high variance"
+  - If your model is under-fitting (logistic regression of non linear data) it has a "high bias"
+  - If your model is over-fitting then it has a "high variance"
   - Your model will be alright if you balance the Bias / Variance
   - For more:
-    - ![](https://raw.githubusercontent.com/ashishpatel26/DeepLearning.ai-Summary/master/2-%20Improving%20Deep%20Neural%20Networks/Images//01-_Bias_-_Variance.png)
+    ![[IMG_8249.png]]
 - Another idea to get the bias /  variance if you don't have a 2D plotting mechanism:
-  - High variance (overfitting) for example:
+  - High variance (over-fitting) for example:
     - Training error: 1%
     - Dev error: 11%
   - high Bias (underfitting) for example:
@@ -72,17 +72,14 @@ Here are the course summary as its given on the course [link](https://www.course
   - Try regularization.
   - Try a different model that is suitable for your data.
 - You should try the previous two points until you have a low bias and low variance.
-- In the older days before deep learning, there was a "Bias/variance tradeoff". But because now you have more options/tools for solving the bias and variance problem its really helpful to use deep learning.
+- In the older days before deep learning, there was a "Bias/variance trade-off". But because now you have more options/tools for solving the bias and variance problem its really helpful to use deep learning.
 - Training a bigger neural network never hurts.
 
 ### Regularization
 
-- Adding regularization to NN will help it reduce variance (overfitting)
-- L1 matrix norm:
-  
-  - `||W|| = Sum(|w[i,j]|)  # sum of absolute values of all w`
-- L2 matrix norm because of arcane technical math reasons is called Frobenius norm:
-  - `||W||^2 = Sum(|w[i,j]|^2)	# sum of all w squared`
+- Adding regularization to NN will help it reduce variance (over-fitting)
+- L1 matrix norm: `||W|| = Sum(|w[i,j]|)  # sum of absolute values of all w`
+- L2 matrix norm because of arcane technical math reasons is called Frobenius norm:`||W||^2 = Sum(|w[i,j]|^2)	# sum of all w squared`
   - Also can be calculated as `||W||^2 = W.T * W`
 - Regularization for logistic regression:
   - The normal cost function that we want to minimize is: `J(w,b) = (1/m) * Sum(L(y(i),y'(i)))`
@@ -107,25 +104,23 @@ Here are the course summary as its given on the course [link](https://www.course
     `dw[l] = (from back propagation) + lambda/m * w[l]`
 
   - So plugging it in weight update step:
-
-    - ```
-      w[l] = w[l] - learning_rate * dw[l]
-           = w[l] - learning_rate * ((from back propagation) + lambda/m * w[l])
-           = w[l] - (learning_rate*lambda/m) * w[l] - learning_rate * (from back propagation) 
-           = (1 - (learning_rate*lambda)/m) * w[l] - learning_rate * (from back propagation)
-      ```
-
+  ```python
+  w[l] = w[l] - learning_rate * dw[l]
+  = w[l] - learning_rate * ((from back propagation) + lambda/m * w[l])
+  = w[l] - (learning_rate*lambda/m) * w[l] - learning_rate * (from back propagation) 
+  = (1 - (learning_rate*lambda)/m) * w[l] - learning_rate * (from back propagation)
+  ```
   - In practice this penalizes large weights and effectively limits the freedom in your model.
 
   - The new term `(1 - (learning_rate*lambda)/m) * w[l]`  causes the **weight to decay** in proportion to its size.
 
 
-### Why regularization reduces overfitting?
+### Why regularization reduces over-fitting?
 
 Here are some intuitions:
   - Intuition 1:
      - If `lambda` is too large - a lot of w's will be close to zeros which will make the NN simpler (you can think of it as it would behave closer to logistic regression).
-     - If `lambda` is good enough it will just reduce some weights that makes the neural network overfit.
+     - If `lambda` is good enough it will just reduce some weights that makes the neural network over-fit.
   - Intuition 2 (with _tanh_ activation function):
      - If `lambda` is too large, w's will be small (close to zero) - will use the linear part of the _tanh_ activation function, so we will go from non linear activation to _roughly_ linear which would make the NN a _roughly_ linear classifier.
      - If `lambda` good enough it will just make some of _tanh_ activations _roughly_ linear which will prevent overfitting.
@@ -180,8 +175,8 @@ _**Implementation tip**_: if you implement gradient descent, one of the steps to
   - In this technique we plot the training set and the dev set cost together for each iteration. At some iteration the dev set cost will stop decreasing and will start increasing.
   - We will pick the point at which the training set error and dev set error are best (lowest training cost with lowest dev cost).
   - We will take these parameters as the best parameters.
-    - ![](https://raw.githubusercontent.com/ashishpatel26/DeepLearning.ai-Summary/master/2-%20Improving%20Deep%20Neural%20Networks/Images//02-_Early_stopping.png)
-  - Andrew prefers to use L2 regularization instead of early stopping because this technique simultaneously tries to minimize the cost function and not to overfit which contradicts the orthogonalization approach (will be discussed further).
+  - ![[IMG_8250.png]]
+  - Andrew prefers to use L2 regularization instead of early stopping because this technique simultaneously tries to minimize the cost function and not to over-fit which contradicts the orthogonalization approach (will be discussed further).
   - But its advantage is that you don't need to search a hyperparameter like in other regularization approaches (like `lambda` in L2 regularization).
 - **Model Ensembles**:
   - Algorithm:

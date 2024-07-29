@@ -13,13 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Courses/Deep-Learning/Improving Deep Neural Networks Hyperparameter tuning, Regularization and Optimization.md",
+                "file": "Courses/GPUs Programming/Introduction to Concurrent Programming with GPUs.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "6b523f292c29e676",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Using Multiprocessing library to parallel computing in python.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -107,7 +120,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Courses/Deep-Learning/Improving Deep Neural Networks Hyperparameter tuning, Regularization and Optimization.md"
+                "file": "Using Multiprocessing library to parallel computing in python.md"
               }
             }
           },
@@ -143,7 +156,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Courses/Deep-Learning/Improving Deep Neural Networks Hyperparameter tuning, Regularization and Optimization.md",
+                "file": "Using Multiprocessing library to parallel computing in python.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -160,7 +173,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Courses/Deep-Learning/Improving Deep Neural Networks Hyperparameter tuning, Regularization and Optimization.md",
+                "file": "Using Multiprocessing library to parallel computing in python.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -194,11 +207,16 @@
       "workspaces:Manage workspace layouts": false
     }
   },
-  "active": "776f3864b44a8c96",
+  "active": "6b523f292c29e676",
   "lastOpenFiles": [
+    "Courses/GPUs Programming/Introduction to Concurrent Programming with GPUs.md",
+    "Using Multiprocessing library to parallel computing in python.md",
+    "assets/IMG_8249.png",
+    "Courses/Deep-Learning/Improving Deep Neural Networks Hyperparameter tuning, Regularization and Optimization.md",
+    "assets/IMG_8250.png",
+    "assets/Pasted image 20240729023825.png",
     "Courses/Deep-Learning/Deep-Learning Specialization.md",
     "Improving Deep Neural Networks Hyperparameter tuning, Regularization and Optimization.md",
-    "Courses/Deep-Learning/Improving Deep Neural Networks Hyperparameter tuning, Regularization and Optimization.md",
     "Courses/Deep-Learning/andrewng-p-2-improving-deep-learning-network.md",
     "assets/IMG_8239.png",
     "Courses/Deep-Learning/Neural Networks and Deep Learning.md",
@@ -210,14 +228,10 @@
     "Courses/GPUs Programming/Introduction to Concurrent Programming with GPUs Outline.md",
     "kaggle.com.md",
     "assets/IMG_8236.png",
-    "IMG_8236 1.png",
-    "assets/IMG_8235.png",
-    "assets/IMG_8234.png",
     "assets",
     "Courses/Deep-Learning/Neural Networks and Deep Learning notes.md",
     "Courses/Deep-Learning/andrewng-p-5-sequence-models.md",
     "Courses/Deep-Learning/andrewng-p-1-neural-network-deep-learning.md",
-    "Courses/GPUs Programming/Introduction to Concurrent Programming with GPUs.md",
     "Courses/GPUs Programming/GPU Programming Specialization.md",
     "Courses/Deep-Learning",
     "Courses/GPUs Programming/jn.md",
