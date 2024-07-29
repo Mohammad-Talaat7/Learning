@@ -82,37 +82,13 @@ Many of the solutions fit into these five patterns:
 - Recursion requires a good management to get it to its final state to ensure that the recursive calls will continue in an infinite way
 
 ## Flynn’s Taxonomy
-- Flynn's Taxonomy classifies all parallel operations into four categories each category start with SI (Singe-Instruction) or MI (Multi-Instruction) and end with SD (Single-Data) or MD (Multi-Data)
-- ![[Pasted image 20240729023825.png]]
-- Single-Instruction and Single-Data
-    - Traditional Von Neumann Single CPU computer
-    - An SISD computing system is a uniprocessor machine which is capable of executing a single instruction, operating on a single data stream
-    - machine instructions are processed in a sequential manner and computers adopting this model are popularly called sequential computers
-    - All the instructions and data to be processed have to be stored in primary memory
-    - The speed of the processing element in the SISD model is limited(dependent) by the rate at which the computer can transfer information internally
-    - Dominant representative SISD systems are IBM PC, workstations.
-- Single-Instruction and Multi-Data
-    - Vector Processors fine-grained data Parallel Computers
-    - An SIMD system is a multiprocessor machine capable of executing the same instruction on all the CPUs but operating on different data streams
-    - Machines based on an SIMD model are well suited to scientific computing since they involve lots of vector and matrix operations
-    - So that the information can be passed to all the processing elements (PEs) organized data elements of vectors can be divided into multiple sets(N-sets for N PE systems) and each PE can process one data set.
-    - Dominant representative SIMD systems is Cray’s vector processing machine
-- Multi-Instruction and Single-Data
-    - Maybe pipelined Computers
-    - An MISD computing system is a multiprocessor machine capable of executing different instructions on different PEs but all of them operating on the same dataset
-    - Example 𝑍=𝑠𝑖𝑛(𝑥)+𝑐𝑜𝑠(𝑥)+𝑡𝑎𝑛(𝑥)
-    - The system performs different operations on the same data set.
-    - Machines built using the MISD model are not useful in most of the application, a few machines are built, but none of them are available commercially.
-- Multi-Instruction and Multi-Data
-    - Multi Computers Multi-Processors
-    - An MIMD system is a multiprocessor machine which is capable of executing multiple instructions on multiple data sets.
-    - Each PE in the MIMD model has separate instruction and data streams; therefore machines built using this model are capable to any kind of application.
-    - Unlike SIMD and MISD machines, PEs in MIMD machines work asynchronously
+- 
+
 # Week 3
 ## Python 3 Syntax
-- _ thread / threading libraries 
-- asyncio library
-- multiprocessing library [[Using Multiprocessing library to parallel computing in python]]
+### _ thread / threading libraries 
+### asyncio library
+### multiprocessing library
 # Week 4
 ## Nivida GPU architecture
 ### Tesla
@@ -173,7 +149,5 @@ Many of the solutions fit into these five patterns:
 	- 115 watts
 ## CUDA Software Layers
 - Our CUDA application can communicate with either the CUDA runtime API layer (NVCC) or the driver API directly 
-![[lt46q7vNR2-eOqu7zbdv8Q_eed25abbc36e4a4da116d131d4781b86_Lesson5_CUDA_Software_Layers-readonly.png]]
 - If you have chosen to use the higher level CUDA runtime API it can imped the GPU code (in .ptx or .cubin extension)into the host code to do this we need to compile both types of codes via NVCC command and once done they can interoperate we still need to use a host oriented compiler like GCC or G++ which wore output in the executable thankfully via the NVCC command
 - If you are targeting the driver API you have to compile the GPU code (.ptx-.fatbin) and the CPU code (host code) separately then have the host-executable interact with the GPU via the driver API
-![[lt46q7vNR2-eOqu7zbdv8Q_eed25abbc36e4a4da116d131d4781b86_Lلللesson5_CUDA_Software_Layers-readonly.png]]
