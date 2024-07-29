@@ -20,9 +20,37 @@ print("Number of Processors: ", mp.cpu_count())
 	- first of all the __Synchronous__ execution when we use it we lock critical parts of code from the main program means that the rest of processes can't access the shared variables until the __Synchronous__ process finish
 	- second of all the __Asynchronous__ execution when we use it we set no locks the program runs and finish all the process when he can as a result the order of results can mixed up but usually finish faster
 ## Python Implementation
-- there are two main objects in `multiprocessing` to implement parallel execution:
-	- `Pool` Class
-		- Synchronous Execution
-		- `Pool.map()` and `Pool.starmap()`
-		- `Pool.apply()`
-		- 
+### Problem Statement: Count how many numbers exist between a given range in each row?
+- The first problem is: Given a 2D matrix (or list of lists), count how many numbers are present between a given range in each row. We will work on the list prepared below.
+```python
+import numpy as np
+from time import time
+
+# Prepare data
+np.random.RandomState(100)
+arr = np.random.randint(0, 10, size=[200000, 5])
+data = arr.tolist()
+data[:5]
+```
+- Solution without parallelization:
+```python
+# Solution Without Paralleization
+
+def howmany_within_range(row, minimum, maximum):
+    """Returns how many numbers lie within `maximum` and `minimum` in a given `row`"""
+    count = 0
+    for n in row:
+        if minimum <= n <= maximum:
+            count = count + 1
+    return count
+
+results = []
+for row in data:
+    results.append(howmany_within_range(row, minimum=4, maximum=8))
+
+print(results[:10])
+#> [3, 1, 4, 4, 4, 2, 1, 1, 3, 3]
+```
+- The general way to Parallelize any operation is to take a particular function that should run multiple times and make it run parallelly in different processors
+- To do this we initialize a `Pool` with n number of processors and pass the function you want to parallelize to one of `Pool` parallelization methods
+- the `Pool` class offer `Pool.map()` , `Pool.starmap()`, and `Pool.apply()`methods to execute 
