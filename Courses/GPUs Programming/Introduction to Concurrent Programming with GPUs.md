@@ -134,4 +134,8 @@ Many of the solutions fit into these five patterns:
 ### Turing
 - Produced 2018-2020
 - Tensor and Ray Tracing Cores
-- Geforce 
+- Geforce RTX 2080 Specifics
+	- 3072 CUDA cores
+	- 8 GB of GDDR5 memory 
+	- 448 GB/s memory bandwidth 
+	- 215 watts
