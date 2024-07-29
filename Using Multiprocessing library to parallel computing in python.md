@@ -54,4 +54,25 @@ print(results[:10])
 - The general way to Parallelize any operation is to take a particular function that should run multiple times and make it run parallelly in different processors
 - To do this we initialize a `Pool` with n number of processors and pass the function you want to parallelize to one of `Pool` parallelization methods
 - the `Pool` class offer `Pool.map()` , `Pool.starmap()`, and `Pool.apply()`methods to execute the function in __Synchronous__ theme and `Pool.map_async()`, `Pool.starmap_async()`, and `Pool.apply_async()` methods to execute the function in __Asynchronous__ theme 
-- Both `Pool.`
+- Both `Pool.map()` and `Pool.apply()` take the function-desired-toParallyze as the main argument but the main difference that `Pool.apply()` takes an `args` Argument that accepts the parameters passed to the function whereas `Pool.map()` takes only one iterable as an argument
+- In simpler words `Pool.map()` is more suitable for simpler iterable operations but does the job faster 
+### Parallel Programming with `Pool.apply()`
+```python
+# Parallelizing using Pool.apply()
+
+import multiprocessing as mp
+
+# Step 1: Init multiprocessing.Pool()
+pool = mp.Pool(mp.cpu_count())
+
+# Step 2: `pool.apply` the `howmany_within_range()`
+results = [pool.apply(howmany_within_range, args=(row, 4, 8)) for row in data]
+
+# Step 3: Don't forget to close
+pool.close()    
+
+print(results[:10])
+#> [3, 1, 4, 4, 4, 2, 1, 1, 3, 3]
+```
+### Parallel Programming using `Pool.map()`
+- as we mentioned `Pool.map()` 
