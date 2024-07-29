@@ -123,7 +123,7 @@ Many of the solutions fit into these five patterns:
 	- 4 GB of GDDR5 memory
 	- 224 GB/s memory bandwidth
 	- 165 watts
-## Pascal
+### Pascal
 - Produced 2016-2018
 - Unified Memory and NVLink
 - GTX 1080 Specifics
@@ -134,8 +134,18 @@ Many of the solutions fit into these five patterns:
 ### Turing
 - Produced 2018-2020
 - Tensor and Ray Tracing Cores
-- Geforce RTX 2080 Specifics
+- GeForce RTX 2080 Specifics
 	- 3072 CUDA cores
 	- 8 GB of GDDR5 memory 
 	- 448 GB/s memory bandwidth 
 	- 215 watts
+### Ampere
+- Produced 2020-
+- More RT and tensor cores and lower cores/W
+- GeForce RTX 3070 Specifics
+	- 5120 CUDA cores
+	- 8 GB of GDDR6 memory 
+	- 384 GB/s memory bandwidth 
+	- 115 watts
+## CUDA Software Layers
+- Our CU
