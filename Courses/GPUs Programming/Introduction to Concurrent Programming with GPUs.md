@@ -148,4 +148,4 @@ Many of the solutions fit into these five patterns:
 	- 384 GB/s memory bandwidth 
 	- 115 watts
 ## CUDA Software Layers
-- Our CU
+- Our CUDA application can 
