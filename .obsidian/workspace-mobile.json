@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Using Multiprocessing library to parallel computing in python.md",
+                "file": "Articles/Using Multiprocessing library to parallel computing in python.md",
                 "mode": "source",
                 "source": false
               }
@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Using Multiprocessing library to parallel computing in python.md",
+                "file": "Articles/Using Multiprocessing library to parallel computing in python.md",
                 "mode": "source",
                 "source": false
               }
@@ -118,7 +118,7 @@
         "state": {
           "type": "backlink",
           "state": {
-            "file": "Using Multiprocessing library to parallel computing in python.md",
+            "file": "Articles/Using Multiprocessing library to parallel computing in python.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -135,7 +135,7 @@
         "state": {
           "type": "outgoing-link",
           "state": {
-            "file": "Using Multiprocessing library to parallel computing in python.md",
+            "file": "Articles/Using Multiprocessing library to parallel computing in python.md",
             "linksCollapsed": false,
             "unlinkedCollapsed": true
           }
@@ -147,7 +147,7 @@
         "state": {
           "type": "outline",
           "state": {
-            "file": "Using Multiprocessing library to parallel computing in python.md"
+            "file": "Articles/Using Multiprocessing library to parallel computing in python.md"
           }
         }
       },
@@ -186,7 +186,8 @@
   "active": "82d661bf6c9e4fb1",
   "lastOpenFiles": [
     "Untitled.md",
-    "Using Multiprocessing library to parallel computing in python.md",
+    "Articles/Using Multiprocessing library to parallel computing in python.md",
+    "Articles",
     "Courses/GPUs Programming/Introduction to Concurrent Programming with GPUs.md",
     "assets/IMG_8250.png",
     "assets/IMG_8249.png",
