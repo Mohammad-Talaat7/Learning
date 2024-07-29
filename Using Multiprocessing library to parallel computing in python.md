@@ -18,4 +18,4 @@ print("Number of Processors: ", mp.cpu_count())
 ## What is Synchronous and Asynchronous execution?
 - In the field of parallel computing there are two categories of executing program's processes:
 	- first of all the __Synchronous__ execution when we use it we lock critical parts of code from the main program means that the rest of processes can't access the shared variables until the __Synchronous__ process finish
-	- 
+	- second of all the __Asynchronous__ execution when we 
