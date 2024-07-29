@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Courses/GPUs Programming/Introduction to Concurrent Programming with GPUs.md",
+                "file": "Courses/Deep-Learning/Improving Deep Neural Networks Hyperparameter tuning, Regularization and Optimization.md",
                 "mode": "source",
                 "source": false
               }
@@ -107,7 +107,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Courses/GPUs Programming/Introduction to Concurrent Programming with GPUs.md"
+                "file": "Courses/Deep-Learning/Improving Deep Neural Networks Hyperparameter tuning, Regularization and Optimization.md"
               }
             }
           },
@@ -143,7 +143,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Courses/GPUs Programming/Introduction to Concurrent Programming with GPUs.md",
+                "file": "Courses/Deep-Learning/Improving Deep Neural Networks Hyperparameter tuning, Regularization and Optimization.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -160,7 +160,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Courses/GPUs Programming/Introduction to Concurrent Programming with GPUs.md",
+                "file": "Courses/Deep-Learning/Improving Deep Neural Networks Hyperparameter tuning, Regularization and Optimization.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -196,6 +196,7 @@
   },
   "active": "776f3864b44a8c96",
   "lastOpenFiles": [
+    "Courses/GPUs Programming/Introduction to Concurrent Programming with GPUs.md",
     "assets/Pasted image 20240729023825.png",
     "Courses/Deep-Learning/Improving Deep Neural Networks Hyperparameter tuning, Regularization and Optimization.md",
     "Courses/Deep-Learning/Deep-Learning Specialization.md",
@@ -213,12 +214,10 @@
     "assets/IMG_8236.png",
     "IMG_8236 1.png",
     "assets/IMG_8235.png",
-    "assets/IMG_8234.png",
     "assets",
     "Courses/Deep-Learning/Neural Networks and Deep Learning notes.md",
     "Courses/Deep-Learning/andrewng-p-5-sequence-models.md",
     "Courses/Deep-Learning/andrewng-p-1-neural-network-deep-learning.md",
-    "Courses/GPUs Programming/Introduction to Concurrent Programming with GPUs.md",
     "Courses/GPUs Programming/GPU Programming Specialization.md",
     "Courses/Deep-Learning",
     "Courses/GPUs Programming/jn.md",

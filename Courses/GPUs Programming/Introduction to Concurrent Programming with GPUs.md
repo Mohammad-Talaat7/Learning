@@ -99,10 +99,15 @@ Many of the solutions fit into these five patterns:
 	- Dominant representative SIMD systems is Cray’s vector processing machine
 - Multi-Instruction and Single-Data
 	- Maybe pipelined Computers
-	-  
-
-
-
+	- An MISD computing system is a multiprocessor machine capable of executing different instructions on different PEs but all of them operating on the same dataset
+	- Example $Z = sin(x)+cos(x)+tan(x)$
+	- The system performs different operations on the same data set.
+	- Machines built using the MISD model are not useful in most of the application, a few machines are built, but none of them are available commercially. 
+- Multi-Instruction and Multi-Data
+	- Multi Computers Multi-Processors
+	- An MIMD system is a multiprocessor machine which is capable of executing multiple instructions on multiple data sets.
+	- Each PE in the MIMD model has separate instruction and data streams; therefore machines built using this model are capable to any kind of application.
+	- Unlike SIMD and MISD machines, PEs in MIMD machines work asynchronously
 # Week 3
 ## Python 3 Syntax
 ### _ thread / threading libraries 
