@@ -114,6 +114,11 @@ Many of the solutions fit into these five patterns:
 - _ thread / threading libraries [[Intro to Python Threading]]
 - asyncio library [[Async IO in Python A Complete Walkthrough]]
 - multiprocessing library [[Using Multiprocessing library to parallel computing in python]]
+## C++ Syntax
+- atomic library
+- future library
+- mutex library
+- thread library
 # Week 4
 ## Nivida GPU architecture
 ### Tesla
