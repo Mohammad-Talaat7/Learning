@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Intro to Python Threading.md",
+                "file": "Articles/Intro to Python Threading.md",
                 "mode": "source",
                 "source": false
               }
@@ -120,7 +120,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Intro to Python Threading.md"
+                "file": "Articles/Intro to Python Threading.md"
               }
             }
           },
@@ -156,7 +156,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Intro to Python Threading.md",
+                "file": "Articles/Intro to Python Threading.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -173,7 +173,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Intro to Python Threading.md",
+                "file": "Articles/Intro to Python Threading.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -207,10 +207,11 @@
       "workspaces:Manage workspace layouts": false
     }
   },
-  "active": "159a45715e2511dc",
+  "active": "b4ff4c9b0e471e17",
   "lastOpenFiles": [
+    "Untitled.canvas",
+    "Articles/Intro to Python Threading.md",
     "assets/lt46q7vNR2-eOqu7zbdv8Q_eed25abbc36e4a4da116d131d4781b86_Lesson5_CUDA_Software_Layers-readonly.png",
-    "Intro to Python Threading.md",
     "Courses/GPUs Programming/Introduction to Concurrent Programming with GPUs.md",
     "assets/IMG_8250.png",
     "assets/Pasted image 20240729023825.png",

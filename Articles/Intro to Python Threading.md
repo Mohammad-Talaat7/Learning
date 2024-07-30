@@ -235,3 +235,17 @@ def producer(pipeline):
     # Send a sentinel message to tell consumer we're done
     pipeline.set_message(SENTINEL, "Producer")
 ```
+- To generate a fake message, the `producer` gets a random number between one and one hundred. It calls `.set_message()` on the `pipeline` to send it to the `consumer`.\
+- The `producer` also uses a `SENTINEL` value to signal the consumer to stop after it has sent ten values. This is a little awkward, but don’t worry, you’ll see ways to get rid of this `SENTINEL` value after you work through this example.
+- On the other side of the `pipeline` is the consumer:
+```python
+def consumer(pipeline):
+    """Pretend we're saving a number in the database."""
+    message = 0
+    while message is not SENTINEL:
+        message = pipeline.get_message("Consumer")
+        if message is not SENTINEL:
+            logging.info("Consumer storing message: %s", message)
+```
+- The `consumer` reads a message from the `pipeline` and writes it to a fake database, which in this case is just printing it to the display. If it gets the `SENTINEL` value, it returns from the function, which will terminate the thread.
+- Before you look at the really interesting part, the `Pipeline`, here’s the `__main__` section, which spawns these threads:
