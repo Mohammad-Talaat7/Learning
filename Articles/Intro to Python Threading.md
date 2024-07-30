@@ -249,3 +249,87 @@ def consumer(pipeline):
 ```
 - The `consumer` reads a message from the `pipeline` and writes it to a fake database, which in this case is just printing it to the display. If it gets the `SENTINEL` value, it returns from the function, which will terminate the thread.
 - Before you look at the really interesting part, the `Pipeline`, here’s the `__main__` section, which spawns these threads:
+```python
+if __name__ == "__main__":
+    format = "%(asctime)s: %(message)s"
+    logging.basicConfig(format=format, level=logging.INFO,
+                        datefmt="%H:%M:%S")
+    # logging.getLogger().setLevel(logging.DEBUG)
+
+    pipeline = Pipeline()
+    with concurrent.futures.ThreadPoolExecutor(max_workers=2) as executor:
+        executor.submit(producer, pipeline)
+        executor.submit(consumer, pipeline)
+```
+- It can be worthwhile to walk through the `DEBUG` logging messages to see exactly where each thread acquires and releases the locks.
+- Now let’s take a look at the `Pipeline` that passes messages from the `producer` to the `consumer`:
+```python
+class Pipeline:
+    """
+    Class to allow a single element pipeline between producer and consumer.
+    """
+    def __init__(self):
+        self.message = 0
+        self.producer_lock = threading.Lock()
+        self.consumer_lock = threading.Lock()
+        self.consumer_lock.acquire()
+
+    def get_message(self, name):
+        logging.debug("%s:about to acquire getlock", name)
+        self.consumer_lock.acquire()
+        logging.debug("%s:have getlock", name)
+        message = self.message
+        logging.debug("%s:about to release setlock", name)
+        self.producer_lock.release()
+        logging.debug("%s:setlock released", name)
+        return message
+
+    def set_message(self, message, name):
+        logging.debug("%s:about to acquire setlock", name)
+        self.producer_lock.acquire()
+        logging.debug("%s:have setlock", name)
+        self.message = message
+        logging.debug("%s:about to release getlock", name)
+        self.consumer_lock.release()
+        logging.debug("%s:getlock released", name)
+```
+- That seems a bit more manageable. The `Pipeline` in this version of your code has three members:
+	- `.message` stores the message to pass.
+	- `.producer_lock` is a `threading.Lock` object that restricts access to the message by the `producer` thread.
+	- `.consumer_lock` is also a `threading.Lock` that restricts access to the message by the `consumer` thread.
+- `__init__()` initializes these three members and then calls `.acquire()` on the `.consumer_lock`. This is the state you want to start in. The `producer` is allowed to add a new message, but the `consumer` needs to wait until a message is present.
+- `.get_message()` and `.set_messages()` are nearly opposites. `.get_message()` calls `.acquire()` on the `consumer_lock`. This is the call that will make the `consumer` wait until a message is ready.
+- Once the `consumer` has acquired the `.consumer_lock`, it copies out the value in `.message` and then calls `.release()` on the `.producer_lock`. Releasing this lock is what allows the `producer` to insert the next message into the `pipeline`.
+- Before you go on to `.set_message()`, there’s something subtle going on in `.get_message()` that’s pretty easy to miss. It might seem tempting to get rid of `message` and just have the function end with `return self.message`. See if you can figure out why you don’t want to do that before moving on.
+- Here’s the answer. As soon as the `consumer` calls `.producer_lock.release()`, it can be swapped out, and the `producer` can start running. That could happen before `.release()` returns! This means that there is a slight possibility that when the function returns `self.message`, that could actually be the _next_ message generated, so you would lose the first message. This is another example of a __race condition__.
+- Moving on to `.set_message()`, you can see the opposite side of the transaction. The `producer` will call this with a message. It will acquire the `.producer_lock`, set the `.message`, and the call `.release()` on then `consumer_lock`, which will allow the `consumer` to read that value.
+- Let’s run the code that has logging set to `WARNING` and see what it looks like:
+```bash
+$ ./prodcom_lock.py
+Producer got data 43
+Producer got data 45
+Consumer storing data: 43
+Producer got data 86
+Consumer storing data: 45
+Producer got data 40
+Consumer storing data: 86
+Producer got data 62
+Consumer storing data: 40
+Producer got data 15
+Consumer storing data: 62
+Producer got data 16
+Consumer storing data: 15
+Producer got data 61
+Consumer storing data: 16
+Producer got data 73
+Consumer storing data: 61
+Producer got data 22
+Consumer storing data: 73
+Consumer storing data: 22
+```
+- At first, you might find it odd that the producer gets two messages before the consumer even runs. If you look back at the `producer` and `.set_message()`, you will notice that the only place it will wait for a `Lock` is when it attempts to put the message into the pipeline. This is done after the `producer` gets the message and logs that it has it.
+- When the `producer` attempts to send this second message, it will call `.set_message()` the second time and it will block.
+- The operating system can swap threads at any time, but it generally lets each thread have a reasonable amount of time to run before swapping it out. That’s why the `producer` usually runs until it blocks in the second call to `.set_message()`.
+- Once a thread is blocked, however, the operating system will always swap it out and find a different thread to run. In this case, the only other thread with anything to do is the `consumer`.
+
+The `consumer` calls `.get_message()`, which reads the message and calls `.release()` on the `.producer_lock`, thus allowing the `producer` to run again the next time threads are swapped.
