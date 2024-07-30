@@ -58,3 +58,41 @@ Two
 Two
 countasync.py executed in 1.01 seconds.
 ```
+- The order of this output is the heart of async IO. Talking to each of the calls to `count()` is a single event loop, or coordinator. When each task reaches `await asyncio.sleep(1)`, the function yells up to the event loop and gives control back to it, saying, “I’m going to be sleeping for 1 second. Go ahead and let something else meaningful be done in the meantime.”
+- Contrast this to the synchronous version:
+```python
+#!/usr/bin/env python3
+# countsync.py
+
+import time
+
+def count():
+    print("One")
+    time.sleep(1)
+    print("Two")
+
+def main():
+    for _ in range(3):
+        count()
+
+if __name__ == "__main__":
+    s = time.perf_counter()
+    main()
+    elapsed = time.perf_counter() - s
+    print(f"{__file__} executed in {elapsed:0.2f} seconds.")
+```
+- When executed, there is a slight but critical change in order and execution time:
+```bash
+$ python3 countsync.py
+One
+Two
+One
+Two
+One
+Two
+countsync.py executed in 3.01 seconds.
+```
+- While using `time.sleep()` and `asyncio.sleep()` may seem banal, they are used as stand-ins for any time-intensive processes that involve wait time. (The most mundane thing you can wait on is a `sleep()` call that does basically nothing.) That is, `time.sleep()` can represent any time-consuming blocking function call, while `asyncio.sleep()` is used to stand in for a non-blocking call (but one that also takes some time to complete).
+- As you’ll see in the next section, the benefit of awaiting something, including `asyncio.sleep()`, is that the surrounding function can temporarily cede control to another function that’s more readily able to do something immediately. In contrast, `time.sleep()` or any other blocking call is incompatible with asynchronous Python code, because it will stop everything in its tracks for the duration of the sleep time.
+## The Rules of Async IO
+- - The syntax `async def` introduces either a **native coroutine** or an **asynchronous generator**. The expressions `async with` and `async for` are also valid, and you’ll see them later on.
