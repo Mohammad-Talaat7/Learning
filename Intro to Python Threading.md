@@ -143,4 +143,13 @@ if __name__ == "__main__":
 ```
 - The code creates a `ThreadPoolExecutor` as a context manager, telling it how many worker threads it wants in the pool. It then uses `.map()` to step through an iterable of things, in your case `range(3)`, passing each one to a thread in the pool.
 - The end of the `with` block causes the `ThreadPoolExecutor` to do a `.join()` on each of the threads in the pool. It is _strongly_ recommended that you use `ThreadPoolExecutor` as a context manager when you can so that you never forget to `.join()` the threads.
-- 
+- Running your corrected example code will produce output that looks like this:
+```bash
+$ ./executor.py
+Thread 0: starting
+Thread 1: starting
+Thread 2: starting
+Thread 1: finishing
+Thread 0: finishing
+Thread 2: finishing
+```
