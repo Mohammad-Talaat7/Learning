@@ -18,21 +18,8 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "a205da7f52d5ea13",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Async IO in Python A Complete Walkthrough.md",
-                "mode": "source",
-                "source": false
-              }
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -120,7 +107,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Async IO in Python A Complete Walkthrough.md"
+                "file": "Courses/GPUs Programming/Introduction to Concurrent Programming with GPUs.md"
               }
             }
           },
@@ -156,7 +143,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Async IO in Python A Complete Walkthrough.md",
+                "file": "Courses/GPUs Programming/Introduction to Concurrent Programming with GPUs.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -173,7 +160,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Async IO in Python A Complete Walkthrough.md",
+                "file": "Courses/GPUs Programming/Introduction to Concurrent Programming with GPUs.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -207,10 +194,10 @@
       "workspaces:Manage workspace layouts": false
     }
   },
-  "active": "a205da7f52d5ea13",
+  "active": "97bf3a6704c77d90",
   "lastOpenFiles": [
+    "Articles/Async IO in Python A Complete Walkthrough.md",
     "Courses/GPUs Programming/Introduction to Concurrent Programming with GPUs.md",
-    "Async IO in Python A Complete Walkthrough.md",
     "Articles/Intro to Python Threading.md",
     "Untitled.canvas",
     "assets/lt46q7vNR2-eOqu7zbdv8Q_eed25abbc36e4a4da116d131d4781b86_Lesson5_CUDA_Software_Layers-readonly.png",
