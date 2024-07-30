@@ -331,5 +331,77 @@ Consumer storing data: 22
 - When the `producer` attempts to send this second message, it will call `.set_message()` the second time and it will block.
 - The operating system can swap threads at any time, but it generally lets each thread have a reasonable amount of time to run before swapping it out. That’s why the `producer` usually runs until it blocks in the second call to `.set_message()`.
 - Once a thread is blocked, however, the operating system will always swap it out and find a different thread to run. In this case, the only other thread with anything to do is the `consumer`.
+- The `consumer` calls `.get_message()`, which reads the message and calls `.release()` on the `.producer_lock`, thus allowing the `producer` to run again the next time threads are swapped.
+- Notice that the first message was `43`, and that is exactly what the `consumer` read, even though the `producer` had already generated the `45` message.
+- While it works for this limited test, it is not a great solution to the producer-consumer problem in general because it only allows a single value in the pipeline at a time. When the `producer` gets a burst of messages, it will have nowhere to put them.
+- Let’s move on to a better way to solve this problem, using a `Queue`.
+## Producer-Consumer Using Queue
+- If you want to be able to handle more than one value in the pipeline at a time, you’ll need a data structure for the pipeline that allows the number to grow and shrink as data backs up from the `producer`.
+- Python’s standard library has a `queue` module which, in turn, has a `Queue` class. Let’s change the `Pipeline` to use a `Queue` instead of just a variable protected by a `Lock`. You’ll also use a different way to stop the worker threads by using a different primitive from Python `threading`, an `Event`.
+- Let’s start with the `Event`. The `threading.Event` object allows one thread to signal an `event` while many other threads can be waiting for that `event` to happen. The key usage in this code is that the threads that are waiting for the event do not necessarily need to stop what they are doing, they can just check the status of the `Event` every once in a while.
+- The triggering of the event can be many things. In this example, the main thread will simply sleep for a while and then `.set()` it:
+```python
+if __name__ == "__main__":
+    format = "%(asctime)s: %(message)s"
+    logging.basicConfig(format=format, level=logging.INFO,
+                        datefmt="%H:%M:%S")
+    # logging.getLogger().setLevel(logging.DEBUG)
 
-The `consumer` calls `.get_message()`, which reads the message and calls `.release()` on the `.producer_lock`, thus allowing the `producer` to run again the next time threads are swapped.
+    pipeline = Pipeline()
+    event = threading.Event()
+    with concurrent.futures.ThreadPoolExecutor(max_workers=2) as executor:
+        executor.submit(producer, pipeline, event)
+        executor.submit(consumer, pipeline, event)
+
+        time.sleep(0.1)
+        logging.info("Main: about to set event")
+        event.set()
+```
+- The only changes here are the creation of the `event` object on line 8, passing the `event` as a parameter on lines 10 and 11, and the final section on lines 13 to 15, which sleep for a second, log a message, and then call `.set()` on the event.
+- The `producer` also did not have to change too much:
+```python
+def producer(pipeline, event):
+    """Pretend we're getting a number from the network."""
+    while not event.is_set():
+        message = random.randint(1, 101)
+        logging.info("Producer got message: %s", message)
+        pipeline.set_message(message, "Producer")
+
+    logging.info("Producer received EXIT event. Exiting")
+```
+- It now will loop until it sees that the event was set on line 3. It also no longer puts the `SENTINEL` value into the `pipeline`.
+- `consumer` had to change a little more:
+```python
+def consumer(pipeline, event):
+    """Pretend we're saving a number in the database."""
+    while not event.is_set() or not pipeline.empty():
+        message = pipeline.get_message("Consumer")
+        logging.info(
+            "Consumer storing message: %s  (queue size=%s)",
+            message,
+            pipeline.qsize(),
+        )
+
+    logging.info("Consumer received EXIT event. Exiting")
+```
+- While you got to take out the code related to the `SENTINEL` value, you did have to do a slightly more complicated `while` condition. Not only does it loop until the `event` is set, but it also needs to keep looping until the `pipeline` has been emptied.
+- Making sure the queue is empty before the consumer finishes prevents another fun issue. If the `consumer` does exit while the `pipeline` has messages in it, there are two bad things that can happen. The first is that you lose those final messages, but the more serious one is that the `producer` can get caught attempting to add a message to a full queue and never return.
+- This happens if the `event` gets triggered after the `producer` has checked the `.is_set()` condition but before it calls `pipeline.set_message()`.
+- If that happens, it’s possible for the consumer to wake up and exit with the queue still completely full. The `producer` will then call `.set_message()` which will wait until there is space on the queue for the new message. The `consumer` has already exited, so this will not happen and the `producer` will not exit.
+- The `Pipeline` has changed dramatically, however:
+```python
+class Pipeline(queue.Queue):
+    def __init__(self):
+        super().__init__(maxsize=10)
+
+    def get_message(self, name):
+        logging.debug("%s:about to get from queue", name)
+        value = self.get()
+        logging.debug("%s:got %d from queue", name, value)
+        return value
+
+    def set_message(self, value, name):
+        logging.debug("%s:about to add %d to queue", name, value)
+        self.put(value)
+        logging.debug("%s:added %d to queue", name, value)
+```
