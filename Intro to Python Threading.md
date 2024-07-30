@@ -153,4 +153,28 @@ Thread 1: finishing
 Thread 0: finishing
 Thread 2: finishing
 ```
-# Race Condition
+# Basic Synchronization Using `Lock`
+- To solve your race condition, you need to find a way to allow only one thread at a time into the read-modify-write section of your code. The most common way to do this is called `Lock` in Python. In some other languages this same idea is called a `mutex`. Mutex comes from MUTual EXclusion, which is exactly what a `Lock` does.
+- A `Lock` is an object that acts like a hall pass. Only one thread at a time can have the `Lock`. Any other thread that wants the `Lock` must wait until the owner of the `Lock` gives it up.
+- The basic functions to do this are `.acquire()` and `.release()`. A thread will call `my_lock.acquire()` to get the lock. If the lock is already held, the calling thread will wait until it is released. There’s an important point here. If one thread gets the lock but never gives it back, your program will be stuck. You’ll read more about this later.
+- Fortunately, Python’s `Lock` will also operate as a context manager, so you can use it in a `with` statement, and it gets released automatically when the `with` block exits for any reason.
+```python
+class FakeDatabase:
+    def __init__(self):
+        self.value = 0
+        self._lock = threading.Lock()
+
+    def locked_update(self, name):
+        logging.info("Thread %s: starting update", name)
+        logging.debug("Thread %s about to lock", name)
+        with self._lock:
+            logging.debug("Thread %s has lock", name)
+            local_copy = self.value
+            local_copy += 1
+            time.sleep(0.1)
+            self.value = local_copy
+            logging.debug("Thread %s about to release lock", name)
+        logging.debug("Thread %s after release", name)
+        logging.info("Thread %s: finishing update", name)
+```
+
