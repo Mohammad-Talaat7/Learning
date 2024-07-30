@@ -24,3 +24,37 @@ Type:
 - There is only one Judit Polgár, who has only two hands and makes only one move at a time by herself. But playing asynchronously cuts the exhibition time down from 12 hours to one. So, cooperative multitasking is a fancy way of saying that a program’s event loop (more on that later) communicates with multiple tasks to let each take turns running at the optimal time.
 - Async IO takes long waiting periods in which functions would otherwise be blocking and allows other functions to run during that downtime. (A function that blocks effectively forbids others from running from the time that it starts until the time that it returns.)
 # The `asyncio` Package and `async/await`
+- At the heart of async IO are coroutines. A coroutine is a specialized version of a Python generator function. Let’s start with a baseline definition and then build off of it as you progress here: a coroutine is a function that can suspend its execution before reaching `return`, and it can indirectly pass control to another coroutine for some time.
+- Let’s take the immersive approach and write some async IO code. This short program is the `Hello World` of async IO but goes a long way towards illustrating its core functionality:
+```python
+#!/usr/bin/env python3
+# countasync.py
+
+import asyncio
+
+async def count():
+    print("One")
+    await asyncio.sleep(1)
+    print("Two")
+
+async def main():
+    await asyncio.gather(count(), count(), count())
+
+if __name__ == "__main__":
+    import time
+    s = time.perf_counter()
+    asyncio.run(main())
+    elapsed = time.perf_counter() - s
+    print(f"{__file__} executed in {elapsed:0.2f} seconds.")
+```
+- When you execute this file, take note of what looks different than if you were to define the functions with just `def` and `time.sleep()`:
+```bash
+$ python3 countasync.py
+One
+One
+One
+Two
+Two
+Two
+countasync.py executed in 1.01 seconds.
+```
