@@ -177,4 +177,61 @@ class FakeDatabase:
         logging.debug("Thread %s after release", name)
         logging.info("Thread %s: finishing update", name)
 ```
+- If you run this version with logging set to warning level, you’ll see this:
+```bash
+$ ./fixrace.py
+Testing locked update. Starting value is 0.
+Thread 0: starting update
+Thread 1: starting update
+Thread 0: finishing update
+Thread 1: finishing update
+Testing locked update. Ending value is 2.
+```
+- Look at that. Your program finally works!
+- You can turn on full logging by setting the level to `DEBUG` by adding this statement after you configure the logging output in `__main__`:
+```python
+logging.getLogger().setLevel(logging.DEBUG)
+```
+- Running this program with `DEBUG` logging turned on looks like this:
+```bash
+$ ./fixrace.py
+Testing locked update. Starting value is 0.
+Thread 0: starting update
+Thread 0 about to lock
+Thread 0 has lock
+Thread 1: starting update
+Thread 1 about to lock
+Thread 0 about to release lock
+Thread 0 after release
+Thread 0: finishing update
+Thread 1 has lock
+Thread 1 about to release lock
+Thread 1 after release
+Thread 1: finishing update
+Testing locked update. Ending value is 2.
+```
+- In this output you can see `Thread 0` acquires the lock and is still holding it when it goes to sleep. `Thread 1` then starts and attempts to acquire the same lock. Because `Thread 0` is still holding it, `Thread 1` has to wait. This is the mutual exclusion that a `Lock` provides.
+# Producer-Consumer Threading
+- The Producer-Consumer Problem is a standard computer science problem used to look at threading or process synchronization issues. You’re going to look at a variant of it to get some ideas of what primitives the Python `threading` module provides.
+- For this example, you’re going to imagine a program that needs to read messages from a network and write them to disk. The program does not request a message when it wants. It must be listening and accept messages as they come in. The messages will not come in at a regular pace, but will be coming in bursts. This part of the program is called the producer.
+- On the other side, once you have a message, you need to write it to a database. The database access is slow, but fast enough to keep up to the average pace of messages. It is _not_ fast enough to keep up when a burst of messages comes in. This part is the consumer.
+- In between the producer and the consumer, you will create a `Pipeline` that will be the part that changes as you learn about different synchronization objects.
+- That’s the basic layout. Let’s look at a solution using `Lock`. It doesn’t work perfectly, but it uses tools you already know, so it’s a good place to start.
+## Producer-Consumer Using `Lock`
+- Since this is an article about Python `threading`, and since you just read about the `Lock` primitive, let’s try to solve this problem with two threads using a `Lock` or two.
+- The general design is that there is a `producer` thread that reads from the fake network and puts the message into a `Pipeline`:
+```python
+import random 
 
+SENTINEL = object()
+
+def producer(pipeline):
+    """Pretend we're getting a message from the network."""
+    for index in range(10):
+        message = random.randint(1, 101)
+        logging.info("Producer got message: %s", message)
+        pipeline.set_message(message, "Producer")
+
+    # Send a sentinel message to tell consumer we're done
+    pipeline.set_message(SENTINEL, "Producer")
+```
