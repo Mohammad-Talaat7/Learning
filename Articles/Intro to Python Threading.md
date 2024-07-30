@@ -405,3 +405,56 @@ class Pipeline(queue.Queue):
         self.put(value)
         logging.debug("%s:added %d to queue", name, value)
 ```
+- You can see that `Pipeline` is a subclass of `queue.Queue`. `Queue` has an optional parameter when initializing to specify a maximum size of the queue.
+- If you give a positive number for `maxsize`, it will limit the queue to that number of elements, causing `.put()` to block until there are fewer than `maxsize` elements. If you don’t specify `maxsize`, then the queue will grow to the limits of your computer’s memory.
+- `.get_message()` and `.set_message()` got much smaller. They basically wrap `.get()` and `.put()` on the `Queue`. You might be wondering where all of the locking code that prevents the threads from causing race conditions went.
+- The core devs who wrote the standard library knew that a `Queue` is frequently used in multi-threading environments and incorporated all of that locking code inside the `Queue` itself. `Queue` is thread-safe.
+- Running this program looks like the following:
+```bash
+$ ./prodcom_queue.py
+Producer got message: 32
+Producer got message: 51
+Producer got message: 25
+Producer got message: 94
+Producer got message: 29
+Consumer storing message: 32 (queue size=3)
+Producer got message: 96
+Consumer storing message: 51 (queue size=3)
+Producer got message: 6
+Consumer storing message: 25 (queue size=3)
+Producer got message: 31
+
+[many lines deleted]
+
+Producer got message: 80
+Consumer storing message: 94 (queue size=6)
+Producer got message: 33
+Consumer storing message: 20 (queue size=6)
+Producer got message: 48
+Consumer storing message: 31 (queue size=6)
+Producer got message: 52
+Consumer storing message: 98 (queue size=6)
+Main: about to set event
+Producer got message: 13
+Consumer storing message: 59 (queue size=6)
+Producer received EXIT event. Exiting
+Consumer storing message: 75 (queue size=6)
+Consumer storing message: 97 (queue size=5)
+Consumer storing message: 80 (queue size=4)
+Consumer storing message: 33 (queue size=3)
+Consumer storing message: 48 (queue size=2)
+Consumer storing message: 52 (queue size=1)
+Consumer storing message: 13 (queue size=0)
+Consumer received EXIT event. Exiting
+```
+- If you read through the output in my example, you can see some interesting things happening. Right at the top, you can see the `producer` got to create five messages and place four of them on the queue. It got swapped out by the operating system before it could place the fifth one.
+- The `consumer` then ran and pulled off the first message. It printed out that message as well as how deep the queue was at that point
+- This is how you know that the fifth message hasn’t made it into the `pipeline` yet. The queue is down to size three after a single message was removed. You also know that the `queue` can hold ten messages, so the `producer` thread didn’t get blocked by the `queue`. It was swapped out by the OS.
+# Threading Objects
+- There are a few more primitives offered by the Python `threading` module. While you didn’t need these for the examples above, they can come in handy in different use cases, so it’s good to be familiar with them.
+## Semaphore
+- The first Python `threading` object to look at is `threading.Semaphore`. A `Semaphore` is a counter with a few special properties. The first one is that the counting is atomic. This means that there is a guarantee that the operating system will not swap out the thread in the middle of incrementing or decrementing the counter.
+- The internal counter is incremented when you call `.release()` and decremented when you call `.acquire()`.
+- The next special property is that if a thread calls `.acquire()` when the counter is zero, that thread will block until a different thread calls `.release()` and increments the counter to one.
+- Semaphores are frequently used to protect a resource that has a limited capacity. An example would be if you have a pool of connections and want to limit the size of that pool to a specific number.
+##  Timer
