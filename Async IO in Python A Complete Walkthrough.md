@@ -13,7 +13,7 @@ Type:
 - The `asyncio` package is billed by the Python documentation as a library to write concurrent code. However, async IO is not threading, nor is it multiprocessing. It is not built on top of either of these.
 - In fact, async IO is a single-threaded, single-process design: it uses **cooperative multitasking**, a term that you’ll flesh out by the end of this tutorial. It has been said in other words that async IO gives a feeling of concurrency despite using a single thread in a single process. Coroutines (a central feature of async IO) can be scheduled concurrently, but they are not inherently concurrent.
 - I’d like to paraphrase one from Miguel Grinberg’s 2017 [PyCon](https://realpython.com/pycon-guide/) talk, which explains everything quite beautifully:
-- fdfdfd
+
 
 > [!example] Miguel Grinberg's 2017 PyCon Talk
 >  Chess master Judit Polgár hosts a chess exhibition in which she plays multiple amateur players. She has two ways of conducting the exhibition: synchronously and asynchronously.
