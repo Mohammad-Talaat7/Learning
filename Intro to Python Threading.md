@@ -51,6 +51,24 @@ Main    : wait for the thread to finish
 Main    : all done
 Thread 1: finishing
 ```
-# Daemon Threads
+## Daemon Threads
 - In computer science, a _daemon_ is a process that runs in the background.
 - If a program is running `Threads` that are not `daemons`, then the program will wait for those threads to complete before it terminates. `Threads` that _are_ daemons, however, are just killed wherever they are when the program is exiting.
+- Let’s repeat the program with a `daemon` thread. You do that by changing how you construct the `Thread`, adding the `daemon=True` flag:
+```python
+x = threading.Thread(target=thread_function, args=(1,), daemon=True)
+```
+- When you run the program now, you should see this output:
+```bash
+$ ./daemon_thread.py
+Main    : before creating thread
+Main    : before running thread
+Thread 1: starting
+Main    : wait for the thread to finish
+Main    : all done
+```
+- The difference here is that the final line of the output is missing. `thread_function()` did not get a chance to complete. It was a `daemon` thread, so when `__main__` reached the end of its code and the program wanted to finish, the daemon was killed.
+## `join()` a Thread
+- Daemon threads are handy, but what about when you want to wait for a thread to stop? What about when you want to do that and not exit your program? Now let’s go back to your original program and look at that commented out line twenty `x.join()`
+- To tell one thread to wait for another thread to finish, you call `.join()`. If you uncomment that line, the main thread will pause and wait for the thread `x` to complete running.
+# Working with many th
