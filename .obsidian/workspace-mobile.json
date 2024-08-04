@@ -4,55 +4,31 @@
     "type": "split",
     "children": [
       {
-        "id": "684e120c27dd929f",
+        "id": "750689fc0ac17dc0",
         "type": "tabs",
         "children": [
           {
-            "id": "9db92a668b29b306",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Articles/Using Multiprocessing library to parallel computing in python.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "82d661bf6c9e4fb1",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Courses/GPUs Programming/Introduction to Concurrent Programming with GPUs.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "d3ea79e6ccd33cfe",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Courses/GPUs Programming/Introduction to Concurrent Programming with GPUs.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "28be73ba417a55c0",
+            "id": "35e8a082f33853a0",
             "type": "leaf",
             "state": {
               "type": "graph",
               "state": {}
             }
+          },
+          {
+            "id": "408759513a60f0cc",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Courses/GPUs Programming/GPU Programming Specialization.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -130,7 +106,7 @@
         "state": {
           "type": "backlink",
           "state": {
-            "file": "Courses/GPUs Programming/Introduction to Concurrent Programming with GPUs.md",
+            "file": "Courses/GPUs Programming/GPU Programming Specialization.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -147,7 +123,7 @@
         "state": {
           "type": "outgoing-link",
           "state": {
-            "file": "Courses/GPUs Programming/Introduction to Concurrent Programming with GPUs.md",
+            "file": "Courses/GPUs Programming/GPU Programming Specialization.md",
             "linksCollapsed": false,
             "unlinkedCollapsed": true
           }
@@ -159,7 +135,7 @@
         "state": {
           "type": "outline",
           "state": {
-            "file": "Courses/GPUs Programming/Introduction to Concurrent Programming with GPUs.md"
+            "file": "Courses/GPUs Programming/GPU Programming Specialization.md"
           }
         }
       },
@@ -195,30 +171,33 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "d3ea79e6ccd33cfe",
+  "active": "408759513a60f0cc",
   "lastOpenFiles": [
+    "Learning Career.md",
+    "Articles/Using Multiprocessing library to parallel computing in python.md",
+    "Courses/GPUs Programming/Introduction to Concurrent Programming with GPUs.md",
+    "Articles/Async IO in Python A Complete Walkthrough.md",
+    "Articles/Intro to Python Threading.md",
+    "assets/lt46q7vNR2-eOqu7zbdv8Q_eed25abbc36e4a4da116d131d4781b86_Lلللesson5_CUDA_Software_Layers-readonly.png",
+    "assets/lt46q7vNR2-eOqu7zbdv8Q_eed25abbc36e4a4da116d131d4781b86_Lesson5_CUDA_Software_Layers-readonly.png",
+    "/assets/lt46q7vNR2-eOqu7zbdv8Q_eed25abbc36e4a4da116d131d4781b86_Lesson5_CUDA_Software_Layers-readonly.png",
+    "/Courses/GPUs Programming/Introduction to Concurrent Programming with GPUs.md",
+    "/Articles/Intro to Python Threading.md",
+    "/Articles/Async IO in Python A Complete Walkthrough.md",
+    "/assets/lt46q7vNR2-eOqu7zbdv8Q_eed25abbc36e4a4da116d131d4781b86_Lلللesson5_CUDA_Software_Layers-readonly.png",
     "lt46q7vNR2-eOqu7zbdv8Q_eed25abbc36e4a4da116d131d4781b86_Lesson5_CUDA_Software_Layers-readonly.png",
     "lt46q7vNR2-eOqu7zbdv8Q_eed25abbc36e4a4da116d131d4781b86_Lلللesson5_CUDA_Software_Layers-readonly.png",
     "/lt46q7vNR2-eOqu7zbdv8Q_eed25abbc36e4a4da116d131d4781b86_Lesson5_CUDA_Software_Layers-readonly.png",
-    "/Courses/GPUs Programming/Introduction to Concurrent Programming with GPUs.md",
     "/lt46q7vNR2-eOqu7zbdv8Q_eed25abbc36e4a4da116d131d4781b86_Lلللesson5_CUDA_Software_Layers-readonly.png",
     "conflict-files-obsidian-git.md",
-    "Courses/GPUs Programming/Introduction to Concurrent Programming with GPUs.md",
-    "Articles/Using Multiprocessing library to parallel computing in python.md",
-    "Untitled.md",
     "Articles",
     "assets/IMG_8250.png",
     "assets/IMG_8249.png",
-    "assets/Pasted image 20240729023825.png",
     "/Courses/Deep-Learning/Improving Deep Neural Networks Hyperparameter tuning, Regularization and Optimization.md",
     "/Using Multiprocessing library to parallel computing in python.md",
-    "/assets/Pasted image 20240729023825.png",
-    "/assets/IMG_8250.png",
-    "/assets/IMG_8249.png",
     "Courses/Deep-Learning/Improving Deep Neural Networks Hyperparameter tuning, Regularization and Optimization.md",
     "Courses/Deep-Learning/Deep-Learning Specialization.md",
     "Courses/Deep-Learning",
-    "assets/IMG_8229.jpg",
     "assets",
     "Courses/Deep-Learning/Neural Networks and Deep Learning.md",
     "/Courses/Deep-Learning/Neural Networks and Deep Learning.md",

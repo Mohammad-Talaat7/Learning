@@ -82,7 +82,7 @@ Many of the solutions fit into these five patterns:
 - Recursion requires a good management to get it to its final state to ensure that the recursive calls will continue in an infinite way
 
 ## Flynn’s Taxonomy
-- - Flynn's Taxonomy classifies all parallel operations into four categories each category start with SI (Singe-Instruction) or MI (Multi-Instruction) and end with SD (Single-Data) or MD (Multi-Data)
+- Flynn's Taxonomy classifies all parallel operations into four categories each category start with SI (Singe-Instruction) or MI (Multi-Instruction) and end with SD (Single-Data) or MD (Multi-Data)
 - ![[Pasted image 20240729023825.png]]
 - Single-Instruction and Single-Data
 	- Traditional Von Neumann Single CPU computer
