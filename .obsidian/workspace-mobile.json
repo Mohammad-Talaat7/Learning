@@ -21,7 +21,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Courses/GPUs Programming/GPU Programming Specialization.md",
+                "file": "Courses/GPUs Programming/Introduction to Concurrent Programming with GPUs.md",
                 "mode": "source",
                 "source": false
               }
@@ -106,7 +106,7 @@
         "state": {
           "type": "backlink",
           "state": {
-            "file": "Courses/GPUs Programming/GPU Programming Specialization.md",
+            "file": "Courses/GPUs Programming/Introduction to Concurrent Programming with GPUs.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -123,7 +123,7 @@
         "state": {
           "type": "outgoing-link",
           "state": {
-            "file": "Courses/GPUs Programming/GPU Programming Specialization.md",
+            "file": "Courses/GPUs Programming/Introduction to Concurrent Programming with GPUs.md",
             "linksCollapsed": false,
             "unlinkedCollapsed": true
           }
@@ -135,7 +135,7 @@
         "state": {
           "type": "outline",
           "state": {
-            "file": "Courses/GPUs Programming/GPU Programming Specialization.md"
+            "file": "Courses/GPUs Programming/Introduction to Concurrent Programming with GPUs.md"
           }
         }
       },
@@ -173,6 +173,7 @@
   },
   "active": "408759513a60f0cc",
   "lastOpenFiles": [
+    "Courses/GPUs Programming/GPU Programming Specialization.md",
     "Learning Career.md",
     "Articles/Using Multiprocessing library to parallel computing in python.md",
     "Courses/GPUs Programming/Introduction to Concurrent Programming with GPUs.md",
@@ -204,7 +205,6 @@
     "/Courses/Deep-Learning/Deep-Learning Specialization.md",
     "/assets",
     "/Courses/Deep-Learning",
-    "Courses/GPUs Programming/GPU Programming Specialization.md",
     "Courses/GPUs Programming",
     "Courses",
     "Courses/GPUs Programming/Introduction to Concurrent Programming with GPUs Outline.md"
