@@ -189,3 +189,8 @@ Many of the solutions fit into these five patterns:
 - The Runtime API is just an abstraction of the driver which save developers from tasks like initialization of modules and managing context 
 - Another simplification is that in runtime API all kernels that were compiled into any associated GPU code are available to host code as well therefore no need to selectively load modules and kernels into the current context 
 - To write code that utilize this API you will need to write in a C++ Language in general 
+### CUDA Driver API
+- Use it if you want more control on your code and how it works on GPU
+- Can be programmed in assembly but also any language that can link and execute .cubin objects
+- The driver api needs to be initialized at least once using cuInit function 
+# Week 5
