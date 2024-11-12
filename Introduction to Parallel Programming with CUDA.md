@@ -1114,4 +1114,4 @@ Considerations for Variable Memory
 - Be mindful of how many variables you instantiate in your kernels, as excessive variable memory can lead to inefficiencies similar to CPU memory management.
 - Aim to keep your variable memory within the 2 kilobyte limit per core to avoid performance issues related to global memory access.
 
-### 
+### **====**
