@@ -132,11 +132,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Introduction to Parallel Programming with CUDA.md"
-              },
+              "state": {},
               "icon": "lucide-list",
-              "title": "Outline of Introduction to Parallel Programming with CUDA"
+              "title": "Outline"
             }
           },
           {
@@ -175,7 +173,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Introduction to Parallel Programming with CUDA.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -185,7 +182,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Introduction to Parallel Programming with CUDA"
+              "title": "Backlinks"
             }
           },
           {
@@ -194,12 +191,11 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Introduction to Parallel Programming with CUDA.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Introduction to Parallel Programming with CUDA"
+              "title": "Outgoing links"
             }
           },
           {
@@ -232,14 +228,14 @@
       "workspaces:Manage workspace layouts": false
     }
   },
-  "active": "97bf3a6704c77d90",
+  "active": "c9d73fbf9cbb085c",
   "lastOpenFiles": [
+    "Introduction to Parallel Programming with CUDA.md",
     "Pasted image 20241112123616.png",
     "Pasted image 20241112123604.png",
     "Pasted image 20241112123544.png",
     "Pasted image 20241112123515.png",
     "Courses/GPUs Programming/Introduction to Concurrent Programming with GPUs.md",
-    "Introduction to Parallel Programming with CUDA.md",
     "Courses/GPUs Programming/GPU Programming Specialization.md",
     "Learning Career.md",
     "Articles/Async IO in Python A Complete Walkthrough.md",
@@ -260,7 +256,6 @@
     "Courses/Deep-Learning/andrewng-p-2-improving-deep-learning-network.md",
     "assets/IMG_8239.png",
     "Courses/Deep-Learning/Neural Networks and Deep Learning.md",
-    "assets/IMG_8242.png",
     "Courses/GPUs Programming/Introduction to Concurrent Programming with GPUs Outline.md",
     "kaggle.com.md",
     "assets",
