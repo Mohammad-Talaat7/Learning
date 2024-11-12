@@ -761,4 +761,23 @@ By using a memory pool, you can significantly reduce the overhead of memory mana
 - **Reduction in Bank Conflicts**: Properly organizing data in shared memory can help avoid bank conflicts, where multiple threads attempt to access the same memory bank simultaneously. This can lead to performance degradation, so careful data layout is essential.
     
 - **Temporary Storage**: Shared memory can be used as a temporary storage area for intermediate results, which can be particularly useful in algorithms that require multiple passes over data.
-## v
+# Module-3
+## Nvidia GPU Device Shared and Constant Memory Video Lecture
+This material focuses on understanding shared and constant memory in Nvidia GPU devices, which is crucial for optimizing performance in parallel programming.
+
+Understanding Shared Memory
+
+- Shared memory, also known as L1 Cache, is accessible by all cores and threads within the same block, allowing for efficient data sharing and communication.
+- The effective use of shared memory can help avoid costly read misses and race conditions, enhancing overall performance.
+
+Constant Memory Overview
+
+- Constant memory is typically limited to 64 KB and can sometimes be incorporated into the L2 Cache, which has increased significantly over time, now approaching 48 MB.
+- It's important to check the specifications of your GPU to determine how much constant memory can be utilized effectively.
+
+Effective Memory Management
+
+- Utilizing L2 Cache effectively is essential, as excessive cache read misses can lead to performance degradation similar to that of global memory.
+- The amount of shared memory per streaming multi-processor has varied over time, but recent architectures have seen significant increases, making it a valuable resource for developers.
+
+### **====**
