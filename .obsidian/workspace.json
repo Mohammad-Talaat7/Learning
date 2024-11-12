@@ -13,10 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
+                "file": "Introduction to Parallel Programming with CUDA.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Introduction to Parallel Programming with CUDA"
+            }
+          },
+          {
+            "id": "cf0157488fd8495b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
                 "file": "Courses/GPUs Programming/Introduction to Concurrent Programming with GPUs.md",
                 "mode": "source",
                 "source": false
-              }
+              },
+              "icon": "lucide-file",
+              "title": "Introduction to Concurrent Programming with GPUs"
             }
           }
         ]
@@ -39,7 +55,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
             }
           },
           {
@@ -54,7 +72,9 @@
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-search",
+              "title": "Search"
             }
           },
           {
@@ -62,7 +82,9 @@
             "type": "leaf",
             "state": {
               "type": "bookmarks",
-              "state": {}
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
             }
           }
         ]
@@ -86,7 +108,9 @@
             "type": "leaf",
             "state": {
               "type": "graph",
-              "state": {}
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
             }
           },
           {
@@ -98,7 +122,9 @@
                 "sortOrder": "frequency",
                 "showSearch": false,
                 "searchQuery": ""
-              }
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
             }
           },
           {
@@ -107,8 +133,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Courses/GPUs Programming/Introduction to Concurrent Programming with GPUs.md"
-              }
+                "file": "Introduction to Parallel Programming with CUDA.md"
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Introduction to Parallel Programming with CUDA"
             }
           },
           {
@@ -119,7 +147,9 @@
               "state": {
                 "sortOrder": "frequency",
                 "useHierarchy": true
-              }
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
             }
           },
           {
@@ -127,7 +157,9 @@
             "type": "leaf",
             "state": {
               "type": "calendar",
-              "state": {}
+              "state": {},
+              "icon": "calendar-with-checkmark",
+              "title": "Calendar"
             }
           }
         ]
@@ -143,7 +175,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Courses/GPUs Programming/Introduction to Concurrent Programming with GPUs.md",
+                "file": "Introduction to Parallel Programming with CUDA.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -151,7 +183,9 @@
                 "searchQuery": "",
                 "backlinkCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Introduction to Parallel Programming with CUDA"
             }
           },
           {
@@ -160,10 +194,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Courses/GPUs Programming/Introduction to Concurrent Programming with GPUs.md",
+                "file": "Introduction to Parallel Programming with CUDA.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Introduction to Parallel Programming with CUDA"
             }
           },
           {
@@ -171,7 +207,9 @@
             "type": "leaf",
             "state": {
               "type": "git-view",
-              "state": {}
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
             }
           }
         ],
@@ -194,11 +232,13 @@
       "workspaces:Manage workspace layouts": false
     }
   },
-  "active": "ad35da2405346f98",
+  "active": "97bf3a6704c77d90",
   "lastOpenFiles": [
+    "Courses/GPUs Programming/Introduction to Concurrent Programming with GPUs.md",
+    "Introduction to Parallel Programming with CUDA.md",
+    "Courses/GPUs Programming/GPU Programming Specialization.md",
     "Learning Career.md",
     "Articles/Async IO in Python A Complete Walkthrough.md",
-    "Courses/GPUs Programming/Introduction to Concurrent Programming with GPUs.md",
     "Articles/Intro to Python Threading.md",
     "Untitled.canvas",
     "assets/lt46q7vNR2-eOqu7zbdv8Q_eed25abbc36e4a4da116d131d4781b86_Lesson5_CUDA_Software_Layers-readonly.png",
@@ -226,7 +266,6 @@
     "Courses/Deep-Learning/Neural Networks and Deep Learning notes.md",
     "Courses/Deep-Learning/andrewng-p-5-sequence-models.md",
     "Courses/Deep-Learning/andrewng-p-1-neural-network-deep-learning.md",
-    "Courses/GPUs Programming/GPU Programming Specialization.md",
     "Courses/Deep-Learning",
     "Courses/GPUs Programming/jn.md",
     "Courses/GPUs Programming",
