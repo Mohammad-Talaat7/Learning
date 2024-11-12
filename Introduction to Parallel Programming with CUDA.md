@@ -1338,4 +1338,3 @@ Summary:
 
 In this convolution example, shared memory is essential for efficiency as it allows for quick access to the image data and filter, reduces global memory accesses, and enables effective collaboration among threads. This leads to faster processing times, especially for large images and complex filters.
 
-## f
