@@ -37,4 +37,10 @@ Type:
 - ## Overall, what was your degree result and how did that reflect on your ability? Please help us understand the grading system for your results.
 	- I graduated from my university with B degree (B+ in US grading system).
 	- our grading system was pretty much like high school just summing the total grad for each student and then scale it and give students their success percentage over all subjects in each semester then by summing the total grad of the two semesters and scaling it they give the result for each year and by that they calculate the overall result for the whole academic journey.
-	- Note that in the graduation project I have got a 
+	- Note that in the graduation project I have got an excellent with honor degree (A+ in US grading system) and the real reason that I got B in overall grads was because I was completely focused on my courses and self-learning road and was mentored by one of the greatest professors that we had.
+
+- ## During all of your education years, from high school to university,  can you describe any achievements that were truly exceptional?
+	- Well nothing is truly exceptional but for me I think my ability to study and teaching programming and tech. while doing my military services was a great achievement at least that's for me.
+
+- ## What leadership roles did you take on during your education? Have you conceived and driven to completion any initiatives outside of your required classwork?
+	- I was the leader of AI ha
