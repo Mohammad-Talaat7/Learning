@@ -71,4 +71,4 @@ Type:
 	- Note that any model used in our project either being part of the project in the end or stopped at the benchmarking phase was implemented using only Pytorch, numPy, and pandas libraries.
 
 - ## Give details of any experience you have with automated provisioning tools, configuration management and infrastructure-as-code
-	- 
+	- Honestly 
