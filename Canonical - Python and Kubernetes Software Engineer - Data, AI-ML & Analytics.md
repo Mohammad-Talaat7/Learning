@@ -26,4 +26,6 @@ Type:
 	- I fact I can't as my high school not even have a website on it's own I think the only way to outline it will be the records of the special exams in years 2016, 2017, and 2018 but that's a governmental records I can't access them.
 
 - ## What sort of high school student were you? Outside of class, what were your interests and hobbies? What would your high school peers remember you for?
-	- I think I was the nerd guy in the class I had a very little group of friends and didn't really want to expand that group 
+	- I think I was the nerd guy in the class I had a very little group of friends and didn't really want to expand that group as I wanted to really focus on getting into a Computer Science College as it was my dream since I was young.
+	- Outside of class I would be either studying or killing time on computer trying to learn a new skill or just playing video games.
+	- My peers would mostly remember me eating in the restaurant in front of our school (I really spent a lot of time in it).  
