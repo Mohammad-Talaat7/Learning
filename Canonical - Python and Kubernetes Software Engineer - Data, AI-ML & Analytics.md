@@ -80,3 +80,4 @@ Type:
 	- Again I have nearly no experience in Cloud base operations or applications but I'm willing to learn in path of becoming better developer and helping humanity.
 
 - ## Outline your thoughts on quality in software development. What practices are most effective to drive improvements in quality?
+	- In my opinion 
