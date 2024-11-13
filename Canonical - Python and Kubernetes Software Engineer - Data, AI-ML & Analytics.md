@@ -66,4 +66,7 @@ Type:
 
 - ## Which project or piece of software are you most proud of, and why?
 	- The project I'm most proud of so far would be my Graduation project It was an application that can analyze any kind of medical rays and diagnose it too and return the type of the rays used, the diagnose, and the object classified version of the medical ray if there was any thing wrong in it (like nails, plates or even tumors).
-	- It was so challenging project we first had to find where would we get the data from and ended using the Stanford AIMI Shared Datasets then augmenting the data and benchmarking 
+	- It was so challenging project we first had to find where would we get the data from and ended using the Stanford AIMI Shared Datasets then augmenting the data and benchmarking couple of AI models for image classification for each medical ray, image classification to determine the type of the rays, object detection, and object classification.
+	- I was in charge of mentoring the benchmarking phase and developing new models for image classification for X-Rays I started using simple models like VGG but it couldn't learn well from data and there
+
+- 
