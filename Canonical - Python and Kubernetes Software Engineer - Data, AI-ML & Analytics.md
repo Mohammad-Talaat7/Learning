@@ -27,7 +27,7 @@ Type:
 
 - ## What sort of high school student were you? Outside of class, what were your interests and hobbies? What would your high school peers remember you for?
 	- I think I was the nerd guy in the class I had a very little group of friends and didn't really want to expand that group as I wanted to really focus on getting into a Computer Science College as it was my dream since I was young.
-	- Outside of class I would be either studying, reading a book, cooking, or killing time on computer trying to learn a new skill or just playing video games (I really loved playing video games) .
+	- Outside of class I would be either studying, reading a book, cooking, Reading manga, Watching Anime, or killing time on computer trying to learn a new skill or just playing video games (I really loved playing video games) .
 	- My peers would mostly remember me eating in the restaurant in front of our school (I really spent a lot of time in it).
 
 - ## Which university and degree did you choose? What other universities did you consider, and why did you select that one?
@@ -35,4 +35,4 @@ Type:
 	- At that time I considered getting into Cairo University or getting into Engineering Department but in the end I chose El-Shrouk Academy due to it's professors and the great reputation the academy have.
 
 - ## Overall, what was your degree result and how did that reflect on your ability? Please help us understand the grading system for your results.
-	- 
+	- I graduated from my university with B degree (B+ in US grading system)
