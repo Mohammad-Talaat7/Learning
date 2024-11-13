@@ -64,4 +64,6 @@ Type:
 	- Honestly all I know about it is that it's used in cloud and server-side applications, DevOps, and Command line Tools and that it was intended to replace popular high-performance server-side languages like Java or C++ and being written in Assembly and C++ makes it really efficient I guess.
 	- In a scale from 1 to 10 I would be 2 in Go as all I know is basic syntax.
 
-- 
+- ## Which project or piece of software are you most proud of, and why?
+	- The project I'm most proud of so far would be my Graduation project It was an application that can analyze any kind of medical rays and diagnose it too and return the type of the rays used, the diagnose, and the object classified version of the medical ray if there was any thing wrong in it (like nails, plates or even tumors).
+	- It was so challenging project we first had to find where would we get the data from and ended using the Stanford AIMI Shared Datasets then augmenting the data and benchmarking 
