@@ -57,4 +57,5 @@ Type:
 	- most of it was running on linux operating system (Ubuntu - Fedora) using Spyder or Jupyter Lab as the development environments and python as it's main language and for databases MSQL (although I didn't work on databases before my most experience in python and AI/ML algorithms).
 
 - ## Give details of your Python software development experience to date, how would you rate your competency with Python?
-	- Currently I'm learning how to program CUDA programs through python 
+	- Currently I'm learning how to program CUDA programs using python and how to use it to optimize my python projects, I'm learning through NVIDIA Docs and the CUDA series training provided to Oakland National Laboratory that is opened to the public, also I'm now developing my own library and plan to publish it on Python Package Index (PyPI) when it's finished my goal is to develop a python package that enables a beginner to implement a whole AI/ML algorithm in few codes starting from reading data and ending with evaluating the code and visualize the results with high customization it can work with any way the user want and with any datatype too (with that said I have to say that I'm still in the begin of that project).
+	- Honestly i
