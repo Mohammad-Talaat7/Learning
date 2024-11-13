@@ -20,4 +20,7 @@ Type:
 	- I say that as I participated in my high school's special exams for top students.
 
 - ## Please state your high school graduation results or university entrance results, and explain the grading system used. For example, in the US, you might give your SAT or ACT scores. In Germany, you might give your scores out of a grading system of 1-5, with 1 being the best.
-	- My high School 
+	- My high School was ranking students by scaling their grades in percentage way and as far as I can remember I graduated from high school with 92% (Excellent in the US grading system).
+
+- ## Can you make a case that you are in the top 5% in your academic year, or top 1%, or even higher? If so please outline that case. Make reference where possible to standardised testing results at regional or national level, or university entrance results. Please explain any specific grading system used.
+	- I fact I can't as my high school not even have a website on it's own
