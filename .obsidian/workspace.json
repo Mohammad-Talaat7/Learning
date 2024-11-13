@@ -158,19 +158,8 @@
               "icon": "calendar-with-checkmark",
               "title": "Calendar"
             }
-          },
-          {
-            "id": "d17727ca8f1e0a15",
-            "type": "leaf",
-            "state": {
-              "type": "git-history-view",
-              "state": {},
-              "icon": "history",
-              "title": "History"
-            }
           }
-        ],
-        "currentTab": 5
+        ]
       },
       {
         "id": "a45e5240f8c0857d",
@@ -201,16 +190,35 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Courses/GPUs Programming/CUDA at Scale for the Enterprise.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from CUDA at Scale for the Enterprise"
+              "title": "Outgoing links"
+            }
+          },
+          {
+            "id": "64ed5afe705132ac",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
+          },
+          {
+            "id": "d17727ca8f1e0a15",
+            "type": "leaf",
+            "state": {
+              "type": "git-history-view",
+              "state": {},
+              "icon": "history",
+              "title": "History"
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
@@ -229,10 +237,10 @@
       "workspaces:Manage workspace layouts": false
     }
   },
-  "active": "97bf3a6704c77d90",
+  "active": "64ed5afe705132ac",
   "lastOpenFiles": [
-    "Courses/GPUs Programming/Introduction to Parallel Programming with CUDA.md",
     "Courses/GPUs Programming/CUDA at Scale for the Enterprise.md",
+    "Courses/GPUs Programming/Introduction to Parallel Programming with CUDA.md",
     "assets/Pasted image 20241112123515.png",
     "Courses/GPUs Programming/Introduction to Concurrent Programming with GPUs.md",
     "assets/Pasted image 20241112123616.png",
