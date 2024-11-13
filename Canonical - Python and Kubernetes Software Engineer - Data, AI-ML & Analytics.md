@@ -35,4 +35,6 @@ Type:
 	- At that time I considered getting into Cairo University or getting into Engineering Department but in the end I chose El-Shrouk Academy due to it's professors and the great reputation the academy have.
 
 - ## Overall, what was your degree result and how did that reflect on your ability? Please help us understand the grading system for your results.
-	- I graduated from my university with B degree (B+ in US grading system)
+	- I graduated from my university with B degree (B+ in US grading system).
+	- our grading system was pretty much like high school just summing the total grad for each student and then scale it and give students their success percentage over all subjects in each semester then by summing the total grad of the two semesters and scaling it they give the result for each year and by that they calculate the overall result for the whole academic journey.
+	- Note that in the graduation project I have got a 
