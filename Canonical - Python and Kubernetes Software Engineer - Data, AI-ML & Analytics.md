@@ -43,4 +43,5 @@ Type:
 	- Well nothing is truly exceptional but for me I think my ability to study and teaching programming and tech. while doing my military services was a great achievement at least that's for me.
 
 - ## What leadership roles did you take on during your education? Have you conceived and driven to completion any initiatives outside of your required classwork?
-	- I was the leader of AI ha
+	- I was the leader of the AI Learning Group we founded it in the first year and was mentored by our professors I was responsible of teaching my classmates the foundation of using AI and ML techniques.
+	- Since I was accepted in the college I started taking courses outside the 
