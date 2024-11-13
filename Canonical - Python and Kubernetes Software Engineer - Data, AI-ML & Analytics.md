@@ -31,5 +31,8 @@ Type:
 	- My peers would mostly remember me eating in the restaurant in front of our school (I really spent a lot of time in it).
 
 - ## Which university and degree did you choose? What other universities did you consider, and why did you select that one?
-	- I got into El-Shrouk Academy Computer Science department, It's a great university I learned a lot from it.
-	- At that time I considered getting into Cairo University or getting into Engine
+	- I got into El-Shrouk Academy Computer Science department.
+	- At that time I considered getting into Cairo University or getting into Engineering Department but in the end I chose El-Shrouk Academy due to it's professors and the great reputation the academy have.
+
+- ## Overall, what was your degree result and how did that reflect on your ability? Please help us understand the grading system for your results.
+	- 
