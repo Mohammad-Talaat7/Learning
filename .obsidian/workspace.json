@@ -91,8 +91,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 374.5,
-    "collapsed": true
+    "width": 374.5
   },
   "right": {
     "id": "e342685a996aaaaa",
@@ -159,8 +158,19 @@
               "icon": "calendar-with-checkmark",
               "title": "Calendar"
             }
+          },
+          {
+            "id": "d17727ca8f1e0a15",
+            "type": "leaf",
+            "state": {
+              "type": "git-history-view",
+              "state": {},
+              "icon": "history",
+              "title": "History"
+            }
           }
-        ]
+        ],
+        "currentTab": 5
       },
       {
         "id": "a45e5240f8c0857d",
@@ -191,25 +201,16 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Courses/GPUs Programming/CUDA at Scale for the Enterprise.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links"
-            }
-          },
-          {
-            "id": "ad35da2405346f98",
-            "type": "leaf",
-            "state": {
-              "type": "git-view",
-              "state": {},
-              "icon": "git-pull-request",
-              "title": "Source Control"
+              "title": "Outgoing links from CUDA at Scale for the Enterprise"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
