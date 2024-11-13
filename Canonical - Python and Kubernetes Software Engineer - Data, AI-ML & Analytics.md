@@ -58,4 +58,10 @@ Type:
 
 - ## Give details of your Python software development experience to date, how would you rate your competency with Python?
 	- Currently I'm learning how to program CUDA programs using python and how to use it to optimize my python projects, I'm learning through NVIDIA Docs and the CUDA series training provided to Oakland National Laboratory that is opened to the public, also I'm now developing my own library and plan to publish it on Python Package Index (PyPI) when it's finished my goal is to develop a python package that enables a beginner to implement a whole AI/ML algorithm in few codes starting from reading data and ending with evaluating the code and visualize the results with high customization it can work with any way the user want and with any datatype too (with that said I have to say that I'm still in the begin of that project).
-	- Honestly i
+	- Honestly in a scale from 1 to 10 I would say that I'm 9.5 in python I have spent 5-6 years learning it and working with it.
+
+- ## Give details of your Go software development experience to date, how would you rate your competency with Go?
+	- Honestly all I know about it is that it's used in cloud and server-side applications, DevOps, and Command line Tools and that it was intended to replace popular high-performance server-side languages like Java or C++ and being written in Assembly and C++ makes it really efficient I guess.
+	- In a scale from 1 to 10 I would be 2 in Go as all I know is basic syntax.
+
+- 
