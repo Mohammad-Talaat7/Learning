@@ -104,4 +104,8 @@ Type:
 
 - ## Outline your thoughts on the mission of Canonical. What is it about the company's purpose and goals which is most appealing to you? What do you see as risky or unappealing?
 	- I have knew Canonical for 3-4 years and was really impressed I think that the company's mission is to bring open source knowledge and tech for everyone across the globe.
-	- I have struggled in my early days to find knowledge but always find a person or company that is believing in the open source community and contributing to it either with knowledge or software and I always felt that this is right and every human being deserve to benefit from the open source knowledge and tools and when it comes to the open source community Canonical comes first in mind due to its contributions to the communi
+	- In my opinion Company's goals would be the leadership in Open source community and Linux systems which is most appealing in my opinion also simplifying AI/ML is very appealing to me too.
+	- The risks in my opinion is balancing profitability with open source values I think this is one of the great risks also the competition Red Hat and other enterprise Linux providers.
+
+- ## How should Canonical set about winning, commercially?
+	- 
