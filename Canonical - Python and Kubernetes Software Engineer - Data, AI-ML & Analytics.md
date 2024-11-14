@@ -91,4 +91,12 @@ Type:
 # Context
 ---
 - ## Describe your experience with AI/ML operations tools, such as Kubeflow, MLFlow, Spark, etc.
-	- 
+	- I used MLFlow's Tracking feature to store my graduation project results in benchmarking phase which helped me a lot to determine what to do next and what models I should focus on.
+
+- ## Give details of your practical experience with Kubernetes, and with container-based operations in general
+	- In fact I don't have practical experience using Kubernetes or container-based operations but as I have already mentioned I'm willing to keep learning and to become better developer.
+
+- ## Have you had any involvement in the Cloud Native community, or contributed to any related projects?
+	- In fact I don't have any involvement in the Cloud Native Community.
+
+- ## Outline your thoughts on the challenges of managing deployed MLOps software in enterprise situations
