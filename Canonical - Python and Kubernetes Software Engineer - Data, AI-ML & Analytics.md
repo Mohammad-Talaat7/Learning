@@ -81,4 +81,7 @@ Type:
 
 - ## Outline your thoughts on quality in software development. What practices are most effective to drive improvements in quality?
 	- In my opinion maintaining a good quality since the start of the project is very important and to ensure it is better to use Agile methodology, and test the project really well (Unit test - Feature test - Integration test) also keep an eye on project's performance by profiling it's time and space complexity while developing and maybe the most important thing in my mind is to plan well for the project, analyzing the requirements, and planning each step properly.
+
+- ## Outline your thoughts on documentation in software projects. What practices should teams follow? What are great examples of open source docs?
+	- In my opinion Documenting the project is very important as it helps end-user to understand how actually the project works and how to use it properly also it helps to maintain the project in the future.
 	- 
