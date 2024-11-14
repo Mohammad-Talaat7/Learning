@@ -114,4 +114,13 @@ Type:
 	- Canonical success relies deeply on it's community (Open Source Community) so in my opinion it should focus on position Ubuntu as the default Operating System for every developer while increase it's contributions to the community this will influence enterprise choices.
 
 - ## Why do you most want to work for Canonical?
-	- In fact working in Canonical was my dream for the past 3 years as I learned how strong this company contributing to the open source community also it would be a great chance for me to gain a practical experience with cloud 
+	- In fact working in Canonical was my dream for the past 3 years as I learned how strong this company contributing to the open source community also it would be a great chance for me to gain a practical experience with cloud operations, dockers, MLOps, and another knowledge that I lack in my knowledge base and gaining the chance to meet the wonderful team who works in the company.
+
+- ## What gives you the most satisfaction at work?
+	- Gaining the opportunity to learn new skills and contributing to the open source community would give me the most satisfaction.
+
+- ## What would you most want to change about Canonical?
+	- I would publish more updates to Ubuntu honestly.
+
+- ## What gets you most excited about this role?
+	- Being able to work in Canonical while using my experience in Python and gaining the opportunity to keep learning in one of the leading providers of open source software
