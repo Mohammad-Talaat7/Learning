@@ -100,3 +100,7 @@ Type:
 	- In fact I don't have any involvement in the Cloud Native Community.
 
 - ## Outline your thoughts on the challenges of managing deployed MLOps software in enterprise situations
+	- In my opinion managing deployed MLOps software in enterprise situations can have multiple challenges like lack of data versioning, lack of iterative deployment, or changing in the nature of data needed for the project.
+
+- ## Outline your thoughts on the mission of Canonical. What is it about the company's purpose and goals which is most appealing to you? What do you see as risky or unappealing?
+	- 
