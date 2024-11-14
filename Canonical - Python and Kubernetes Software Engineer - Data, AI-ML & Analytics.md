@@ -108,4 +108,10 @@ Type:
 	- The risks in my opinion is balancing profitability with open source values I think this is one of the great risks also the competition Red Hat and other enterprise Linux providers.
 
 - ## How should Canonical set about winning, commercially?
-	- 
+	- In my opinion focusing on AI/ML and data science capabilities would rise Canonical commercially also its expanding in IoT market is an important move with it's develop in cloud applications and partnership with cloud providers.
+
+- ## How should Canonical amplify its impact in open source?
+	- Canonical success relies deeply on it's community (Open Source Community) so in my opinion it should focus on position Ubuntu as the default Operating System for every developer while increase it's contributions to the community this will influence enterprise choices.
+
+- ## Why do you most want to work for Canonical?
+	- In fact working in Canonical was my dream for the past 3 years as I learned how strong this company contributing to the open source community also it would be a great chance for me to gain a practical experience with cloud 
