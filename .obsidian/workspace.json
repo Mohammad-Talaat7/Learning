@@ -8,31 +8,17 @@
         "type": "tabs",
         "children": [
           {
-            "id": "97bf3a6704c77d90",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Canonical - Python and Kubernetes Software Engineer - Data, AI-ML & Analytics.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Canonical - Python and Kubernetes Software Engineer - Data, AI-ML & Analytics"
-            }
-          },
-          {
             "id": "f72408abf97fd9e4",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Courses/GPUs Programming/Introduction to Parallel Programming with CUDA.md",
+                "file": "Courses/GPUs Programming/CUDA at Scale for the Enterprise.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Introduction to Parallel Programming with CUDA"
+              "title": "CUDA at Scale for the Enterprise"
             }
           }
         ]
@@ -238,14 +224,14 @@
       "workspaces:Manage workspace layouts": false
     }
   },
-  "active": "97bf3a6704c77d90",
+  "active": "f72408abf97fd9e4",
   "lastOpenFiles": [
-    "Learning Career.md",
+    "Courses/GPUs Programming/Introduction to Parallel Programming with CUDA.md",
     "Canonical - Python and Kubernetes Software Engineer - Data, AI-ML & Analytics.md",
+    "Learning Career.md",
     "Canonical - Python and Kubernetes Software Engineer - Data, AI/ML & Analytics.md",
     "Canonical - Python and Kubernetes Software Engineer - Data, AI",
     "Courses/GPUs Programming/CUDA at Scale for the Enterprise.md",
-    "Courses/GPUs Programming/Introduction to Parallel Programming with CUDA.md",
     "assets/Pasted image 20241112123515.png",
     "Courses/GPUs Programming/Introduction to Concurrent Programming with GPUs.md",
     "assets/Pasted image 20241112123616.png",
