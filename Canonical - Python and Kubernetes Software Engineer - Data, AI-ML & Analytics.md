@@ -123,4 +123,4 @@ Type:
 	- I would publish more updates to Ubuntu honestly.
 
 - ## What gets you most excited about this role?
-	- Being able to work in Canonical while using my experience in Python and gaining the opportunity to keep learning in one of the leading providers of open source software
+	- Being able to work in Canonical while using my experience in Python and gaining the opportunity to keep learning in one of the leading providers of open source software.
