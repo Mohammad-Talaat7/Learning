@@ -84,4 +84,11 @@ Type:
 
 - ## Outline your thoughts on documentation in software projects. What practices should teams follow? What are great examples of open source docs?
 	- In my opinion Documenting the project is very important as it helps end-user to understand how actually the project works and how to use it properly also it helps to maintain the project in the future.
-	- In my opinion the best practice is to start documenting with the start of the project 
+	- In my opinion the best practice is to start documenting with the start of the project.
+	- Using Open Source Docs helps a lot when it comes to documenting the project **MkDocs** is good and simple and have wide choice of themes.
+
+
+# Context
+---
+- ## Describe your experience with AI/ML operations tools, such as Kubeflow, MLFlow, Spark, etc.
+	- 
