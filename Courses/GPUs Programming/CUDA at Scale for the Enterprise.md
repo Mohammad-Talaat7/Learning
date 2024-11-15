@@ -268,4 +268,94 @@ Summary
 
 Overall, `cudaIpcGetMemHandle` is essential for enabling efficient data sharing between processes using CUDA, making it a key component in applications that require inter-process communication between GPUs.
 
+# Module 2
+## CUDA Streams and Events
+This material focuses on understanding streams and events in CUDA programming, highlighting how they enhance efficiency and control in executing kernels.
+
+Understanding Streams
+
+- In CUDA, the default stream executes all kernels sequentially, which can lead to inefficiencies due to the need for data copying between CPU and GPU memory.
+- Creating user-defined streams allows for more efficient execution by enabling multiple streams to run concurrently, improving overall performance.
+
+Utilizing Events for Control
+
+- Events are used to manage the execution order of kernels and streams, allowing the CPU to wait for specific events to complete before proceeding.
+- This capability enables complex workflows, such as executing multiple kernels in a specific order and managing resources across multiple CPUs or GPUs.
+
+Maximizing Efficiency
+
+- By using non-blocking streams, you can specify multiple kernels on the same stream, allowing for better resource utilization when some streams are idle.
+- Events help create dependencies between streams, ensuring that certain actions only occur after previous tasks are completed, leading to optimized execution.
+
+Remember, mastering these concepts will significantly enhance your ability to write efficient CUDA programs.
+
+### **==What is the role of events in managing execution order in CUDA?==**
+- **Start and Complete Actions**: Events can signal the start and completion of tasks, enabling the CPU to wait for a specific event from a stream or kernel before proceeding.
+    
+- **Creating Dependencies**: You can set up dependencies between different streams. A kernel on one stream will not start executing until the corresponding event from another stream is completed.
+    
+- **Complex Workflows**: Events allow you to design complex workflows, such as executing a series of kernels in a specific order across different streams, ensuring that resources are managed efficiently.
+    
+- **Asynchronous Execution**: By using events, you can achieve more asynchronous capabilities, allowing the CPU to continue executing other tasks while waiting for events to complete.
+
+### **==How can you create dependencies between different streams using events?==**
+Creating dependencies between different streams using events in CUDA involves a few key steps. Here’s a concise guide on how to do this:
+
+1. **Create Events**: Use the CUDA API to create events that will be used to signal the completion of tasks in your streams.
+    
+    ```c
+    cudaEvent_t event;
+    cudaEventCreate(&event);
+    ```
+    
+2. **Record Events**: After launching a kernel in a stream, record the event to indicate that the kernel has completed its execution.
+    
+    ```c
+    cudaStream_t stream1;
+    cudaStreamCreate(&stream1);
+    kernelFunction<<<blocks, threads, 0, stream1>>>(...);
+    cudaEventRecord(event, stream1);
+    ```
+    
+3. **Wait for Events**: In another stream, you can wait for the event to complete before launching subsequent kernels. This ensures that the second stream does not start executing until the first stream has finished its task.
+    
+    ```c
+    cudaStream_t stream2;
+    cudaStreamCreate(&stream2);
+    cudaEventSynchronize(event); // Wait for the event to complete
+    kernelFunction2<<<blocks, threads, 0, stream2>>>(...);
+    ```
+    
+4. **Cleanup**: After you are done with the events and streams, make sure to destroy them to free up resources.
+    
+    ```c
+    cudaEventDestroy(event);
+    cudaStreamDestroy(stream1);
+    cudaStreamDestroy(stream2);
+    ```
+    
+
+By following these steps, you can effectively create dependencies between different streams, ensuring that tasks are executed in the desired order. This approach enhances the efficiency and control of your CUDA applications.
+
+### **==What is the relationship between streams and events in managing kernel execution?==**
+The relationship between streams and events in managing kernel execution in CUDA is fundamental to achieving efficient and controlled execution of tasks. Here’s a concise overview of how they interact:
+
+- **Streams**:
+    
+    - Streams are sequences of operations that are executed in order on the GPU. Each stream can execute kernels and memory operations concurrently with other streams.
+    - By using multiple streams, you can overlap computation and data transfer, leading to better resource utilization and improved performance.
+- **Events**:
+    - Events are synchronization points that allow you to track the completion of operations in streams. They can be used to signal when a kernel has finished executing or when a memory operation is complete.
+    - Events help manage dependencies between different streams, ensuring that certain tasks do not start until previous tasks have completed.
+
+How They Work Together:
+
+- **Synchronization**: Events can be recorded in a stream after a kernel execution. Other streams can then wait for these events to complete before launching their own kernels, creating a controlled execution order.
+    
+- **Dependency Management**: By using events, you can establish dependencies between streams. For example, if Stream A must complete a kernel before Stream B can start its execution, you can record an event in Stream A and synchronize Stream B with that event.
+    
+- **Asynchronous Execution**: While events provide synchronization, they also allow for asynchronous execution. The CPU can continue executing other tasks while waiting for events to complete, maximizing efficiency.
+
+In summary, streams provide the framework for executing operations concurrently, while events offer the control needed to manage the execution order and dependencies between those operations. This combination is key to optimizing performance in CUDA applications.
+
 ## f
