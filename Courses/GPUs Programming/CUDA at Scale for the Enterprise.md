@@ -149,4 +149,24 @@ A great example of a real-world application that benefits from NVLink technology
     
 - **Research and Development**: In academic and industrial research settings, NVLink supports collaborative projects that require extensive computational resources, enabling researchers to experiment with more sophisticated models and algorithms.
 
-## # CUDA Multiple GPU Programming Model
+## CUDA Multiple GPU Programming Model
+This material focuses on the computational model for multi-issue GPU systems using CUDA, emphasizing device management and inter-process communication.
+
+Device Management in CUDA
+
+- CUDA allows you to manage multiple devices, enabling you to query properties like global memory and memory speed to choose the best GPU for your tasks.
+- You can use `cudaGetDeviceCount` to determine the number of available devices and select one based on specific properties.
+
+Inter-Process Communication
+
+- Setting up inter-process communication allows different GPUs to share memory handles, facilitating data exchange between processes.
+- You can create events on shared streams between GPUs, which can be powerful for synchronizing tasks.
+
+Unified Addressing and Peer Access
+
+- Unified addressing simplifies memory management across GPUs and CPUs, allowing CUDA to handle memory locations automatically.
+- You can enable peer access between devices to share memory and perform operations like `CUDA mem copy peer async` for efficient data transfer.
+
+Remember, mastering these concepts will empower you to effectively utilize CUDA in multi-GPU systems.
+
+### **====**
