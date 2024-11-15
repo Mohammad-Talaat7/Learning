@@ -97,4 +97,56 @@ Benefits of Asynchronous Communication in This Scenario:
 - **Efficiency**: The system can handle multiple requests simultaneously, reducing wait times and improving overall performance.
 - **Scalability**: Asynchronous communication allows the platform to scale better during peak times, such as sales events, without overwhelming the server.
 
-## f
+## Multiple CPUs vs Multiple GPUs
+This material focuses on the comparison between multiple CPU and GPU systems, highlighting their communication methods, advantages, and use cases.
+
+Communication Mechanisms
+
+- Multi CPU systems communicate via cache or system bus, which is fast but limited by distance and physical connections.
+- Multi GPU systems utilize technologies like NVLink for seamless communication, allowing for faster memory copies without going through the CPU.
+
+Advantages and Limitations
+
+- Multi CPUs offer unlimited storage and memory, making them suitable for complex tasks that require high coherence and control.
+- Multi GPUs excel in performing many simple computations efficiently, but they are limited in communication forms and are best for problems that can be easily decomposed.
+
+Use Cases
+
+- Multi CPUs are ideal for edge computing and complex tasks that require distributed processing across different locations.
+- Multi GPUs are particularly effective for machine learning tasks where computations are repetitive and cost-effective solutions are needed.
+
+Remember, understanding these concepts will empower you to make informed decisions in your computing projects.
+### **==What is NVLink and how does it improve GPU communication?==**
+- **High Bandwidth**: NVLink provides significantly higher bandwidth compared to traditional PCIe connections, allowing for faster data transfer between GPUs. This is crucial for applications that require large amounts of data to be processed quickly.
+    
+- **Seamless Memory Access**: With NVLink, multiple GPUs can share memory more efficiently. This means that data can be accessed directly from the memory of another GPU without needing to go through the CPU, reducing latency and improving performance.
+    
+- **Scalability**: NVLink allows for the connection of multiple GPUs in a single system, enabling scalable performance. This is particularly beneficial for tasks that can leverage parallel processing, such as deep learning and complex simulations.
+    
+- **Improved Coherency**: NVLink enhances data coherency between GPUs, which is essential for maintaining consistency in computations across multiple processing units.
+
+### **==What challenges might arise when managing communication between multiple CPUs?==**
+- **Latency**: Communication between CPUs can introduce latency, especially if they are connected over longer distances or through slower network interfaces. This can slow down overall system performance.
+    
+- **Data Coherency**: Ensuring that all CPUs have a consistent view of the data can be complex. If one CPU updates data, other CPUs need to be informed to maintain coherence, which can lead to additional overhead.
+    
+- **Network Configuration**: Different CPUs may be configured differently, leading to potential compatibility issues. Ensuring that all CPUs can communicate effectively requires careful network setup and management.
+    
+- **Scalability**: As more CPUs are added to a system, managing communication becomes increasingly complex. The network may become a bottleneck, limiting the performance gains from adding additional CPUs.
+    
+- **Complexity of Programming**: Writing software that efficiently utilizes multiple CPUs can be challenging. Developers need to consider how to distribute tasks and manage data sharing effectively.
+    
+- **Resource Contention**: Multiple CPUs may compete for shared resources, such as memory or I/O bandwidth, leading to contention and reduced performance.
+
+### **==What's an example of a real-world application that benefits from NVLink technology?==**
+A great example of a real-world application that benefits from NVLink technology is **deep learning** in artificial intelligence (AI) research and development. Here’s how NVLink enhances this application:
+
+- **Training Neural Networks**: Deep learning models, especially those used in image recognition, natural language processing, and autonomous driving, require processing vast amounts of data. NVLink allows multiple GPUs to work together efficiently, significantly speeding up the training process.
+    
+- **Large Model Handling**: As AI models grow in complexity and size, NVLink enables the distribution of these models across multiple GPUs. This allows for faster computations and the ability to handle larger datasets without running into memory limitations.
+    
+- **Real-Time Inference**: In applications like self-driving cars or real-time video analysis, NVLink facilitates quick data processing and decision-making by allowing GPUs to share information rapidly, leading to improved performance and responsiveness.
+    
+- **Research and Development**: In academic and industrial research settings, NVLink supports collaborative projects that require extensive computational resources, enabling researchers to experiment with more sophisticated models and algorithms.
+
+## # CUDA Multiple GPU Programming Model

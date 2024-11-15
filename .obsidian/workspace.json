@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Courses/GPUs Programming/Introduction to Concurrent Programming with GPUs.md",
+                "file": "Courses/GPUs Programming/CUDA at Scale for the Enterprise.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Introduction to Concurrent Programming with GPUs"
+              "title": "CUDA at Scale for the Enterprise"
             }
           }
         ]
@@ -226,6 +226,7 @@
   },
   "active": "f72408abf97fd9e4",
   "lastOpenFiles": [
+    "Courses/GPUs Programming/Introduction to Concurrent Programming with GPUs.md",
     "Courses/GPUs Programming/CUDA at Scale for the Enterprise.md",
     "Courses/GPUs Programming/Introduction to Parallel Programming with CUDA.md",
     "Canonical - Python and Kubernetes Software Engineer - Data, AI-ML & Analytics.md",
@@ -233,7 +234,6 @@
     "Canonical - Python and Kubernetes Software Engineer - Data, AI/ML & Analytics.md",
     "Canonical - Python and Kubernetes Software Engineer - Data, AI",
     "assets/Pasted image 20241112123515.png",
-    "Courses/GPUs Programming/Introduction to Concurrent Programming with GPUs.md",
     "assets/Pasted image 20241112123616.png",
     "assets/Pasted image 20241112123604.png",
     "assets/Pasted image 20241112123544.png",
