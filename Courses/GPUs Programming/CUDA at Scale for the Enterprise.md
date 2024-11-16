@@ -760,3 +760,48 @@ Summary
 While radix sort is not inherently designed for negative numbers or special characters, with some adjustments and considerations, it can be effectively adapted to handle these cases.
 
 ## Sorting Algorithm GPU Pseudocode Quick Sort
+This material focuses on the Quicksort algorithm, a powerful sorting method that efficiently organizes data by using a pivot value to partition the array.
+
+Understanding Quicksort
+
+- Quicksort operates by selecting a pivot value, typically the left-most element, and rearranging the array so that elements less than the pivot are on the left and those greater are on the right.
+- The algorithm uses colors in visual representations: blue for unsorted, amber for sorted, yellow for the pivot, green for values less than the pivot, and purple for values greater than the pivot.
+
+Partitioning and Recursion
+
+- The partition function identifies the pivot and organizes elements around it, returning the pivot's final position and allowing for recursive sorting of the left and right partitions.
+- Quicksort is recursive, meaning it calls itself on smaller sections of the array until the base case is reached, where the start and end indices converge.
+
+Efficiency of Quicksort
+
+- Quicksort is generally faster than other sorting algorithms like bubble sort due to fewer comparisons and the ability to sort in smaller, manageable parts.
+- The algorithm's efficiency is enhanced by its ability to work with subsets of data rather than the entire array at once, making it suitable for larger datasets.
+
+### **==What is the role of the pivot value in Quicksort?==**
+- **Partitioning**: The pivot value is used to divide the array into two parts. Elements less than the pivot are moved to its left, and elements greater than the pivot are moved to its right.
+    
+- **Determining Position**: The pivot helps in finding its correct position in the sorted array. Once the partitioning is complete, the pivot is in its final sorted position.
+    
+- **Recursive Sorting**: After partitioning, Quicksort recursively sorts the sub-arrays on either side of the pivot. This process continues until the base case is reached, where the sub-arrays are small enough to be considered sorted.
+    
+- **Efficiency**: The choice of pivot can significantly affect the algorithm's performance. A good pivot minimizes the number of comparisons and helps maintain balance in the partitions.
+
+### **==What is the process of partitioning in the Quicksort algorithm?==**
+Here’s a step-by-step overview of how it works:
+
+1. **Choose a Pivot**: Select a pivot value from the array. This can be the left-most element, right-most element, or any other element based on the implementation.
+    
+2. **Initialize Indices**: Set up two indices: one for traversing the array (let's call it `i`) and another for tracking the position of the pivot (let's call it `pivotIndex`).
+    
+3. **Traverse the Array**: Loop through the array from the start to the end:
+    
+    - Compare each element with the pivot value.
+    - If an element is less than the pivot, swap it with the element at the `pivotIndex`, and then increment the `pivotIndex`.
+4. **Final Swap**: After the loop, swap the pivot value with the element at the `pivotIndex`. This places the pivot in its correct sorted position.
+    
+5. **Return the Pivot Index**: The partition function returns the index of the pivot, which now separates the array into two parts: elements less than the pivot on the left and elements greater than the pivot on the right.
+
+This partitioning process is repeated recursively on the sub-arrays until the entire array is sorted. It’s a powerful method that allows Quicksort to efficiently manage and sort large datasets.
+
+###
+## Memory and GPU Pseudocode Bubble Sort
