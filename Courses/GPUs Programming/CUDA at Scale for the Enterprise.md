@@ -803,5 +803,13 @@ Here’s a step-by-step overview of how it works:
 
 This partitioning process is repeated recursively on the sub-arrays until the entire array is sorted. It’s a powerful method that allows Quicksort to efficiently manage and sort large datasets.
 
-###
+### **==What’s an example of a scenario where Quicksort would perform better than other sorting algorithms?==**
+- **Large Datasets**: Quicksort is particularly efficient with large datasets due to its average-case time complexity of O(n log n). For example, if you have a large array of numbers to sort, Quicksort can handle it more efficiently than simpler algorithms like bubble sort, which has a time complexity of O(n²).
+    
+- **Partially Sorted Data**: If the data is already partially sorted, Quicksort can take advantage of this, leading to fewer comparisons and swaps. For instance, if you have an array where most elements are already in order, Quicksort can quickly partition the data around the pivot, resulting in faster sorting.
+    
+- **Randomized Input**: When the input data is random, Quicksort's performance is generally better than algorithms like insertion sort or selection sort. For example, sorting a randomly generated list of integers will typically yield better performance with Quicksort.
+    
+- **Memory Constraints**: Quicksort is an in-place sorting algorithm, meaning it requires only a small, constant amount of additional storage space. This makes it suitable for environments with limited memory, such as embedded systems.
+
 ## Memory and GPU Pseudocode Bubble Sort
