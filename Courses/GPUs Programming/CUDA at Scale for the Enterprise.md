@@ -8,7 +8,7 @@ Type:
   - Course
 Reference: Coursera
 ---
-# Module 1
+# Module 1 
 ## Multiple CPU Architectures
 This material focuses on how to effectively utilize multiple CPUs in a single architecture, exploring various communication patterns and technologies.
 
@@ -1059,3 +1059,24 @@ Importance of Synchronization Here:
 This example illustrates how synchronization points are crucial for maintaining the integrity and efficiency of the quick sort algorithm in a parallel processing context.
 
 # Module 4
+## NPP Image Processing Syntax
+This material focuses on the NVIDIA Performance Primitives (NPP) library, particularly its image processing capabilities and how developers can efficiently manage image data in CUDA applications.
+
+Image Data Types and Importing
+
+- The NPP library uses a naming convention for image data types that starts with `image CPU_`, followed by the number type (e.g., 8-bit, 16-bit) and the number of channels (e.g., grayscale, RGB).
+- Libraries like FreeImage and OpenCV can be used to import images into NPP, ensuring that the data is correctly formatted for processing.
+
+Device Memory Management
+
+- Device memory types in NPP follow a similar naming pattern, allowing for easy population from host memory using constructors like `imagesNPP_8u_C1`.
+- Memory management functions such as `nppiMalloc` and `nppiFree` are used to allocate and deallocate memory for images, streamlining the process for developers.
+
+Image Processing Capabilities
+
+- NPP offers various filtering functions, with a naming convention that includes the filter type, number type, and number of channels (e.g., `nppiFilterBox_8u_C1R_Ctx`).
+- Additional capabilities include geometric transformations, color operations, and mathematical modifications, enabling a wide range of image processing tasks.
+
+Remember, mastering these concepts will empower you to effectively utilize the NPP library for image processing in your CUDA projects.
+
+### **==What is the naming convention for image data types in NPP?==**
