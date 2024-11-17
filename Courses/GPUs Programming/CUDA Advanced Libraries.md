@@ -815,4 +815,198 @@ Level-3 Operations
 - Level-3 operations deal with multiplications between sparse matrices and dense matrices, following a similar syntax pattern as Level-2.
 - These operations also utilize PSR storage and include functions for defining buffer sizes and analyzing the solution process.
 
-### ***
+### **==What would happen if you used Level-1 functions instead of Level-2 or Level-3?==**
+Using Level-1 functions instead of Level-2 or Level-3 functions in the cusSPARSE library is not recommended because:
+
+- **Deprecation**: Level-1 functions are being deprecated and will eventually be removed from CUDA. This means they may not be supported in future versions, leading to potential compatibility issues in your code.
+    
+- **Limited Functionality**: Level-1 functions are designed for simpler operations, which may not be efficient or suitable for more complex tasks that Level-2 and Level-3 functions can handle, such as operations involving dense matrices and vectors.
+    
+- **Performance**: Level-2 and Level-3 functions are optimized for performance with sparse matrices, providing better speed and efficiency for matrix operations compared to Level-1 functions.
+
+In summary, it's best to focus on Level-2 and Level-3 functions for your sparse matrix operations to ensure your work is up-to-date, efficient, and compatible with future CUDA developments.
+
+### **==What is the significance of PSR storage in sparse matrix operations?==**
+PSR (Compressed Sparse Row) storage is significant in sparse matrix operations for several reasons:
+
+- **Efficiency**: PSR storage allows for a compact representation of sparse matrices, which means that only the non-zero elements are stored. This reduces memory usage significantly compared to storing the entire matrix, especially when dealing with large matrices that contain many zero elements.
+    
+- **Speed**: Operations on matrices stored in PSR format can be performed more quickly because the algorithms can skip over the zero elements, focusing only on the non-zero values. This leads to faster computation times for matrix operations.
+    
+- **Flexibility**: PSR storage supports various matrix operations, including those involving dense vectors and matrices. This flexibility is crucial for implementing complex algorithms in linear algebra and machine learning.
+    
+- **Buffer Size Calculation**: PSR storage provides functions to determine the buffer size needed for representing the matrix, which is essential for efficient memory management during computations.
+
+### **==How could you apply PSR storage in a practical scenario?==**
+- **Machine Learning**: In machine learning, especially in natural language processing (NLP), datasets often contain sparse features (e.g., word counts in a document). Using PSR storage allows for efficient representation and manipulation of these sparse matrices, speeding up training and inference processes.
+    
+- **Graph Algorithms**: When working with large graphs (e.g., social networks), the adjacency matrix can be very sparse. PSR storage can be used to represent the graph efficiently, enabling faster traversal and manipulation of graph-related algorithms, such as finding shortest paths or community detection.
+    
+- **Scientific Computing**: In simulations involving finite element methods or other numerical methods, the resulting matrices are often sparse. PSR storage can help manage these matrices efficiently, allowing for faster computations in simulations of physical systems.
+    
+- **Recommendation Systems**: In collaborative filtering for recommendation systems, user-item interaction matrices are typically sparse. PSR storage can be utilized to efficiently compute recommendations based on user preferences and item characteristics.
+
+## nvBLAS Syntax Video
+This material focuses on the NVBLAS syntax, which is built upon cuBLAS and designed for multi-GPU support, providing a range of matrix operations.
+
+Understanding NVBLAS
+
+- NVBLAS is based on CUBLASXT, the multi-GPU version of cuBLAS, and supports Level 1 to Level 3 functions found in cuBLAS.
+- It includes routines for rank updates, symmetric and hermitian operations, and is limited to complex and double precision complex numbers.
+
+Matrix Multiplication Types
+
+- There are four types of matrix multiplication: triangular (upper or lower), symmetric (same size matrices), hermitian (complex double precision), and generic (matrices of different sizes).
+- The triangular solution of a matrix is handled by the TRSM function, which is one of the many functions available in NVBLAS.
+
+Function Selection and Properties
+
+- When using NVBLAS, it's essential to consider the specific function needed for your task and the properties and arguments required, such as handles.
+- Understanding the available routines and their specific applications will help you effectively utilize NVBLAS in your projects.
+
+### **==How would you choose the appropriate function in NVBLAS for a specific task?==**
+Choosing the appropriate function in NVBLAS for a specific task involves a few key steps:
+
+1. **Identify the Task**: Clearly define what you need to accomplish. Are you performing matrix multiplication, rank updates, or solving a triangular system?
+    
+2. **Understand the Matrix Types**:
+    
+    - Determine the types of matrices you are working with (e.g., triangular, symmetric, hermitian, or generic).
+    - Check if the matrices are of the same size or if they can be of different sizes.
+3. **Review Available Functions**: Familiarize yourself with the functions available in NVBLAS. For example:
+    
+    - For triangular matrix multiplication, use the TRSM function.
+    - For symmetric matrix multiplication, look for functions specifically designed for symmetric operations.
+4. **Consider Input and Output Sizes**: Ensure that the function you choose can handle the sizes of your input matrices and produces the desired output.
+    
+5. **Check Function Limitations**: Be aware of any limitations, such as support for single or double operations, and ensure that the function aligns with your data types (e.g., complex numbers).
+    
+6. **Consult Documentation**: If available, refer to the NVBLAS documentation for detailed descriptions of each function, including their parameters and examples of usage.
+
+By following these steps, you can effectively select the right NVBLAS function for your specific computational needs.
+
+### **==How could you apply NVBLAS functions in a multi-GPU environment?==**
+1. **Set Up the Multi-GPU Environment**:
+    
+    - Ensure that your system has multiple GPUs installed and that they are properly configured.
+    - Use NVIDIA's CUDA toolkit to manage GPU resources and ensure that NVBLAS is installed.
+2. **Initialize NVBLAS**:
+    
+    - Before using NVBLAS functions, initialize the library in your application. This typically involves setting up the NVBLAS environment variables to specify the GPUs you want to use.
+3. **Distribute Workload**:
+    
+    - Divide your computational tasks among the available GPUs. This can be done by partitioning your data or assigning different tasks to different GPUs.
+    - For example, if you are performing matrix operations, you can split large matrices into smaller submatrices and assign each submatrix to a different GPU.
+4. **Use NVBLAS Functions**:
+    
+    - Call the appropriate NVBLAS functions for your tasks, ensuring that you specify the correct GPU context for each operation.
+    - NVBLAS functions are designed to handle multi-GPU operations, so you can leverage their built-in support for parallel processing.
+5. **Manage Data Transfers**:
+    
+    - Be mindful of data transfers between the host and the GPUs. Minimize data movement to reduce latency and improve performance.
+    - Use asynchronous data transfers when possible to overlap computation and communication.
+6. **Synchronize GPUs**:
+    
+    - After executing NVBLAS functions, synchronize the GPUs to ensure that all operations are completed before proceeding to the next steps in your application.
+7. **Monitor Performance**:
+    - Use profiling tools to monitor the performance of your multi-GPU application. This will help you identify bottlenecks and optimize your workload distribution.
+
+By following these steps, you can effectively apply NVBLAS functions in a multi-GPU environment, maximizing the computational power at your disposal. Keep experimenting with different configurations and tasks, and you'll gain valuable experience in optimizing your applications!
+
+### **==How would you approach troubleshooting if a function in NVBLAS does not perform as expected?==**
+1. **Check Input Parameters**:
+    
+    - Ensure that all input parameters to the NVBLAS function are correct. This includes matrix sizes, data types, and any additional arguments required by the function.
+    - Verify that the matrices are properly allocated and initialized before passing them to the function.
+2. **Review Documentation**:
+    
+    - Consult the NVBLAS documentation for the specific function you are using. Look for any notes on limitations, expected input formats, and common pitfalls.
+3. **Examine Error Codes**:
+    
+    - NVBLAS functions typically return error codes. Check the return value of the function call to see if it indicates an error, and refer to the documentation for the meaning of the error code.
+4. **Validate Data**:
+    
+    - Ensure that the data being processed is valid. Check for issues such as uninitialized memory, incorrect data types, or out-of-bounds access.
+5. **Test with Simplified Cases**:
+    
+    - Create a minimal example that isolates the problem. Use small matrices or simple operations to see if the issue persists. This can help you identify whether the problem is with the function itself or with the way it is being used.
+6. **Check GPU Configuration**:
+    
+    - Ensure that your multi-GPU setup is correctly configured. Verify that the NVBLAS environment variables are set properly and that the GPUs are recognized by your application.
+7. **Profile Performance**:
+    
+    - Use profiling tools to analyze the performance of your NVBLAS calls. This can help you identify bottlenecks or unexpected behavior during execution.
+8. **Consult Community Resources**:
+    
+    - If you're still having trouble, consider reaching out to online forums, user groups, or communities focused on CUDA and NVBLAS. Other users may have encountered similar issues and can offer insights.
+9. **Debugging Tools**:
+    
+    - Utilize debugging tools available for CUDA applications, such as NVIDIA Nsight, to step through your code and inspect variables and memory states.
+10. **Iterate and Experiment**:
+    - Troubleshooting can be an iterative process. Make small changes, test, and observe the results. This will help you narrow down the source of the issue.
+
+By following these steps, you can effectively troubleshoot issues with NVBLAS functions and improve your understanding of how to use them correctly. Remember, persistence is key, and each challenge is an opportunity to learn!
+
+# Module 3
+## Thrust Vector Syntax Video
+This material focuses on the Thrust library in CUDA, particularly its vector syntax and functionalities, which simplify memory management and data manipulation.
+
+Understanding Thrust and Vectors
+
+- Thrust is designed to provide capabilities similar to C++'s STL and Boost libraries, abstracting away some complexities like pointer management.
+- The main data types in Thrust are host vectors and device vectors, which correspond to host and device memory, respectively.
+
+Vector Functions and Operations
+
+- The `vector fill` function populates a vector with a specified value between a defined start and end range.
+- The `vector sequence` function generates a sequence of integers, filling indices from start to end, excluding the end value.
+
+Vector Resizing and Copying
+
+- Vectors are initially statically sized but can be resized using the `resize` function, which can either add or truncate values based on the new size.
+- The `vector copy` function allows for copying elements from one vector to another, using iterators to define the range of values to be copied.
+
+Remember, mastering these concepts will empower you to effectively utilize the Thrust library in your CUDA programming endeavors.
+
+### **==What might happen if you attempt to resize a vector to a smaller size?==**
+- **Truncation of Values**: Any elements beyond the new size will be removed. For example, if you have a vector of size 4 and you resize it to size 2, the last two elements will be truncated and lost.
+    
+- **Memory Management**: The memory allocated for the vector may be adjusted, but the specifics can depend on the implementation and the underlying memory management of the Thrust library.
+
+This behavior is important to keep in mind when working with vectors, as it can lead to data loss if not handled carefully. Always ensure that you are aware of the current size and the intended new size before resizing.
+
+### **==What is the purpose of the iterator in Thrust vectors?==**
+- **Iteration**: Iterators allow you to iterate through all the values in a vector easily, enabling you to access and modify elements without needing to manage pointers directly.
+    
+- **Function Inputs**: You can pass parts of a vector or specify the beginning and end of the vector as inputs to functions, particularly those provided by the Thrust library. This makes it easier to apply algorithms to specific sections of a vector.
+    
+- **Flexibility**: Iterators provide a flexible way to work with data, allowing you to perform operations like copying, filling, or transforming elements within a vector.
+
+### **==What would happen if you tried to copy elements from an empty vector?==**
+- **No Elements Copied**: Since the source vector is empty, there are no elements to copy. The operation will effectively result in no changes to the destination vector.
+    
+- **Iterator Behavior**: If you use iterators to define the range for copying, the iterators for the start and end of the empty vector will point to the same location, meaning that the copy operation will not have any elements to process.
+    
+- **No Errors**: Typically, this operation will not produce an error; it will simply result in the destination vector remaining unchanged.
+
+It's always a good practice to check if a vector is empty before performing copy operations to ensure that your code behaves as expected.
+
+## Thrust Vector Iterator Video
+This material focuses on the Thrust vector data type and its iteration syntax, emphasizing the role of iterators in simplifying complex operations.
+
+Understanding Iterators
+
+- An iterator abstracts the complexities of pointers and indexing, making it easier to handle for loops and related functions.
+- Common functions that utilize iterators include copy sequence and fill, which require a start and end point.
+
+Types of Iterators
+
+- Constant Iterator: Returns the same value regardless of the index, useful for operations like multiplying a vector by a constant scalar.
+- Counting Iterator: Generates a sequence starting from an initial value, incrementing based on the index, allowing for easy value generation.
+
+Transform and Permutation Iterators
+
+- Transform Iterator: Takes one iterator and applies a transformation function (e.g., multiplying by two) to create a new iterator.
+- Permutation Iterator: Combines two iterators, using one as a collection of indexes to access values in the second iterator, enabling complex data manipulations.
+
+### ****
