@@ -1277,5 +1277,3 @@ In this example:
 - The kernel function `addSignals` adds corresponding elements of the two signals.
 
 This operation can be extended to other mathematical operations as well, such as subtraction, multiplication, or even more complex functions like convolution.
-
-## f
