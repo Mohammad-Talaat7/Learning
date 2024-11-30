@@ -1,0 +1,177 @@
+.todo-diff-viewer {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80vw;
+  height: 80vh;
+  background-color: var(--background-primary);
+  border-radius: 8px;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+}
+
+.todo-diff-header {
+  padding: 8px 16px;
+  border-bottom: 1px solid var(--background-modifier-border);
+}
+
+.todo-diff-header h3 {
+  margin: 0;
+  font-size: 1.2em;
+}
+
+.todo-diff-content {
+  flex: 1;
+  overflow: auto;
+  padding: 0;
+  min-height: 0;
+}
+
+.todo-diff-content > div {
+  height: 100%;
+  margin: 0;
+}
+
+.todo-diff-content pre {
+  margin: 0;
+  padding: 8px;
+  white-space: pre-wrap;
+  word-break: break-word;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.todo-diff-content table {
+  width: 100%;
+  table-layout: fixed;
+  margin: 0;
+  border-spacing: 0;
+}
+
+.todo-diff-content td {
+  vertical-align: top;
+  padding: 0;
+  width: 50%;
+}
+
+.todo-diff-footer {
+  padding: 8px 16px;
+  border-top: 1px solid var(--background-modifier-border);
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.todo-diff-footer button {
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: 1px solid var(--background-modifier-border);
+  background-color: var(--background-secondary);
+  color: var(--text-normal);
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.todo-diff-footer button:hover {
+  background-color: var(--background-modifier-hover);
+}
+
+.todo-diff-footer button.mod-cta {
+  background-color: var(--interactive-accent);
+  color: var(--text-on-accent);
+  border: none;
+}
+
+.todo-diff-footer button.mod-cta:hover {
+  background-color: var(--interactive-accent-hover);
+}
+
+.todo-diff-content::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.todo-diff-content::-webkit-scrollbar-track {
+  background: var(--background-secondary);
+  border-radius: 4px;
+}
+
+.todo-diff-content::-webkit-scrollbar-thumb {
+  background: var(--background-modifier-border);
+  border-radius: 4px;
+}
+
+.todo-diff-content::-webkit-scrollbar-thumb:hover {
+  background: var(--background-modifier-hover);
+}
+
+/* 调整表格布局 */
+.todo-diff-content table {
+  width: 100%;
+  table-layout: fixed;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+/* 统一所有单元格的基础样式 */
+.todo-diff-content td {
+  padding: 2px 0;
+  vertical-align: top;
+  line-height: 1.5;
+  height: 24px !important;
+}
+
+/* 行号列 */
+.todo-diff-content td:nth-child(1),
+.todo-diff-content td:nth-child(4) {
+  width: 45px !important;
+  min-width: 45px !important;
+  padding-right: 4px !important;
+  text-align: right;
+  color: var(--text-muted);
+  font-size: 12px;
+}
+
+/* 变更指示器列 */
+.todo-diff-content td:nth-child(2),
+.todo-diff-content td:nth-child(5) {
+  width: 25px !important;
+  min-width: 25px !important;
+  text-align: center;
+  padding: 0 !important;
+}
+
+/* 内容列 */
+.todo-diff-content td:nth-child(3),
+.todo-diff-content td:nth-child(6) {
+  width: calc(50% - 70px) !important;
+  padding-left: 4px !important;
+  padding-right: 12px !important;
+}
+
+/* 统一文本样式 */
+.todo-diff-content pre {
+  margin: 0 !important;
+  padding: 0 !important;
+  font-size: 14px;
+  line-height: 1.5 !important;
+  white-space: pre-wrap;
+}
+
+/* 移除多余的空间 */
+.todo-diff-content td > div {
+  min-height: unset !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* 确保变更标记对齐 */
+.todo-diff-content td > div > span {
+  line-height: 1.5 !important;
+  height: 20px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+}
