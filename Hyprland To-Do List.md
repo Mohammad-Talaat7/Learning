@@ -1,3 +1,10 @@
-- [ ] hh
-- [ ] hf
-- [ ] fh
+- [ ] Split the configurations
+- [ ] configure hyprland
+- [ ] configure hyprpaper
+- [ ] configure keybinds
+- [ ] configure waybar
+- [ ] research more about EWW
+- [ ] configure app launcher
+- [ ] confogure notification center
+- [ ] configure pywall (check the name)
+- [ ] 
