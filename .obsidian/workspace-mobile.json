@@ -21,16 +21,28 @@
             "id": "4c2fa1fd0b78818d",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
+            }
+          },
+          {
+            "id": "4a700a6508b3aa0a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
               "state": {
-                "file": "assets/lt46q7vNR2-eOqu7zbdv8Q_eed25abbc36e4a4da116d131d4781b86_Lلللesson5_CUDA_Software_Layers-readonly.png"
+                "file": "Untitled.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-image",
-              "title": "lt46q7vNR2-eOqu7zbdv8Q_eed25abbc36e4a4da116d131d4781b86_Lلللesson5_CUDA_Software_Layers-readonly"
+              "icon": "lucide-file",
+              "title": "Untitled"
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -199,8 +211,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "4c2fa1fd0b78818d",
+  "active": "4a700a6508b3aa0a",
   "lastOpenFiles": [
+    "Untitled.md",
+    "Courses/GPUs Programming/CUDA Advanced Libraries.md",
+    "/Courses/GPUs Programming/CUDA Advanced Libraries.md",
+    "/Courses/GPUs Programming/CUDA at Scale for the Enterprise.md",
     "assets/lt46q7vNR2-eOqu7zbdv8Q_eed25abbc36e4a4da116d131d4781b86_Lلللesson5_CUDA_Software_Layers-readonly.png",
     "assets/lt46q7vNR2-eOqu7zbdv8Q_eed25abbc36e4a4da116d131d4781b86_Lesson5_CUDA_Software_Layers-readonly.png",
     "assets/Pasted image 20241112123616.png",
@@ -211,7 +227,6 @@
     "assets/IMG_8250.png",
     "assets/IMG_8249.png",
     "assets/IMG_8242.png",
-    "assets/IMG_8241.png",
     "Learning Career.md",
     "Courses/GPUs Programming/Introduction to Parallel Programming with CUDA.md",
     "Courses/GPUs Programming/Introduction to Concurrent Programming with GPUs.md",
