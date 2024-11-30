@@ -1,4 +1,7 @@
 - [ ] Split the configurations
+- [ ] Install vscode / obsidian for
+- [ ] research the ML4W dotfiles
+- [ ] research the first dotfiles
 - [ ] configure hyprland
 - [ ] configure hyprpaper
 - [ ] configure keybinds
@@ -7,4 +10,6 @@
 - [ ] configure app launcher
 - [ ] confogure notification center
 - [ ] configure pywall (check the name)
-- [ ] 
+- [ ] theme hyprland
+- [ ] theme the login screen
+- [ ] theme GRUB
