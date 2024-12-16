@@ -32,9 +32,9 @@ sudo nmcli --ask dev wifi connect "SSID"
 sudo pacman -Sy
 ```
 
-- install git
+- install key-apps
 ```bash
-sudo pacman -S git
+sudo pacman -S git firefox waybar rofi swaync
 ```
 
 - download dotfiles
@@ -42,4 +42,7 @@ sudo pacman -S git
 git clone https://github.com/Mohammad-Talaat7/dotfilesBackup.git
 ```
 
-- install
+- copy the configurations
+```bash
+sudo cp -rf ~/dotfilesBackup/* ~/.config
+```
