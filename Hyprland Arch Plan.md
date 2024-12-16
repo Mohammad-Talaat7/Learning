@@ -34,7 +34,7 @@ sudo pacman -Sy
 
 - install key-apps
 ```bash
-sudo pacman -S git firefox waybar rofi swaync
+sudo pacman -S git firefox waybar rofi swaync code
 ```
 
 - download dotfiles
@@ -45,4 +45,10 @@ git clone https://github.com/Mohammad-Talaat7/dotfilesBackup.git
 - copy the configurations
 ```bash
 sudo cp -rf ~/dotfilesBackup/* ~/.config
+```
+
+- install yay
+- install aur packages
+```bash
+yay -S python-pywal16
 ```
