@@ -33,12 +33,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Hyprland To-Do List.md",
+                "file": "Hyprland Arch Plan.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Hyprland To-Do List"
+              "title": "Hyprland Arch Plan"
             }
           }
         ],
@@ -213,7 +213,7 @@
   },
   "active": "4a700a6508b3aa0a",
   "lastOpenFiles": [
-    "Hyprland To-Do List.md",
+    "Hyprland Arch Plan.md",
     "Courses/GPUs Programming/CUDA Advanced Libraries.md",
     "/Courses/GPUs Programming/CUDA Advanced Libraries.md",
     "/Courses/GPUs Programming/CUDA at Scale for the Enterprise.md",
