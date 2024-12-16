@@ -18,5 +18,28 @@ pacman -S archinstall
 
 - install arch hyprland desktop
 ```bash
-
+archinstall
 ```
+
+- reboot 
+- connect wifi network
+```bash
+sudo nmcli --ask dev wifi connect "SSID"
+```
+
+- update pacman databases
+```bash
+sudo pacman -Sy
+```
+
+- install git
+```bash
+sudo pacman -S git
+```
+
+- download dotfiles
+```bash
+git clone https://github.com/Mohammad-Talaat7/dotfilesBackup.git
+```
+
+- install
