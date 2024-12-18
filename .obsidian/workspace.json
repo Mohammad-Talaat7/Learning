@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Courses/GPUs Programming/CUDA Advanced Libraries.md",
+                "file": "Hyprland Arch Plan.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "CUDA Advanced Libraries"
+              "title": "Hyprland Arch Plan"
             }
           }
         ]
@@ -190,8 +190,8 @@
             "state": {
               "type": "git-view",
               "state": {},
-              "icon": "lucide-file",
-              "title": "Plugin no longer active"
+              "icon": "git-pull-request",
+              "title": "Source Control"
             }
           },
           {
@@ -226,8 +226,8 @@
   },
   "active": "f72408abf97fd9e4",
   "lastOpenFiles": [
-    "Courses/GPUs Programming/GPU Programming Specialization.md",
     "Courses/GPUs Programming/CUDA Advanced Libraries.md",
+    "Courses/GPUs Programming/GPU Programming Specialization.md",
     "Courses/GPUs Programming/CUDA at Scale for the Enterprise.md",
     "Courses/GPUs Programming/Introduction to Concurrent Programming with GPUs.md",
     "Courses/GPUs Programming/Introduction to Parallel Programming with CUDA.md",

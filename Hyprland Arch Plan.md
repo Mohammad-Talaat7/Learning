@@ -52,3 +52,5 @@ sudo cp -rf ~/dotfilesBackup/* ~/.config
 ```bash
 yay -S python-pywal16
 ```
+
+fgfgfgg
