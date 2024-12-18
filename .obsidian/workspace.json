@@ -77,8 +77,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 363.5,
-    "collapsed": true
+    "width": 363.5
   },
   "right": {
     "id": "e342685a996aaaaa",
@@ -224,7 +223,7 @@
       "workspaces:Manage workspace layouts": false
     }
   },
-  "active": "f72408abf97fd9e4",
+  "active": "64ed5afe705132ac",
   "lastOpenFiles": [
     "Courses/GPUs Programming/CUDA Advanced Libraries.md",
     "Courses/GPUs Programming/GPU Programming Specialization.md",
